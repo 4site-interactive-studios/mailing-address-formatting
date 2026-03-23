@@ -260,7 +260,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
       <p style="color:var(--text2);margin-bottom:16px;font-size:.9rem">Improvements in ENgrid Address Fields v2 combining the best of ENgrid v1's <code style="color:var(--accent2)">translate-fields.ts</code>, Stripe's AddressElement data, and AI-driven enhancements for accessibility, autofill, and UX.</p>
       <div class="data-table-wrap">
         <table class="data-table" id="enhancementsTable">
-          <thead><tr><th>Enhancement</th><th>Attribute</th><th>v2 Implementation</th><th>v1 Approach</th><th>Benefit</th><th>Status</th></tr></thead>
+          <thead><tr><th>Enhancement</th><th>Attribute</th><th>ENgrid v1 Approach</th><th>ENgrid v2 Implementation</th><th>Benefit</th><th>Status</th></tr></thead>
           <tbody id="enhancementsBody"></tbody>
         </table>
       </div>
@@ -275,12 +275,12 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
 
     <div class="engrid-compare-grid">
       <div class="card">
-        <h2>ENgrid v2 (Enhanced) <span class="count" id="engridStripeLabel">US — United States</span></h2>
-        <div id="engridStripeFields"></div>
-      </div>
-      <div class="card">
         <h2>ENgrid v1 (Original) <span class="count" id="engridEngridLabel">US — United States</span></h2>
         <div id="engridEngridFields"></div>
+      </div>
+      <div class="card">
+        <h2>ENgrid v2 (Enhanced) <span class="count" id="engridStripeLabel">US — United States</span></h2>
+        <div id="engridStripeFields"></div>
       </div>
     </div>
 
@@ -288,7 +288,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
       <h2>Detailed Field-by-Field Diff <span class="count" id="engridDiffLabel">US — United States</span></h2>
       <div class="data-table-wrap">
         <table class="data-table">
-          <thead><tr><th>Field</th><th>Attribute</th><th>ENgrid v2</th><th>ENgrid v1</th><th>Diff</th></tr></thead>
+          <thead><tr><th>Field</th><th>Attribute</th><th>ENgrid v1</th><th>ENgrid v2</th><th>Diff</th></tr></thead>
           <tbody id="engridDiffBody"></tbody>
         </table>
       </div>
@@ -1074,8 +1074,8 @@ let DROPDOWN_OPTS = {};
       return `<tr>
         <td style="font-weight:500">${e.name}</td>
         <td class="mono">${escHtml(e.attr)}</td>
-        <td>${e.stripe}</td>
         <td>${e.engrid}</td>
+        <td>${e.stripe}</td>
         <td style="color:var(--green)">${e.benefit}</td>
         <td>${statusHtml}</td>
       </tr>`;
@@ -1167,8 +1167,8 @@ let DROPDOWN_OPTS = {};
         diffRows += `<tr>
           ${i === 0 ? `<td rowspan="${rows.length}" style="font-weight:500;vertical-align:top;border-right:1px solid var(--border)">${fid}</td>` : ''}
           <td class="mono">${r.attr}</td>
-          <td>${escHtml(r.s)}</td>
           <td>${escHtml(r.e)}</td>
+          <td>${escHtml(r.s)}</td>
           <td class="${diffClass}">${r.diff}</td>
         </tr>`;
       });
