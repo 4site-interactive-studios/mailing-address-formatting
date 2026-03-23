@@ -1,0 +1,2207 @@
+row_type,country_code,country_name,field_order,field_id,label,type,required,placeholder,example,format_regex,dropdown_option_count,option_index,option_value,option_display_label,option_latin_name,postal_code_pattern
+field,AD,Andorra,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AD,Andorra,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AD,Andorra,3,postal_code,Postal code,text,false,,AD100,AD[1-7]0\d,,,,,,
+field,AD,Andorra,4,city,City,text,false,,,,,,,,,
+field,AE,United Arab Emirates,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AE,United Arab Emirates,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AE,United Arab Emirates,3,state,Emirate,dropdown,true,,,,7,,,,,
+option,AE,United Arab Emirates,,state,,,,,,,,1,أبو ظبي,أبو ظبي — Abu Dhabi,Abu Dhabi,
+option,AE,United Arab Emirates,,state,,,,,,,,2,إمارة الشارقةّ,الشارقة — Sharjah,Sharjah,
+option,AE,United Arab Emirates,,state,,,,,,,,3,الفجيرة,الفجيرة — Fujairah,Fujairah,
+option,AE,United Arab Emirates,,state,,,,,,,,4,ام القيوين,ام القيوين — Umm Al Quwain,Umm Al Quwain,
+option,AE,United Arab Emirates,,state,,,,,,,,5,إمارة دبيّ,دبي — Dubai,Dubai,
+option,AE,United Arab Emirates,,state,,,,,,,,6,إمارة رأس الخيمة,رأس الخيمة — Ras al Khaimah,Ras al Khaimah,
+option,AE,United Arab Emirates,,state,,,,,,,,7,عجمان,عجمان — Ajman,Ajman,
+field,AG,Antigua & Barbuda,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AG,Antigua & Barbuda,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AG,Antigua & Barbuda,3,city,City,text,false,,,,,,,,,
+field,AG,Antigua & Barbuda,4,postal_code,Postal code,text,false,,,,,,,,,
+field,AI,Anguilla,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AI,Anguilla,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AI,Anguilla,3,city,City,text,false,,,,,,,,,
+field,AI,Anguilla,4,postal_code,Postal code,text,false,,2640,(?:AI-)?2640,,,,,,
+field,AL,Albania,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AL,Albania,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AL,Albania,3,postal_code,Postal code,text,false,,1001,\d{4},,,,,,
+field,AL,Albania,4,city,City,text,false,,,,,,,,,
+field,AM,Armenia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AM,Armenia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AM,Armenia,3,postal_code,Postal code,text,false,,375010,(?:37)?\d{4},,,,,,
+field,AM,Armenia,4,city,City,text,false,,,,,,,,,
+field,AM,Armenia,5,state,State / Province / Region,dropdown,false,,,,11,,,,,
+option,AM,Armenia,,state,,,,,,,,1,Արագածոտն,Արագածոտն — Aragatsotn,Aragatsotn,0[2-5]
+option,AM,Armenia,,state,,,,,,,,2,Արարատ,Արարատ — Ararat,Ararat,0[6-8]
+option,AM,Armenia,,state,,,,,,,,3,Արմավիր,Արմավիր — Armavir,Armavir,09|1[01]
+option,AM,Armenia,,state,,,,,,,,4,Գեղարքունիք,Գեղարքունիք — Gegharkunik,Gegharkunik,1[2-6]
+option,AM,Armenia,,state,,,,,,,,5,Երևան,Երևան — Yerevan,Yerevan,00
+option,AM,Armenia,,state,,,,,,,,6,Լոռի,Լոռի — Lori,Lori,1[7-9]|2[01]
+option,AM,Armenia,,state,,,,,,,,7,Կոտայք,Կոտայք — Kotayk,Kotayk,2[2-5]
+option,AM,Armenia,,state,,,,,,,,8,Շիրակ,Շիրակ — Shirak,Shirak,2[6-9]|3[01]
+option,AM,Armenia,,state,,,,,,,,9,Սյունիք,Սյունիք — Syunik,Syunik,3[2-5]
+option,AM,Armenia,,state,,,,,,,,10,Վայոց ձոր,Վայոց ձոր — Vayots Dzor,Vayots Dzor,3[6-8]
+option,AM,Armenia,,state,,,,,,,,11,Տավուշ,Տավուշ — Tavush,Tavush,39|4[0-2]
+field,AO,Angola,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AO,Angola,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AO,Angola,3,city,City,text,false,,,,,,,,,
+field,AO,Angola,4,postal_code,Postal code,text,false,,,,,,,,,
+field,AQ,Antarctica,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AQ,Antarctica,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AQ,Antarctica,3,city,City,text,false,,,,,,,,,
+field,AQ,Antarctica,4,postal_code,Postal code,text,false,,,,,,,,,
+field,AR,Argentina,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AR,Argentina,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AR,Argentina,3,postal_code,Postal code,text,false,,C1070AAM,((?:[A-HJ-NP-Z])?\d{4})([A-Z]{3})?,,,,,,
+field,AR,Argentina,4,city,City,text,false,,,,,,,,,
+field,AR,Argentina,5,state,State / Province / Region,dropdown,false,,,,24,,,,,
+option,AR,Argentina,,state,,,,,,,,1,Buenos Aires,Buenos Aires,,B?[1-36-8]
+option,AR,Argentina,,state,,,,,,,,2,Catamarca,Catamarca,,K?[45]
+option,AR,Argentina,,state,,,,,,,,3,Chaco,Chaco,,H?3
+option,AR,Argentina,,state,,,,,,,,4,Chubut,Chubut,,U?[89]
+option,AR,Argentina,,state,,,,,,,,5,Ciudad Autónoma de Buenos Aires,Ciudad Autónoma de Buenos Aires,,C?1
+option,AR,Argentina,,state,,,,,,,,6,Córdoba,Córdoba,,X?[235-8]
+option,AR,Argentina,,state,,,,,,,,7,Corrientes,Corrientes,,W?3
+option,AR,Argentina,,state,,,,,,,,8,Entre Ríos,Entre Ríos,,E?[1-3]
+option,AR,Argentina,,state,,,,,,,,9,Formosa,Formosa,,P?[37]
+option,AR,Argentina,,state,,,,,,,,10,Jujuy,Jujuy,,Y?4
+option,AR,Argentina,,state,,,,,,,,11,La Pampa,La Pampa,,L?[3568]
+option,AR,Argentina,,state,,,,,,,,12,La Rioja,La Rioja,,F?5
+option,AR,Argentina,,state,,,,,,,,13,Mendoza,Mendoza,,M?[56]
+option,AR,Argentina,,state,,,,,,,,14,Misiones,Misiones,,N?3
+option,AR,Argentina,,state,,,,,,,,15,Neuquén,Neuquén,,Q?[38]
+option,AR,Argentina,,state,,,,,,,,16,Río Negro,Río Negro,,R?[89]
+option,AR,Argentina,,state,,,,,,,,17,Salta,Salta,,A?[34]
+option,AR,Argentina,,state,,,,,,,,18,San Juan,San Juan,,J?5
+option,AR,Argentina,,state,,,,,,,,19,San Luis,San Luis,,D?[4-6]
+option,AR,Argentina,,state,,,,,,,,20,Santa Cruz,Santa Cruz,,Z?[89]
+option,AR,Argentina,,state,,,,,,,,21,Santa Fe,Santa Fe,,S?[2368]
+option,AR,Argentina,,state,,,,,,,,22,Santiago del Estero,Santiago del Estero,,G?[2-5]
+option,AR,Argentina,,state,,,,,,,,23,Tierra del Fuego,Tierra del Fuego,,V?9
+option,AR,Argentina,,state,,,,,,,,24,Tucumán,Tucumán,,T?[45]
+field,AT,Austria,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AT,Austria,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AT,Austria,3,postal_code,Postal code,text,true,,1010,\d{4},,,,,,
+field,AT,Austria,4,city,City,text,true,,,,,,,,,
+field,AU,Australia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AU,Australia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AU,Australia,3,city,Suburb,text,true,,,,,,,,,
+field,AU,Australia,4,state,State,dropdown,true,,,,9,,,,,
+option,AU,Australia,,state,,,,,,,,1,ACT,Australian Capital Territory,,29|2540|260|261[0-8]|02|2620
+option,AU,Australia,,state,,,,,,,,2,JBT,Jervis Bay Territory,,2540
+option,AU,Australia,,state,,,,,,,,3,NSW,New South Wales,,1|2[0-57-8]|26[2-9]|261[189]|3500|358[56]|3644|3707
+option,AU,Australia,,state,,,,,,,,4,NT,Northern Territory,,0[89]
+option,AU,Australia,,state,,,,,,,,5,QLD,Queensland,,[49]
+option,AU,Australia,,state,,,,,,,,6,SA,South Australia,,5|0872
+option,AU,Australia,,state,,,,,,,,7,TAS,Tasmania,,7
+option,AU,Australia,,state,,,,,,,,8,VIC,Victoria,,[38]
+option,AU,Australia,,state,,,,,,,,9,WA,Western Australia,,6|0872
+field,AU,Australia,5,postal_code,Postal code,text,true,,2060,\d{4},,,,,,
+field,AW,Aruba,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AW,Aruba,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AW,Aruba,3,city,City,text,false,,,,,,,,,
+field,AW,Aruba,4,postal_code,Postal code,text,false,,,,,,,,,
+field,AX,Åland Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AX,Åland Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AX,Åland Islands,3,postal_code,Postal code,text,true,,22150,22\d{3},,,,,,
+field,AX,Åland Islands,4,city,City,text,true,,,,,,,,,
+field,AZ,Azerbaijan,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,AZ,Azerbaijan,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,AZ,Azerbaijan,3,postal_code,Postal code,text,false,,1000,\d{4},,,,,,
+field,AZ,Azerbaijan,4,city,City,text,false,,,,,,,,,
+field,BA,Bosnia & Herzegovina,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BA,Bosnia & Herzegovina,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BA,Bosnia & Herzegovina,3,postal_code,Postal code,text,false,,71000,\d{5},,,,,,
+field,BA,Bosnia & Herzegovina,4,city,City,text,false,,,,,,,,,
+field,BB,Barbados,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BB,Barbados,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BB,Barbados,3,city,City,text,false,,,,,,,,,
+field,BB,Barbados,4,state,Parish,dropdown,false,,,,11,,,,,
+option,BB,Barbados,,state,,,,,,,,1,Christ Church,Christ Church,,
+option,BB,Barbados,,state,,,,,,,,2,Saint Andrew,Saint Andrew,,
+option,BB,Barbados,,state,,,,,,,,3,Saint George,Saint George,,
+option,BB,Barbados,,state,,,,,,,,4,Saint James,Saint James,,
+option,BB,Barbados,,state,,,,,,,,5,Saint John,Saint John,,
+option,BB,Barbados,,state,,,,,,,,6,Saint Joseph,Saint Joseph,,
+option,BB,Barbados,,state,,,,,,,,7,Saint Lucy,Saint Lucy,,
+option,BB,Barbados,,state,,,,,,,,8,Saint Michael,Saint Michael,,
+option,BB,Barbados,,state,,,,,,,,9,Saint Peter,Saint Peter,,
+option,BB,Barbados,,state,,,,,,,,10,Saint Philip,Saint Philip,,
+option,BB,Barbados,,state,,,,,,,,11,Saint Thomas,Saint Thomas,,
+field,BB,Barbados,5,postal_code,Postal code,text,false,,BB23026,BB\d{5},,,,,,
+field,BD,Bangladesh,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BD,Bangladesh,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BD,Bangladesh,3,city,City,text,false,,,,,,,,,
+field,BD,Bangladesh,4,postal_code,Postal code,text,false,,1340,\d{4},,,,,,
+field,BE,Belgium,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BE,Belgium,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BE,Belgium,3,postal_code,Postal code,text,true,,4000,\d{4},,,,,,
+field,BE,Belgium,4,city,City,text,true,,,,,,,,,
+field,BF,Burkina Faso,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BF,Burkina Faso,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BF,Burkina Faso,3,city,City,text,false,,,,,,,,,
+field,BF,Burkina Faso,4,sorting_code,CEDEX,text,false,,,,,,,,,
+field,BG,Bulgaria,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BG,Bulgaria,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BG,Bulgaria,3,postal_code,Postal code,text,false,,1000,\d{4},,,,,,
+field,BG,Bulgaria,4,city,City,text,false,,,,,,,,,
+field,BH,Bahrain,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BH,Bahrain,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BH,Bahrain,3,city,City,text,false,,,,,,,,,
+field,BH,Bahrain,4,postal_code,Postal code,text,false,,317,(?:^|\b)(?:1[0-2]|[1-9])\d{2}(?:$|\b),,,,,,
+field,BI,Burundi,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BI,Burundi,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BI,Burundi,3,city,City,text,false,,,,,,,,,
+field,BI,Burundi,4,postal_code,Postal code,text,false,,,,,,,,,
+field,BJ,Benin,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BJ,Benin,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BJ,Benin,3,city,City,text,false,,,,,,,,,
+field,BJ,Benin,4,postal_code,Postal code,text,false,,,,,,,,,
+field,BL,St. Barthélemy,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BL,St. Barthélemy,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BL,St. Barthélemy,3,postal_code,Postal code,text,true,,97100,9[78][01]\d{2},,,,,,
+field,BL,St. Barthélemy,4,city,City,text,true,,,,,,,,,
+field,BL,St. Barthélemy,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,BM,Bermuda,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BM,Bermuda,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BM,Bermuda,3,city,City,text,false,,,,,,,,,
+field,BM,Bermuda,4,postal_code,Postal code,text,false,,FL 07,[A-Z]{2} ?[A-Z0-9]{2},,,,,,
+field,BN,Brunei,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BN,Brunei,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BN,Brunei,3,city,City,text,false,,,,,,,,,
+field,BN,Brunei,4,postal_code,Postal code,text,false,,BT2328,[A-Z]{2} ?\d{4},,,,,,
+field,BO,Bolivia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BO,Bolivia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BO,Bolivia,3,city,City,text,false,,,,,,,,,
+field,BO,Bolivia,4,postal_code,Postal code,text,false,,,,,,,,,
+field,BQ,Caribbean Netherlands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BQ,Caribbean Netherlands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BQ,Caribbean Netherlands,3,city,City,text,false,,,,,,,,,
+field,BQ,Caribbean Netherlands,4,postal_code,Postal code,text,false,,,,,,,,,
+field,BR,Brazil,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BR,Brazil,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BR,Brazil,3,sublocality,Neighborhood,text,false,,,,,,,,,
+field,BR,Brazil,4,city,City,text,true,,,,,,,,,
+field,BR,Brazil,5,state,State,dropdown,true,,,,27,,,,,
+option,BR,Brazil,,state,,,,,,,,1,AC,Acre,,699
+option,BR,Brazil,,state,,,,,,,,2,AL,Alagoas,,57
+option,BR,Brazil,,state,,,,,,,,3,AP,Amapá,,689
+option,BR,Brazil,,state,,,,,,,,4,AM,Amazonas,,69[0-24-8]
+option,BR,Brazil,,state,,,,,,,,5,BA,Bahia,,4[0-8]
+option,BR,Brazil,,state,,,,,,,,6,CE,Ceará,,6[0-3]
+option,BR,Brazil,,state,,,,,,,,7,DF,Distrito Federal,,7[0-1]|72[0-7]|73[0-6]
+option,BR,Brazil,,state,,,,,,,,8,ES,Espírito Santo,,29
+option,BR,Brazil,,state,,,,,,,,9,GO,Goiás,,72[89]|73[7-9]|7[4-6]
+option,BR,Brazil,,state,,,,,,,,10,MA,Maranhão,,65
+option,BR,Brazil,,state,,,,,,,,11,MT,Mato Grosso,,78[0-8]
+option,BR,Brazil,,state,,,,,,,,12,MS,Mato Grosso do Sul,,79
+option,BR,Brazil,,state,,,,,,,,13,MG,Minas Gerais,,3
+option,BR,Brazil,,state,,,,,,,,14,PA,Pará,,6[6-7]|68[0-8]
+option,BR,Brazil,,state,,,,,,,,15,PB,Paraíba,,58
+option,BR,Brazil,,state,,,,,,,,16,PR,Paraná,,8[0-7]
+option,BR,Brazil,,state,,,,,,,,17,PE,Pernambuco,,5[0-6]
+option,BR,Brazil,,state,,,,,,,,18,PI,Piauí,,64
+option,BR,Brazil,,state,,,,,,,,19,RJ,Rio de Janeiro,,2[0-8]
+option,BR,Brazil,,state,,,,,,,,20,RN,Rio Grande do Norte,,59
+option,BR,Brazil,,state,,,,,,,,21,RS,Rio Grande do Sul,,9
+option,BR,Brazil,,state,,,,,,,,22,RO,Rondônia,,76[89]|789
+option,BR,Brazil,,state,,,,,,,,23,RR,Roraima,,693
+option,BR,Brazil,,state,,,,,,,,24,SC,Santa Catarina,,8[89]
+option,BR,Brazil,,state,,,,,,,,25,SP,São Paulo,,[01][1-9]
+option,BR,Brazil,,state,,,,,,,,26,SE,Sergipe,,49
+option,BR,Brazil,,state,,,,,,,,27,TO,Tocantins,,77
+field,BR,Brazil,6,postal_code,Postal code,text,true,,40301-110,\d{5}-?\d{3},,,,,,
+field,BS,Bahamas,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BS,Bahamas,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BS,Bahamas,3,city,City,text,false,,,,,,,,,
+field,BS,Bahamas,4,state,Island,dropdown,false,,,,19,,,,,
+option,BS,Bahamas,,state,,,,,,,,1,Abaco,Abaco Islands,,
+option,BS,Bahamas,,state,,,,,,,,2,Acklins,Acklins,,
+option,BS,Bahamas,,state,,,,,,,,3,Andros,Andros Island,,
+option,BS,Bahamas,,state,,,,,,,,4,Berry Islands,Berry Islands,,
+option,BS,Bahamas,,state,,,,,,,,5,Bimini,Bimini,,
+option,BS,Bahamas,,state,,,,,,,,6,Cat Island,Cat Island,,
+option,BS,Bahamas,,state,,,,,,,,7,Crooked Island,Crooked Island,,
+option,BS,Bahamas,,state,,,,,,,,8,Eleuthera,Eleuthera,,
+option,BS,Bahamas,,state,,,,,,,,9,Exuma,Exuma and Cays,,
+option,BS,Bahamas,,state,,,,,,,,10,Grand Bahama,Grand Bahama,,
+option,BS,Bahamas,,state,,,,,,,,11,Harbour Island,Harbour Island,,
+option,BS,Bahamas,,state,,,,,,,,12,Inagua,Inagua,,
+option,BS,Bahamas,,state,,,,,,,,13,Long Island,Long Island,,
+option,BS,Bahamas,,state,,,,,,,,14,Mayaguana,Mayaguana,,
+option,BS,Bahamas,,state,,,,,,,,15,N.P.,New Providence,,
+option,BS,Bahamas,,state,,,,,,,,16,Ragged Island,Ragged Island,,
+option,BS,Bahamas,,state,,,,,,,,17,Rum Cay,Rum Cay,,
+option,BS,Bahamas,,state,,,,,,,,18,San Salvador,San Salvador,,
+option,BS,Bahamas,,state,,,,,,,,19,Spanish Wells,Spanish Wells,,
+field,BT,Bhutan,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BT,Bhutan,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BT,Bhutan,3,city,City,text,false,,,,,,,,,
+field,BT,Bhutan,4,postal_code,Postal code,text,false,,11001,\d{5},,,,,,
+field,BV,Bouvet Island,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BV,Bouvet Island,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BV,Bouvet Island,3,city,City,text,false,,,,,,,,,
+field,BV,Bouvet Island,4,postal_code,Postal code,text,false,,,,,,,,,
+field,BW,Botswana,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BW,Botswana,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BW,Botswana,3,city,City,text,false,,,,,,,,,
+field,BW,Botswana,4,postal_code,Postal code,text,false,,,,,,,,,
+field,BZ,Belize,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,BZ,Belize,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,BZ,Belize,3,city,City,text,false,,,,,,,,,
+field,BZ,Belize,4,postal_code,Postal code,text,false,,,,,,,,,
+field,CA,Canada,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CA,Canada,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CA,Canada,3,city,City,text,true,,,,,,,,,
+field,CA,Canada,4,state,State / Province / Region,dropdown,true,,,,13,,,,,
+option,CA,Canada,,state,,,,,,,,1,AB,Alberta,,T
+option,CA,Canada,,state,,,,,,,,2,BC,British Columbia,,V
+option,CA,Canada,,state,,,,,,,,3,MB,Manitoba,,R
+option,CA,Canada,,state,,,,,,,,4,NB,New Brunswick,,E
+option,CA,Canada,,state,,,,,,,,5,NL,Newfoundland and Labrador,,A
+option,CA,Canada,,state,,,,,,,,6,NT,Northwest Territories,,X0E|X0G|X1A
+option,CA,Canada,,state,,,,,,,,7,NS,Nova Scotia,,B
+option,CA,Canada,,state,,,,,,,,8,NU,Nunavut,,X0A|X0B|X0C
+option,CA,Canada,,state,,,,,,,,9,ON,Ontario,,K|L|M|N|P
+option,CA,Canada,,state,,,,,,,,10,PE,Prince Edward Island,,C
+option,CA,Canada,,state,,,,,,,,11,QC,Quebec,,G|H|J|K1A
+option,CA,Canada,,state,,,,,,,,12,SK,Saskatchewan,,S|R8A
+option,CA,Canada,,state,,,,,,,,13,YT,Yukon,,Y
+field,CA,Canada,5,postal_code,Postal code,text,true,,H3Z 2Y7,[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJ-NPRSTV-Z] ?\d[ABCEGHJ-NPRSTV-Z]\d,,,,,,
+field,CG,Congo - Brazzaville,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CG,Congo - Brazzaville,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CG,Congo - Brazzaville,3,city,City,text,false,,,,,,,,,
+field,CG,Congo - Brazzaville,4,postal_code,Postal code,text,false,,,,,,,,,
+field,CH,Switzerland,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CH,Switzerland,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CH,Switzerland,3,postal_code,Postal code,text,true,,2544,\d{4},,,,,,
+field,CH,Switzerland,4,city,City,text,true,,,,,,,,,
+field,CI,Côte d’Ivoire,1,sorting_code,CEDEX,text,false,,,,,,,,,
+field,CI,Côte d’Ivoire,2,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CI,Côte d’Ivoire,3,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CI,Côte d’Ivoire,4,city,City,text,false,,,,,,,,,
+field,CK,Cook Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CK,Cook Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CK,Cook Islands,3,city,City,text,false,,,,,,,,,
+field,CK,Cook Islands,4,postal_code,Postal code,text,false,,,,,,,,,
+field,CL,Chile,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CL,Chile,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CL,Chile,3,postal_code,Postal code,text,false,,8340457,\d{7},,,,,,
+field,CL,Chile,4,city,City,text,false,,,,,,,,,
+field,CL,Chile,5,state,State / Province / Region,dropdown,false,,,,16,,,,,
+option,CL,Chile,,state,,,,,,,,1,Antofagasta,Antofagasta,,
+option,CL,Chile,,state,,,,,,,,2,Araucanía,Araucanía,,
+option,CL,Chile,,state,,,,,,,,3,Arica y Parinacota,Arica y Parinacota,,
+option,CL,Chile,,state,,,,,,,,4,Atacama,Atacama,,
+option,CL,Chile,,state,,,,,,,,5,Aysén,Aysén del General Carlos Ibáñez del Campo,,
+option,CL,Chile,,state,,,,,,,,6,Biobío,Biobío,,
+option,CL,Chile,,state,,,,,,,,7,Coquimbo,Coquimbo,,
+option,CL,Chile,,state,,,,,,,,8,O'Higgins,Libertador General Bernardo O'Higgins,,
+option,CL,Chile,,state,,,,,,,,9,Los Lagos,Los Lagos,,
+option,CL,Chile,,state,,,,,,,,10,Los Ríos,Los Ríos,,
+option,CL,Chile,,state,,,,,,,,11,Magallanes,Magallanes y de la Antártica Chilena,,
+option,CL,Chile,,state,,,,,,,,12,Maule,Maule,,
+option,CL,Chile,,state,,,,,,,,13,Región Metropolitana,Metropolitana de Santiago,,
+option,CL,Chile,,state,,,,,,,,14,Ñuble,Ñuble,,
+option,CL,Chile,,state,,,,,,,,15,Tarapacá,Tarapacá,,
+option,CL,Chile,,state,,,,,,,,16,Valparaíso,Valparaíso,,
+field,CM,Cameroon,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CM,Cameroon,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CM,Cameroon,3,city,City,text,false,,,,,,,,,
+field,CM,Cameroon,4,postal_code,Postal code,text,false,,,,,,,,,
+field,CO,Colombia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CO,Colombia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CO,Colombia,3,sublocality,District,text,false,,,,,,,,,
+field,CO,Colombia,4,city,City,text,false,,,,,,,,,
+field,CO,Colombia,5,state,Department,dropdown,true,,,,33,,,,,
+option,CO,Colombia,,state,,,,,,,,1,DC,Distrito Capital de Bogotá,,
+option,CO,Colombia,,state,,,,,,,,2,AMA,Amazonas,,
+option,CO,Colombia,,state,,,,,,,,3,ANT,Antioquia,,
+option,CO,Colombia,,state,,,,,,,,4,ARA,Arauca,,
+option,CO,Colombia,,state,,,,,,,,5,ATL,Atlántico,,
+option,CO,Colombia,,state,,,,,,,,6,BOL,Bolívar,,
+option,CO,Colombia,,state,,,,,,,,7,BOY,Boyacá,,
+option,CO,Colombia,,state,,,,,,,,8,CAL,Caldas,,
+option,CO,Colombia,,state,,,,,,,,9,CAQ,Caquetá,,
+option,CO,Colombia,,state,,,,,,,,10,CAS,Casanare,,
+option,CO,Colombia,,state,,,,,,,,11,CAU,Cauca,,
+option,CO,Colombia,,state,,,,,,,,12,CES,Cesar,,
+option,CO,Colombia,,state,,,,,,,,13,COR,Córdoba,,
+option,CO,Colombia,,state,,,,,,,,14,CUN,Cundinamarca,,
+option,CO,Colombia,,state,,,,,,,,15,CHO,Chocó,,
+option,CO,Colombia,,state,,,,,,,,16,GUA,Guainía,,
+option,CO,Colombia,,state,,,,,,,,17,GUV,Guaviare,,
+option,CO,Colombia,,state,,,,,,,,18,HUI,Huila,,
+option,CO,Colombia,,state,,,,,,,,19,LAG,La Guajira,,
+option,CO,Colombia,,state,,,,,,,,20,MAG,Magdalena,,
+option,CO,Colombia,,state,,,,,,,,21,MET,Meta,,
+option,CO,Colombia,,state,,,,,,,,22,NAR,Nariño,,
+option,CO,Colombia,,state,,,,,,,,23,NSA,Norte de Santander,,
+option,CO,Colombia,,state,,,,,,,,24,PUT,Putumayo,,
+option,CO,Colombia,,state,,,,,,,,25,QUI,Quindío,,
+option,CO,Colombia,,state,,,,,,,,26,RIS,Risaralda,,
+option,CO,Colombia,,state,,,,,,,,27,SAP,"San Andrés, Providencia y Santa Catalina",,
+option,CO,Colombia,,state,,,,,,,,28,SAN,Santander,,
+option,CO,Colombia,,state,,,,,,,,29,SUC,Sucre,,
+option,CO,Colombia,,state,,,,,,,,30,TOL,Tolima,,
+option,CO,Colombia,,state,,,,,,,,31,VAC,Valle del Cauca,,
+option,CO,Colombia,,state,,,,,,,,32,VAU,Vaupés,,
+option,CO,Colombia,,state,,,,,,,,33,VID,Vichada,,
+field,CO,Colombia,6,postal_code,Postal code,text,false,,111221,\d{6},,,,,,
+field,CR,Costa Rica,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CR,Costa Rica,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CR,Costa Rica,3,state,State / Province / Region,dropdown,true,,,,7,,,,,
+option,CR,Costa Rica,,state,,,,,,,,1,Alajuela,Alajuela,,
+option,CR,Costa Rica,,state,,,,,,,,2,Cartago,Cartago,,
+option,CR,Costa Rica,,state,,,,,,,,3,Guanacaste,Guanacaste,,
+option,CR,Costa Rica,,state,,,,,,,,4,Heredia,Heredia,,
+option,CR,Costa Rica,,state,,,,,,,,5,Limón,Limón,,
+option,CR,Costa Rica,,state,,,,,,,,6,Puntarenas,Puntarenas,,
+option,CR,Costa Rica,,state,,,,,,,,7,San José,San José,,
+field,CR,Costa Rica,4,city,City,text,true,,,,,,,,,
+field,CR,Costa Rica,5,postal_code,Postal code,text,false,,1000,"\d{4,5}|\d{3}-\d{4}",,,,,,
+field,CV,Cape Verde,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CV,Cape Verde,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CV,Cape Verde,3,postal_code,Postal code,text,false,,7600,\d{4},,,,,,
+field,CV,Cape Verde,4,city,City,text,false,,,,,,,,,
+field,CV,Cape Verde,5,state,Island,dropdown,false,,,,9,,,,,
+option,CV,Cape Verde,,state,,,,,,,,1,Boa Vista,Boa Vista,,
+option,CV,Cape Verde,,state,,,,,,,,2,Brava,Brava,,
+option,CV,Cape Verde,,state,,,,,,,,3,Fogo,Fogo,,
+option,CV,Cape Verde,,state,,,,,,,,4,Maio,Maio,,
+option,CV,Cape Verde,,state,,,,,,,,5,Sal,Sal,,
+option,CV,Cape Verde,,state,,,,,,,,6,Santiago,Santiago,,
+option,CV,Cape Verde,,state,,,,,,,,7,Santo Antão,Santo Antão,,
+option,CV,Cape Verde,,state,,,,,,,,8,São Nicolau,São Nicolau,,
+option,CV,Cape Verde,,state,,,,,,,,9,São Vicente,São Vicente,,
+field,CW,Curaçao,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CW,Curaçao,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CW,Curaçao,3,city,City,text,false,,,,,,,,,
+field,CW,Curaçao,4,postal_code,Postal code,text,false,,,,,,,,,
+field,CY,Cyprus,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CY,Cyprus,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CY,Cyprus,3,postal_code,Postal code,text,false,,2008,\d{4},,,,,,
+field,CY,Cyprus,4,city,City,text,false,,,,,,,,,
+field,CZ,Czechia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,CZ,Czechia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,CZ,Czechia,3,postal_code,Postal code,text,true,,100 00,\d{3} ?\d{2},,,,,,
+field,CZ,Czechia,4,city,City,text,true,,,,,,,,,
+field,DE,Germany,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,DE,Germany,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,DE,Germany,3,postal_code,Postal code,text,true,,26133,\d{5},,,,,,
+field,DE,Germany,4,city,City,text,true,,,,,,,,,
+field,DJ,Djibouti,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,DJ,Djibouti,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,DJ,Djibouti,3,city,City,text,false,,,,,,,,,
+field,DJ,Djibouti,4,postal_code,Postal code,text,false,,,,,,,,,
+field,DK,Denmark,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,DK,Denmark,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,DK,Denmark,3,postal_code,Postal code,text,true,,8660,\d{4},,,,,,
+field,DK,Denmark,4,city,City,text,true,,,,,,,,,
+field,DM,Dominica,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,DM,Dominica,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,DM,Dominica,3,city,City,text,false,,,,,,,,,
+field,DM,Dominica,4,postal_code,Postal code,text,false,,,,,,,,,
+field,DO,Dominican Republic,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,DO,Dominican Republic,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,DO,Dominican Republic,3,postal_code,Postal code,text,false,,11903,\d{5},,,,,,
+field,DO,Dominican Republic,4,city,City,text,false,,,,,,,,,
+field,DZ,Algeria,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,DZ,Algeria,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,DZ,Algeria,3,postal_code,Postal code,text,false,,40304,\d{5},,,,,,
+field,DZ,Algeria,4,city,City,text,false,,,,,,,,,
+field,EC,Ecuador,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,EC,Ecuador,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,EC,Ecuador,3,postal_code,Postal code,text,false,,090105,\d{6},,,,,,
+field,EC,Ecuador,4,city,City,text,false,,,,,,,,,
+field,EE,Estonia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,EE,Estonia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,EE,Estonia,3,postal_code,Postal code,text,true,,69501,\d{5},,,,,,
+field,EE,Estonia,4,city,City,text,true,,,,,,,,,
+field,EE,Estonia,5,state,State / Province / Region,text,false,,,,,,,,,
+field,EG,Egypt,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,EG,Egypt,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,EG,Egypt,3,city,City,text,false,,,,,,,,,
+field,EG,Egypt,4,state,State / Province / Region,dropdown,false,,,,27,,,,,
+option,EG,Egypt,,state,,,,,,,,1,أسوان,أسوان — Aswan Governorate,Aswan Governorate,81
+option,EG,Egypt,,state,,,,,,,,2,أسيوط,أسيوط — Asyut Governorate,Asyut Governorate,71
+option,EG,Egypt,,state,,,,,,,,3,الإسكندرية,الإسكندرية — Alexandria Governorate,Alexandria Governorate,2[13]
+option,EG,Egypt,,state,,,,,,,,4,الإسماعيلية,الإسماعيلية — Ismailia Governorate,Ismailia Governorate,41
+option,EG,Egypt,,state,,,,,,,,5,الأقصر,الأقصر — Luxor Governorate,Luxor Governorate,85
+option,EG,Egypt,,state,,,,,,,,6,البحر الأحمر,البحر الأحمر — Red Sea Governorate,Red Sea Governorate,84
+option,EG,Egypt,,state,,,,,,,,7,البحيرة,البحيرة — El Beheira Governorate,El Beheira Governorate,22
+option,EG,Egypt,,state,,,,,,,,8,الجيزة,الجيزة — Giza Governorate,Giza Governorate,12
+option,EG,Egypt,,state,,,,,,,,9,الدقهلية,الدقهلية — Dakahlia Governorate,Dakahlia Governorate,35
+option,EG,Egypt,,state,,,,,,,,10,السويس,السويس — Suez Governorate,Suez Governorate,43
+option,EG,Egypt,,state,,,,,,,,11,الشرقية,الشرقية — Ash Sharqia Governorate,Ash Sharqia Governorate,44
+option,EG,Egypt,,state,,,,,,,,12,الغربية,الغربية — Gharbia Governorate,Gharbia Governorate,31
+option,EG,Egypt,,state,,,,,,,,13,الفيوم,الفيوم — Faiyum Governorate,Faiyum Governorate,63
+option,EG,Egypt,,state,,,,,,,,14,القاهرة,القاهرة — Cairo Governorate,Cairo Governorate,11
+option,EG,Egypt,,state,,,,,,,,15,القليوبية,القليوبية — Qalyubia Governorate,Qalyubia Governorate,13
+option,EG,Egypt,,state,,,,,,,,16,المنوفية,المنوفية — Menofia Governorate,Menofia Governorate,32
+option,EG,Egypt,,state,,,,,,,,17,المنيا,المنيا — Menia Governorate,Menia Governorate,61
+option,EG,Egypt,,state,,,,,,,,18,الوادي الجديد,الوادي الجديد — New Valley Governorate,New Valley Governorate,72
+option,EG,Egypt,,state,,,,,,,,19,بني سويف,بني سويف — Beni Suef Governorate,Beni Suef Governorate,62
+option,EG,Egypt,,state,,,,,,,,20,بورسعيد,بورسعيد — Port Said Governorate,Port Said Governorate,42
+option,EG,Egypt,,state,,,,,,,,21,جنوب سيناء,جنوب سيناء — South Sinai Governorate,South Sinai Governorate,46
+option,EG,Egypt,,state,,,,,,,,22,دمياط,دمياط — Damietta Governorate,Damietta Governorate,34
+option,EG,Egypt,,state,,,,,,,,23,سوهاج,سوهاج — Sohag Governorate,Sohag Governorate,82
+option,EG,Egypt,,state,,,,,,,,24,شمال سيناء,شمال سيناء — North Sinai Governorate,North Sinai Governorate,45
+option,EG,Egypt,,state,,,,,,,,25,قنا,قنا — Qena Governorate,Qena Governorate,83
+option,EG,Egypt,,state,,,,,,,,26,كفر الشيخ,كفر الشيخ — Kafr El Sheikh Governorate,Kafr El Sheikh Governorate,33
+option,EG,Egypt,,state,,,,,,,,27,مطروح,مطروح — Matrouh Governorate,Matrouh Governorate,51
+field,EG,Egypt,5,postal_code,Postal code,text,false,,12411,\d{5},,,,,,
+field,EH,Western Sahara,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,EH,Western Sahara,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,EH,Western Sahara,3,postal_code,Postal code,text,false,,70000,\d{5},,,,,,
+field,EH,Western Sahara,4,city,City,text,false,,,,,,,,,
+field,ES,Spain,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,ES,Spain,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,ES,Spain,3,postal_code,Postal code,text,true,,28039,\d{5},,,,,,
+field,ES,Spain,4,city,City,text,true,,,,,,,,,
+field,ES,Spain,5,state,State / Province / Region,dropdown,true,,,,52,,,,,
+option,ES,Spain,,state,,,,,,,,1,VI,Álava,,01
+option,ES,Spain,,state,,,,,,,,2,AB,Albacete,,02
+option,ES,Spain,,state,,,,,,,,3,A,Alicante,,03
+option,ES,Spain,,state,,,,,,,,4,AL,Almería,,04
+option,ES,Spain,,state,,,,,,,,5,O,Asturias,,33
+option,ES,Spain,,state,,,,,,,,6,AV,Ávila,,05
+option,ES,Spain,,state,,,,,,,,7,BA,Badajoz,,06
+option,ES,Spain,,state,,,,,,,,8,B,Barcelona,,08
+option,ES,Spain,,state,,,,,,,,9,BU,Burgos,,09
+option,ES,Spain,,state,,,,,,,,10,CC,Cáceres,,10
+option,ES,Spain,,state,,,,,,,,11,CA,Cádiz,,11
+option,ES,Spain,,state,,,,,,,,12,S,Cantabria,,39
+option,ES,Spain,,state,,,,,,,,13,CS,Castellón,,12
+option,ES,Spain,,state,,,,,,,,14,CE,Ceuta,,51
+option,ES,Spain,,state,,,,,,,,15,CR,Ciudad Real,,13
+option,ES,Spain,,state,,,,,,,,16,CO,Córdoba,,14
+option,ES,Spain,,state,,,,,,,,17,CU,Cuenca,,16
+option,ES,Spain,,state,,,,,,,,18,GI,Girona,,17
+option,ES,Spain,,state,,,,,,,,19,GR,Granada,,18
+option,ES,Spain,,state,,,,,,,,20,GU,Guadalajara,,19
+option,ES,Spain,,state,,,,,,,,21,SS,Guipúzcoa,,20
+option,ES,Spain,,state,,,,,,,,22,H,Huelva,,21
+option,ES,Spain,,state,,,,,,,,23,HU,Huesca,,22
+option,ES,Spain,,state,,,,,,,,24,PM,Islas Baleares,,07
+option,ES,Spain,,state,,,,,,,,25,J,Jaén,,23
+option,ES,Spain,,state,,,,,,,,26,C,La Coruña,,15
+option,ES,Spain,,state,,,,,,,,27,LO,La Rioja,,26
+option,ES,Spain,,state,,,,,,,,28,GC,Las Palmas,,35
+option,ES,Spain,,state,,,,,,,,29,LE,León,,24
+option,ES,Spain,,state,,,,,,,,30,L,Lérida,,25
+option,ES,Spain,,state,,,,,,,,31,LU,Lugo,,27
+option,ES,Spain,,state,,,,,,,,32,M,Madrid,,28
+option,ES,Spain,,state,,,,,,,,33,MA,Málaga,,29
+option,ES,Spain,,state,,,,,,,,34,ML,Melilla,,52
+option,ES,Spain,,state,,,,,,,,35,MU,Murcia,,30
+option,ES,Spain,,state,,,,,,,,36,NA,Navarra,,31
+option,ES,Spain,,state,,,,,,,,37,OR,Ourense,,32
+option,ES,Spain,,state,,,,,,,,38,P,Palencia,,34
+option,ES,Spain,,state,,,,,,,,39,PO,Pontevedra,,36
+option,ES,Spain,,state,,,,,,,,40,SA,Salamanca,,37
+option,ES,Spain,,state,,,,,,,,41,TF,Santa Cruz de Tenerife,,38
+option,ES,Spain,,state,,,,,,,,42,SG,Segovia,,40
+option,ES,Spain,,state,,,,,,,,43,SE,Sevilla,,41
+option,ES,Spain,,state,,,,,,,,44,SO,Soria,,26127|42
+option,ES,Spain,,state,,,,,,,,45,T,Tarragona,,43
+option,ES,Spain,,state,,,,,,,,46,TE,Teruel,,44
+option,ES,Spain,,state,,,,,,,,47,TO,Toledo,,45
+option,ES,Spain,,state,,,,,,,,48,V,Valencia,,46
+option,ES,Spain,,state,,,,,,,,49,VA,Valladolid,,47
+option,ES,Spain,,state,,,,,,,,50,BI,Vizcaya,,48
+option,ES,Spain,,state,,,,,,,,51,ZA,Zamora,,49
+option,ES,Spain,,state,,,,,,,,52,Z,Zaragoza,,50
+field,FI,Finland,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,FI,Finland,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,FI,Finland,3,postal_code,Postal code,text,true,,00550,\d{5},,,,,,
+field,FI,Finland,4,city,City,text,true,,,,,,,,,
+field,FJ,Fiji,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,FJ,Fiji,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,FJ,Fiji,3,city,City,text,false,,,,,,,,,
+field,FJ,Fiji,4,postal_code,Postal code,text,false,,,,,,,,,
+field,FK,Falkland Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,FK,Falkland Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,FK,Falkland Islands,3,city,City,text,true,,,,,,,,,
+field,FK,Falkland Islands,4,postal_code,Postal code,text,true,,FIQQ 1ZZ,FIQQ 1ZZ,,,,,,
+field,FO,Faroe Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,FO,Faroe Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,FO,Faroe Islands,3,postal_code,Postal code,text,false,,100,\d{3},,,,,,
+field,FO,Faroe Islands,4,city,City,text,false,,,,,,,,,
+field,FR,France,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,FR,France,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,FR,France,3,postal_code,Postal code,text,true,,33380,\d{2} ?\d{3},,,,,,
+field,FR,France,4,city,City,text,true,,,,,,,,,
+field,GA,Gabon,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GA,Gabon,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GA,Gabon,3,city,City,text,false,,,,,,,,,
+field,GA,Gabon,4,postal_code,Postal code,text,false,,,,,,,,,
+field,GB,United Kingdom,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GB,United Kingdom,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GB,United Kingdom,3,city,Town or city,text,true,,,,,,,,,
+field,GB,United Kingdom,4,postal_code,Postal code,text,true,,EC1Y 8SY,"(?:GIR ?0AA|(?:(?:AB|AL|B|BA|BB|BD|BF|BH|BL|BN|BR|BS|BT|BX|CA|CB|CF|CH|CM|CO|CR|CT|CV|CW|DA|DD|DE|DG|DH|DL|DN|DT|DY|E|EC|EH|EN|EX|FK|FY|G|GL|GY|GU|HA|HD|HG|HP|HR|HS|HU|HX|IG|IM|IP|IV|JE|KA|KT|KW|KY|L|LA|LD|LE|LL|LN|LS|LU|M|ME|MK|ML|N|NE|NG|NN|NP|NR|NW|OL|OX|PA|PE|PH|PL|PO|PR|RG|RH|RM|S|SA|SE|SG|SK|SL|SM|SN|SO|SP|SR|SS|ST|SW|SY|TA|TD|TF|TN|TQ|TR|TS|TW|UB|W|WA|WC|WD|WF|WN|WR|WS|WV|YO|ZE)(?:\d[\dA-Z]? ?\d[ABD-HJLN-UW-Z]{2}))|BFPO ?\d{1,4})",,,,,,
+field,GD,Grenada,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GD,Grenada,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GD,Grenada,3,city,City,text,false,,,,,,,,,
+field,GD,Grenada,4,postal_code,Postal code,text,false,,,,,,,,,
+field,GE,Georgia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GE,Georgia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GE,Georgia,3,postal_code,Postal code,text,false,,0101,\d{4},,,,,,
+field,GE,Georgia,4,city,City,text,false,,,,,,,,,
+field,GF,French Guiana,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GF,French Guiana,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GF,French Guiana,3,postal_code,Postal code,text,true,,97300,9[78]3\d{2},,,,,,
+field,GF,French Guiana,4,city,City,text,true,,,,,,,,,
+field,GF,French Guiana,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,GG,Guernsey,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GG,Guernsey,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GG,Guernsey,3,city,City,text,true,,,,,,,,,
+field,GG,Guernsey,4,postal_code,Postal code,text,true,,GY1 1AA,GY\d[\dA-Z]? ?\d[ABD-HJLN-UW-Z]{2},,,,,,
+field,GH,Ghana,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GH,Ghana,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GH,Ghana,3,city,City,text,false,,,,,,,,,
+field,GH,Ghana,4,postal_code,Postal code,text,false,,,,,,,,,
+field,GI,Gibraltar,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GI,Gibraltar,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GI,Gibraltar,3,postal_code,Postal code,text,false,,GX11 1AA,GX11 1AA,,,,,,
+field,GL,Greenland,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GL,Greenland,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GL,Greenland,3,postal_code,Postal code,text,true,,3900,39\d{2},,,,,,
+field,GL,Greenland,4,city,City,text,true,,,,,,,,,
+field,GM,Gambia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GM,Gambia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GM,Gambia,3,city,City,text,false,,,,,,,,,
+field,GM,Gambia,4,postal_code,Postal code,text,false,,,,,,,,,
+field,GN,Guinea,1,postal_code,Postal code,text,false,,001,\d{3},,,,,,
+field,GN,Guinea,2,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GN,Guinea,3,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GN,Guinea,4,city,City,text,false,,,,,,,,,
+field,GP,Guadeloupe,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GP,Guadeloupe,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GP,Guadeloupe,3,postal_code,Postal code,text,true,,97100,9[78][01]\d{2},,,,,,
+field,GP,Guadeloupe,4,city,City,text,true,,,,,,,,,
+field,GP,Guadeloupe,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,GQ,Equatorial Guinea,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GQ,Equatorial Guinea,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GQ,Equatorial Guinea,3,city,City,text,false,,,,,,,,,
+field,GQ,Equatorial Guinea,4,postal_code,Postal code,text,false,,,,,,,,,
+field,GR,Greece,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GR,Greece,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GR,Greece,3,postal_code,Postal code,text,true,,151 24,\d{3} ?\d{2},,,,,,
+field,GR,Greece,4,city,City,text,true,,,,,,,,,
+field,GS,South Georgia & South Sandwich Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GS,South Georgia & South Sandwich Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GS,South Georgia & South Sandwich Islands,3,city,City,text,true,,,,,,,,,
+field,GS,South Georgia & South Sandwich Islands,4,postal_code,Postal code,text,true,,SIQQ 1ZZ,SIQQ 1ZZ,,,,,,
+field,GT,Guatemala,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GT,Guatemala,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GT,Guatemala,3,postal_code,Postal code,text,false,,09001,\d{5},,,,,,
+field,GT,Guatemala,4,city,City,text,false,,,,,,,,,
+field,GU,Guam,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GU,Guam,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GU,Guam,3,city,City,text,true,,,,,,,,,
+field,GU,Guam,4,postal_code,ZIP,text,true,,96910,(969(?:[12]\d|3[12]))(?:[ \-](\d{4}))?,,,,,,
+field,GW,Guinea-Bissau,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GW,Guinea-Bissau,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GW,Guinea-Bissau,3,postal_code,Postal code,text,false,,1000,\d{4},,,,,,
+field,GW,Guinea-Bissau,4,city,City,text,false,,,,,,,,,
+field,GY,Guyana,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,GY,Guyana,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,GY,Guyana,3,city,City,text,false,,,,,,,,,
+field,GY,Guyana,4,postal_code,Postal code,text,false,,,,,,,,,
+field,HN,Honduras,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,HN,Honduras,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,HN,Honduras,3,city,City,text,true,,,,,,,,,
+field,HN,Honduras,4,state,Department,dropdown,true,,,,18,,,,,
+option,HN,Honduras,,state,,,,,,,,1,Atlántida,Atlántida,,
+option,HN,Honduras,,state,,,,,,,,2,Choluteca,Choluteca,,
+option,HN,Honduras,,state,,,,,,,,3,Colón,Colón,,
+option,HN,Honduras,,state,,,,,,,,4,Comayagua,Comayagua,,
+option,HN,Honduras,,state,,,,,,,,5,Copán,Copán,,
+option,HN,Honduras,,state,,,,,,,,6,Cortés,Cortés,,
+option,HN,Honduras,,state,,,,,,,,7,El Paraíso,El Paraíso,,
+option,HN,Honduras,,state,,,,,,,,8,Francisco Morazán,Francisco Morazán,,
+option,HN,Honduras,,state,,,,,,,,9,Gracias a Dios,Gracias a Dios,,
+option,HN,Honduras,,state,,,,,,,,10,Intibucá,Intibucá,,
+option,HN,Honduras,,state,,,,,,,,11,Islas de la Bahía,Islas de la Bahía,,
+option,HN,Honduras,,state,,,,,,,,12,La Paz,La Paz,,
+option,HN,Honduras,,state,,,,,,,,13,Lempira,Lempira,,
+option,HN,Honduras,,state,,,,,,,,14,Ocotepeque,Ocotepeque,,
+option,HN,Honduras,,state,,,,,,,,15,Olancho,Olancho,,
+option,HN,Honduras,,state,,,,,,,,16,Santa Bárbara,Santa Bárbara,,
+option,HN,Honduras,,state,,,,,,,,17,Valle,Valle,,
+option,HN,Honduras,,state,,,,,,,,18,Yoro,Yoro,,
+field,HN,Honduras,5,postal_code,Postal code,text,false,,31301,\d{5},,,,,,
+field,HR,Croatia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,HR,Croatia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,HR,Croatia,3,postal_code,Postal code,text,false,,10000,\d{5},,,,,,
+field,HR,Croatia,4,city,City,text,false,,,,,,,,,
+field,HT,Haiti,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,HT,Haiti,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,HT,Haiti,3,postal_code,Postal code,text,false,,6120,\d{4},,,,,,
+field,HT,Haiti,4,city,City,text,false,,,,,,,,,
+field,HU,Hungary,1,city,City,text,true,,,,,,,,,
+field,HU,Hungary,2,line1,Address line 1,text,true,Street address,,,,,,,,
+field,HU,Hungary,3,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,HU,Hungary,4,postal_code,Postal code,text,true,,1037,\d{4},,,,,,
+field,ID,Indonesia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,ID,Indonesia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,ID,Indonesia,3,city,City,text,false,,,,,,,,,
+field,ID,Indonesia,4,state,State / Province / Region,dropdown,true,,,,34,,,,,
+option,ID,Indonesia,,state,,,,,,,,1,Aceh,Aceh — Aceh,Aceh,
+option,ID,Indonesia,,state,,,,,,,,2,Bali,Bali — Bali,Bali,
+option,ID,Indonesia,,state,,,,,,,,3,Banten,Banten — Banten,Banten,
+option,ID,Indonesia,,state,,,,,,,,4,Bengkulu,Bengkulu — Bengkulu,Bengkulu,
+option,ID,Indonesia,,state,,,,,,,,5,Daerah Istimewa Yogyakarta,Daerah Istimewa Yogyakarta — Special Region of Yogyakarta,Special Region of Yogyakarta,
+option,ID,Indonesia,,state,,,,,,,,6,DKI Jakarta,DKI Jakarta — Jakarta,Jakarta,
+option,ID,Indonesia,,state,,,,,,,,7,Gorontalo,Gorontalo — Gorontalo,Gorontalo,
+option,ID,Indonesia,,state,,,,,,,,8,Jambi,Jambi — Jambi,Jambi,
+option,ID,Indonesia,,state,,,,,,,,9,Jawa Barat,Jawa Barat — West Java,West Java,
+option,ID,Indonesia,,state,,,,,,,,10,Jawa Tengah,Jawa Tengah — Central Java,Central Java,
+option,ID,Indonesia,,state,,,,,,,,11,Jawa Timur,Jawa Timur — East Java,East Java,
+option,ID,Indonesia,,state,,,,,,,,12,Kalimantan Barat,Kalimantan Barat — West Kalimantan,West Kalimantan,
+option,ID,Indonesia,,state,,,,,,,,13,Kalimantan Selatan,Kalimantan Selatan — South Kalimantan,South Kalimantan,
+option,ID,Indonesia,,state,,,,,,,,14,Kalimantan Tengah,Kalimantan Tengah — Central Kalimantan,Central Kalimantan,
+option,ID,Indonesia,,state,,,,,,,,15,Kalimantan Timur,Kalimantan Timur — East Kalimantan,East Kalimantan,
+option,ID,Indonesia,,state,,,,,,,,16,Kalimantan Utara,Kalimantan Utara — North Kalimantan,North Kalimantan,
+option,ID,Indonesia,,state,,,,,,,,17,Kepulauan Bangka Belitung,Kepulauan Bangka Belitung — Bangka Belitung Islands,Bangka Belitung Islands,
+option,ID,Indonesia,,state,,,,,,,,18,Kepulauan Riau,Kepulauan Riau — Riau Islands,Riau Islands,
+option,ID,Indonesia,,state,,,,,,,,19,Lampung,Lampung — Lampung,Lampung,
+option,ID,Indonesia,,state,,,,,,,,20,Maluku,Maluku — Maluku,Maluku,
+option,ID,Indonesia,,state,,,,,,,,21,Maluku Utara,Maluku Utara — North Maluku,North Maluku,
+option,ID,Indonesia,,state,,,,,,,,22,Nusa Tenggara Barat,Nusa Tenggara Barat — West Nusa Tenggara,West Nusa Tenggara,
+option,ID,Indonesia,,state,,,,,,,,23,Nusa Tenggara Timur,Nusa Tenggara Timur — East Nusa Tenggara,East Nusa Tenggara,
+option,ID,Indonesia,,state,,,,,,,,24,Papua,Papua — Papua,Papua,
+option,ID,Indonesia,,state,,,,,,,,25,Papua Barat,Papua Barat — West Papua,West Papua,
+option,ID,Indonesia,,state,,,,,,,,26,Riau,Riau — Riau,Riau,
+option,ID,Indonesia,,state,,,,,,,,27,Sulawesi Barat,Sulawesi Barat — West Sulawesi,West Sulawesi,
+option,ID,Indonesia,,state,,,,,,,,28,Sulawesi Selatan,Sulawesi Selatan — South Sulawesi,South Sulawesi,
+option,ID,Indonesia,,state,,,,,,,,29,Sulawesi Tengah,Sulawesi Tengah — Central Sulawesi,Central Sulawesi,
+option,ID,Indonesia,,state,,,,,,,,30,Sulawesi Tenggara,Sulawesi Tenggara — South East Sulawesi,South East Sulawesi,
+option,ID,Indonesia,,state,,,,,,,,31,Sulawesi Utara,Sulawesi Utara — North Sulawesi,North Sulawesi,
+option,ID,Indonesia,,state,,,,,,,,32,Sumatera Barat,Sumatera Barat — West Sumatra,West Sumatra,
+option,ID,Indonesia,,state,,,,,,,,33,Sumatera Selatan,Sumatera Selatan — South Sumatra,South Sumatra,
+option,ID,Indonesia,,state,,,,,,,,34,Sumatera Utara,Sumatera Utara — North Sumatra,North Sumatra,
+field,ID,Indonesia,5,postal_code,Postal code,text,false,,40115,\d{5},,,,,,
+field,IE,Ireland,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,IE,Ireland,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,IE,Ireland,3,sublocality,District,text,false,,,,,,,,,
+field,IE,Ireland,4,city,City,text,true,,,,,,,,,
+field,IE,Ireland,5,state,County,dropdown,true,,,,26,,,,,
+option,IE,Ireland,,state,,,,,,,,1,Carlow,Carlow,,
+option,IE,Ireland,,state,,,,,,,,2,Cavan,Cavan,,
+option,IE,Ireland,,state,,,,,,,,3,Clare,Clare,,
+option,IE,Ireland,,state,,,,,,,,4,Cork,Cork,,
+option,IE,Ireland,,state,,,,,,,,5,Donegal,Donegal,,
+option,IE,Ireland,,state,,,,,,,,6,Dublin,Dublin,,
+option,IE,Ireland,,state,,,,,,,,7,Galway,Galway,,
+option,IE,Ireland,,state,,,,,,,,8,Kerry,Kerry,,
+option,IE,Ireland,,state,,,,,,,,9,Kildare,Kildare,,
+option,IE,Ireland,,state,,,,,,,,10,Kilkenny,Kilkenny,,
+option,IE,Ireland,,state,,,,,,,,11,Laois,Laois,,
+option,IE,Ireland,,state,,,,,,,,12,Leitrim,Leitrim,,
+option,IE,Ireland,,state,,,,,,,,13,Limerick,Limerick,,
+option,IE,Ireland,,state,,,,,,,,14,Longford,Longford,,
+option,IE,Ireland,,state,,,,,,,,15,Louth,Louth,,
+option,IE,Ireland,,state,,,,,,,,16,Mayo,Mayo,,
+option,IE,Ireland,,state,,,,,,,,17,Meath,Meath,,
+option,IE,Ireland,,state,,,,,,,,18,Monaghan,Monaghan,,
+option,IE,Ireland,,state,,,,,,,,19,Offaly,Offaly,,
+option,IE,Ireland,,state,,,,,,,,20,Roscommon,Roscommon,,
+option,IE,Ireland,,state,,,,,,,,21,Sligo,Sligo,,
+option,IE,Ireland,,state,,,,,,,,22,Tipperary,Tipperary,,
+option,IE,Ireland,,state,,,,,,,,23,Waterford,Waterford,,
+option,IE,Ireland,,state,,,,,,,,24,Westmeath,Westmeath,,
+option,IE,Ireland,,state,,,,,,,,25,Wexford,Wexford,,
+option,IE,Ireland,,state,,,,,,,,26,Wicklow,Wicklow,,
+field,IE,Ireland,6,postal_code,Eircode,text,false,,A65 F4E2,[\dA-Z]{3} ?[\dA-Z]{4},,,,,,
+field,IL,Israel,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,IL,Israel,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,IL,Israel,3,city,City,text,false,,,,,,,,,
+field,IL,Israel,4,postal_code,Postal code,text,false,,9614303,\d{5}(?:\d{2})?,,,,,,
+field,IM,Isle of Man,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,IM,Isle of Man,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,IM,Isle of Man,3,city,City,text,true,,,,,,,,,
+field,IM,Isle of Man,4,postal_code,Postal code,text,true,,IM2 1AA,IM\d[\dA-Z]? ?\d[ABD-HJLN-UW-Z]{2},,,,,,
+field,IN,India,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,IN,India,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,IN,India,3,city,City,text,true,,,,,,,,,
+field,IN,India,4,postal_code,PIN,text,true,,110034,\d{6},,,,,,
+field,IN,India,5,state,State,dropdown,true,,,,36,,,,,
+option,IN,India,,state,,,,,,,,1,Andaman and Nicobar Islands,Andaman & Nicobar,,744
+option,IN,India,,state,,,,,,,,2,Andhra Pradesh,Andhra Pradesh,,5[0-3]
+option,IN,India,,state,,,,,,,,3,Arunachal Pradesh,Arunachal Pradesh,,79[0-2]
+option,IN,India,,state,,,,,,,,4,Assam,Assam,,78
+option,IN,India,,state,,,,,,,,5,Bihar,Bihar,,8[0-5]
+option,IN,India,,state,,,,,,,,6,Chandigarh,Chandigarh,,16|1440[3-9]
+option,IN,India,,state,,,,,,,,7,Chhattisgarh,Chhattisgarh,,49
+option,IN,India,,state,,,,,,,,8,Dadra and Nagar Haveli and Daman and Diu,Dadra & Nagar Haveli & Daman & Diu,,396|362
+option,IN,India,,state,,,,,,,,9,Delhi,Delhi,,11
+option,IN,India,,state,,,,,,,,10,Goa,Goa,,403
+option,IN,India,,state,,,,,,,,11,Gujarat,Gujarat,,3[6-9]
+option,IN,India,,state,,,,,,,,12,Haryana,Haryana,,1[23]
+option,IN,India,,state,,,,,,,,13,Himachal Pradesh,Himachal Pradesh,,17
+option,IN,India,,state,,,,,,,,14,Jammu and Kashmir,Jammu & Kashmir,,1[89]
+option,IN,India,,state,,,,,,,,15,Jharkhand,Jharkhand,,81[4-9]|82|83[0-5]
+option,IN,India,,state,,,,,,,,16,Karnataka,Karnataka,,5[4-9]|53[7-9]
+option,IN,India,,state,,,,,,,,17,Kerala,Kerala,,6[7-9]|6010|607008|777
+option,IN,India,,state,,,,,,,,18,Ladakh,Ladakh,,194
+option,IN,India,,state,,,,,,,,19,Lakshadweep,Lakshadweep,,682
+option,IN,India,,state,,,,,,,,20,Madhya Pradesh,Madhya Pradesh,,4[5-8]|490
+option,IN,India,,state,,,,,,,,21,Maharashtra,Maharashtra,,4[0-4]
+option,IN,India,,state,,,,,,,,22,Manipur,Manipur,,79[56]
+option,IN,India,,state,,,,,,,,23,Meghalaya,Meghalaya,,79[34]
+option,IN,India,,state,,,,,,,,24,Mizoram,Mizoram,,796
+option,IN,India,,state,,,,,,,,25,Nagaland,Nagaland,,79[78]
+option,IN,India,,state,,,,,,,,26,Odisha,Odisha,,7[5-7]
+option,IN,India,,state,,,,,,,,27,Puducherry,Puducherry,,60[579]
+option,IN,India,,state,,,,,,,,28,Punjab,Punjab,,1[456]
+option,IN,India,,state,,,,,,,,29,Rajasthan,Rajasthan,,3[0-4]
+option,IN,India,,state,,,,,,,,30,Sikkim,Sikkim,,737|750
+option,IN,India,,state,,,,,,,,31,Tamil Nadu,Tamil Nadu,,6[0-6]|536
+option,IN,India,,state,,,,,,,,32,Telangana,Telangana,,5[0-3]
+option,IN,India,,state,,,,,,,,33,Tripura,Tripura,,799
+option,IN,India,,state,,,,,,,,34,Uttar Pradesh,Uttar Pradesh,,2[0-35-8]|24[0-7]|26[12]
+option,IN,India,,state,,,,,,,,35,Uttarakhand,Uttarakhand,,24[46-9]|254|26[23]
+option,IN,India,,state,,,,,,,,36,West Bengal,West Bengal,,7[0-4]
+field,IO,British Indian Ocean Territory,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,IO,British Indian Ocean Territory,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,IO,British Indian Ocean Territory,3,city,City,text,true,,,,,,,,,
+field,IO,British Indian Ocean Territory,4,postal_code,Postal code,text,true,,BBND 1ZZ,BBND 1ZZ,,,,,,
+field,IQ,Iraq,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,IQ,Iraq,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,IQ,Iraq,3,city,City,text,true,,,,,,,,,
+field,IQ,Iraq,4,state,State / Province / Region,dropdown,true,,,,18,,,,,
+option,IQ,Iraq,,state,,,,,,,,1,Al Anbar Governorate,Al Anbar Governorate,,
+option,IQ,Iraq,,state,,,,,,,,2,Basra Governorate,Basra Governorate,,
+option,IQ,Iraq,,state,,,,,,,,3,Muthanna Governorate,Muthanna Governorate,,
+option,IQ,Iraq,,state,,,,,,,,4,Al-Qadisiyah Governorate,Al-Qadisiyah Governorate,,
+option,IQ,Iraq,,state,,,,,,,,5,Najaf Governorate,Najaf Governorate,,
+option,IQ,Iraq,,state,,,,,,,,6,Erbil Governorate,Erbil Governorate,,
+option,IQ,Iraq,,state,,,,,,,,7,Sulaymaniyah Governorate,Sulaymaniyah Governorate,,
+option,IQ,Iraq,,state,,,,,,,,8,Babil Governorate,Babil Governorate,,
+option,IQ,Iraq,,state,,,,,,,,9,Baghdad Governorate,Baghdad Governorate,,
+option,IQ,Iraq,,state,,,,,,,,10,Dohuk Governorate,Dohuk Governorate,,
+option,IQ,Iraq,,state,,,,,,,,11,Dhi Qar Governorate,Dhi Qar Governorate,,
+option,IQ,Iraq,,state,,,,,,,,12,Diyala Governorate,Diyala Governorate,,
+option,IQ,Iraq,,state,,,,,,,,13,Karbala Governorate,Karbala Governorate,,
+option,IQ,Iraq,,state,,,,,,,,14,Kirkuk Governorate,Kirkuk Governorate,,
+option,IQ,Iraq,,state,,,,,,,,15,Maysan Governorate,Maysan Governorate,,
+option,IQ,Iraq,,state,,,,,,,,16,Nineveh Governorate,Nineveh Governorate,,
+option,IQ,Iraq,,state,,,,,,,,17,Saladin Governorate,Saladin Governorate,,
+option,IQ,Iraq,,state,,,,,,,,18,Wasit Governorate,Wasit Governorate,,
+field,IQ,Iraq,5,postal_code,Postal code,text,false,,31001,\d{5},,,,,,
+field,IS,Iceland,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,IS,Iceland,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,IS,Iceland,3,postal_code,Postal code,text,false,,320,\d{3},,,,,,
+field,IS,Iceland,4,city,City,text,false,,,,,,,,,
+field,IT,Italy,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,IT,Italy,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,IT,Italy,3,postal_code,Postal code,text,true,,00144,\d{5},,,,,,
+field,IT,Italy,4,city,City,text,true,,,,,,,,,
+field,IT,Italy,5,state,State / Province / Region,dropdown,true,,,,107,,,,,
+option,IT,Italy,,state,,,,,,,,1,AG,Agrigento,,92
+option,IT,Italy,,state,,,,,,,,2,AL,Alessandria,,15
+option,IT,Italy,,state,,,,,,,,3,AN,Ancona,,60
+option,IT,Italy,,state,,,,,,,,4,AO,Aosta,,11
+option,IT,Italy,,state,,,,,,,,5,AR,Arezzo,,52
+option,IT,Italy,,state,,,,,,,,6,AP,Ascoli Piceno,,63
+option,IT,Italy,,state,,,,,,,,7,AT,Asti,,14
+option,IT,Italy,,state,,,,,,,,8,AV,Avellino,,83
+option,IT,Italy,,state,,,,,,,,9,BA,Bari,,70
+option,IT,Italy,,state,,,,,,,,10,BT,Barletta-Andria-Trani,,76[01]
+option,IT,Italy,,state,,,,,,,,11,BL,Belluno,,32
+option,IT,Italy,,state,,,,,,,,12,BN,Benevento,,82
+option,IT,Italy,,state,,,,,,,,13,BG,Bergamo,,24
+option,IT,Italy,,state,,,,,,,,14,BI,Biella,,13[89]
+option,IT,Italy,,state,,,,,,,,15,BO,Bologna,,40
+option,IT,Italy,,state,,,,,,,,16,BZ,Bolzano,,39
+option,IT,Italy,,state,,,,,,,,17,BS,Brescia,,25
+option,IT,Italy,,state,,,,,,,,18,BR,Brindisi,,72
+option,IT,Italy,,state,,,,,,,,19,CA,Cagliari,,0912[1-9]|0913[0-4]|0901[0289]|0902[03468]|0903[0234]|0904|0803[035]|08043
+option,IT,Italy,,state,,,,,,,,20,CL,Caltanissetta,,93
+option,IT,Italy,,state,,,,,,,,21,CB,Campobasso,,860[1-4]|86100
+option,IT,Italy,,state,,,,,,,,22,CE,Caserta,,81
+option,IT,Italy,,state,,,,,,,,23,CT,Catania,,95
+option,IT,Italy,,state,,,,,,,,24,CZ,Catanzaro,,88[01]
+option,IT,Italy,,state,,,,,,,,25,CH,Chieti,,66
+option,IT,Italy,,state,,,,,,,,26,CO,Como,,22
+option,IT,Italy,,state,,,,,,,,27,CS,Cosenza,,87
+option,IT,Italy,,state,,,,,,,,28,CR,Cremona,,26[01]
+option,IT,Italy,,state,,,,,,,,29,KR,Crotone,,88[89]
+option,IT,Italy,,state,,,,,,,,30,CN,Cuneo,,12|18025
+option,IT,Italy,,state,,,,,,,,31,EN,Enna,,94
+option,IT,Italy,,state,,,,,,,,32,FM,Fermo,,638|63900
+option,IT,Italy,,state,,,,,,,,33,FE,Ferrara,,44
+option,IT,Italy,,state,,,,,,,,34,FI,Firenze,,50
+option,IT,Italy,,state,,,,,,,,35,FG,Foggia,,71
+option,IT,Italy,,state,,,,,,,,36,FC,Forlì-Cesena,,47[015]
+option,IT,Italy,,state,,,,,,,,37,FR,Frosinone,,03
+option,IT,Italy,,state,,,,,,,,38,GE,Genova,,16
+option,IT,Italy,,state,,,,,,,,39,GO,Gorizia,,34[01]7
+option,IT,Italy,,state,,,,,,,,40,GR,Grosseto,,58
+option,IT,Italy,,state,,,,,,,,41,IM,Imperia,,18
+option,IT,Italy,,state,,,,,,,,42,IS,Isernia,,860[7-9]|86170
+option,IT,Italy,,state,,,,,,,,43,AQ,L'Aquila,,67
+option,IT,Italy,,state,,,,,,,,44,SP,La Spezia,,19
+option,IT,Italy,,state,,,,,,,,45,LT,Latina,,04
+option,IT,Italy,,state,,,,,,,,46,LE,Lecce,,73
+option,IT,Italy,,state,,,,,,,,47,LC,Lecco,,23[89]
+option,IT,Italy,,state,,,,,,,,48,LI,Livorno,,57
+option,IT,Italy,,state,,,,,,,,49,LO,Lodi,,26[89]
+option,IT,Italy,,state,,,,,,,,50,LU,Lucca,,55
+option,IT,Italy,,state,,,,,,,,51,MC,Macerata,,62
+option,IT,Italy,,state,,,,,,,,52,MN,Mantova,,46
+option,IT,Italy,,state,,,,,,,,53,MS,Massa-Carrara,,54
+option,IT,Italy,,state,,,,,,,,54,MT,Matera,,75
+option,IT,Italy,,state,,,,,,,,55,ME,Messina,,98
+option,IT,Italy,,state,,,,,,,,56,MI,Milano,,20
+option,IT,Italy,,state,,,,,,,,57,MO,Modena,,41
+option,IT,Italy,,state,,,,,,,,58,MB,Monza e Brianza,,208|20900
+option,IT,Italy,,state,,,,,,,,59,NA,Napoli,,80
+option,IT,Italy,,state,,,,,,,,60,NO,Novara,,28[01]
+option,IT,Italy,,state,,,,,,,,61,NU,Nuoro,,080[1-4]|08100
+option,IT,Italy,,state,,,,,,,,62,OR,Oristano,,090[7-9]|09170|0801[039]|0803[04]
+option,IT,Italy,,state,,,,,,,,63,PD,Padova,,35
+option,IT,Italy,,state,,,,,,,,64,PA,Palermo,,90
+option,IT,Italy,,state,,,,,,,,65,PR,Parma,,43
+option,IT,Italy,,state,,,,,,,,66,PV,Pavia,,27
+option,IT,Italy,,state,,,,,,,,67,PG,Perugia,,06
+option,IT,Italy,,state,,,,,,,,68,PU,Pesaro e Urbino,,61
+option,IT,Italy,,state,,,,,,,,69,PE,Pescara,,65
+option,IT,Italy,,state,,,,,,,,70,PC,Piacenza,,29
+option,IT,Italy,,state,,,,,,,,71,PI,Pisa,,56
+option,IT,Italy,,state,,,,,,,,72,PT,Pistoia,,51
+option,IT,Italy,,state,,,,,,,,73,PN,Pordenone,,330[7-9]|33170
+option,IT,Italy,,state,,,,,,,,74,PZ,Potenza,,85
+option,IT,Italy,,state,,,,,,,,75,PO,Prato,,59
+option,IT,Italy,,state,,,,,,,,76,RG,Ragusa,,97
+option,IT,Italy,,state,,,,,,,,77,RA,Ravenna,,48
+option,IT,Italy,,state,,,,,,,,78,RC,Reggio Calabria,,89[01]
+option,IT,Italy,,state,,,,,,,,79,RE,Reggio Emilia,,42
+option,IT,Italy,,state,,,,,,,,80,RI,Rieti,,02
+option,IT,Italy,,state,,,,,,,,81,RN,Rimini,,47[89]
+option,IT,Italy,,state,,,,,,,,82,RM,Roma,,00
+option,IT,Italy,,state,,,,,,,,83,RO,Rovigo,,45
+option,IT,Italy,,state,,,,,,,,84,SA,Salerno,,84
+option,IT,Italy,,state,,,,,,,,85,SS,Sassari,,07[01]|08020
+option,IT,Italy,,state,,,,,,,,86,SV,Savona,,17|12071
+option,IT,Italy,,state,,,,,,,,87,SI,Siena,,53
+option,IT,Italy,,state,,,,,,,,88,SR,Siracusa,,96
+option,IT,Italy,,state,,,,,,,,89,SO,Sondrio,,23[01]
+option,IT,Italy,,state,,,,,,,,90,SU,Sud Sardegna,,090[1-5][0-9]|0906[0-6]|080[1-4]
+option,IT,Italy,,state,,,,,,,,91,TA,Taranto,,74
+option,IT,Italy,,state,,,,,,,,92,TE,Teramo,,64
+option,IT,Italy,,state,,,,,,,,93,TR,Terni,,05
+option,IT,Italy,,state,,,,,,,,94,TO,Torino,,10
+option,IT,Italy,,state,,,,,,,,95,TP,Trapani,,91
+option,IT,Italy,,state,,,,,,,,96,TN,Trento,,38
+option,IT,Italy,,state,,,,,,,,97,TV,Treviso,,31
+option,IT,Italy,,state,,,,,,,,98,TS,Trieste,,3401|341[0-689]|34062
+option,IT,Italy,,state,,,,,,,,99,UD,Udine,,330[1-5]|33100
+option,IT,Italy,,state,,,,,,,,100,VA,Varese,,21
+option,IT,Italy,,state,,,,,,,,101,VE,Venezia,,30
+option,IT,Italy,,state,,,,,,,,102,VB,Verbano-Cusio-Ossola,,28[89]
+option,IT,Italy,,state,,,,,,,,103,VC,Vercelli,,13[01]
+option,IT,Italy,,state,,,,,,,,104,VR,Verona,,37
+option,IT,Italy,,state,,,,,,,,105,VV,Vibo Valentia,,89[89]
+option,IT,Italy,,state,,,,,,,,106,VI,Vicenza,,36
+option,IT,Italy,,state,,,,,,,,107,VT,Viterbo,,01
+field,JE,Jersey,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,JE,Jersey,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,JE,Jersey,3,city,City,text,true,,,,,,,,,
+field,JE,Jersey,4,postal_code,Postal code,text,true,,JE1 1AA,JE\d[\dA-Z]? ?\d[ABD-HJLN-UW-Z]{2},,,,,,
+field,JM,Jamaica,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,JM,Jamaica,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,JM,Jamaica,3,city,City,text,true,,,,,,,,,
+field,JM,Jamaica,4,state,Parish,dropdown,true,,,,14,,,,,
+option,JM,Jamaica,,state,,,,,,,,1,Clarendon,Clarendon,,
+option,JM,Jamaica,,state,,,,,,,,2,Hanover,Hanover,,
+option,JM,Jamaica,,state,,,,,,,,3,Kingston,Kingston,,
+option,JM,Jamaica,,state,,,,,,,,4,Manchester,Manchester,,
+option,JM,Jamaica,,state,,,,,,,,5,Portland,Portland,,
+option,JM,Jamaica,,state,,,,,,,,6,St. Andrew,St. Andrew,,
+option,JM,Jamaica,,state,,,,,,,,7,St. Ann,St. Ann,,
+option,JM,Jamaica,,state,,,,,,,,8,St. Catherine,St. Catherine,,
+option,JM,Jamaica,,state,,,,,,,,9,St. Elizabeth,St. Elizabeth,,
+option,JM,Jamaica,,state,,,,,,,,10,St. James,St. James,,
+option,JM,Jamaica,,state,,,,,,,,11,St. Mary,St. Mary,,
+option,JM,Jamaica,,state,,,,,,,,12,St. Thomas,St. Thomas,,
+option,JM,Jamaica,,state,,,,,,,,13,Trelawny,Trelawny,,
+option,JM,Jamaica,,state,,,,,,,,14,Westmoreland,Westmoreland,,
+field,JM,Jamaica,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,JO,Jordan,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,JO,Jordan,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,JO,Jordan,3,city,City,text,false,,,,,,,,,
+field,JO,Jordan,4,postal_code,Postal code,text,false,,11937,\d{5},,,,,,
+field,JP,Japan,1,postal_code,Postal code,text,true,,154-0023,\d{3}-?\d{4},,,,,,
+field,JP,Japan,2,state,Prefecture,dropdown,true,,,,47,,,,,
+option,JP,Japan,,state,,,,,,,,1,北海道,北海道 — Hokkaido,Hokkaido,0[4-9]|00[1-7]
+option,JP,Japan,,state,,,,,,,,2,青森県,青森県 — Aomori,Aomori,03|018
+option,JP,Japan,,state,,,,,,,,3,岩手県,岩手県 — Iwate,Iwate,02
+option,JP,Japan,,state,,,,,,,,4,宮城県,宮城県 — Miyagi,Miyagi,98
+option,JP,Japan,,state,,,,,,,,5,秋田県,秋田県 — Akita,Akita,01
+option,JP,Japan,,state,,,,,,,,6,山形県,山形県 — Yamagata,Yamagata,99
+option,JP,Japan,,state,,,,,,,,7,福島県,福島県 — Fukushima,Fukushima,9[67]
+option,JP,Japan,,state,,,,,,,,8,茨城県,茨城県 — Ibaraki,Ibaraki,3[01]
+option,JP,Japan,,state,,,,,,,,9,栃木県,栃木県 — Tochigi,Tochigi,32|311|349
+option,JP,Japan,,state,,,,,,,,10,群馬県,群馬県 — Gunma,Gunma,37|38[49]
+option,JP,Japan,,state,,,,,,,,11,埼玉県,埼玉県 — Saitama,Saitama,3[3-6]
+option,JP,Japan,,state,,,,,,,,12,千葉県,千葉県 — Chiba,Chiba,2[6-9]
+option,JP,Japan,,state,,,,,,,,13,東京都,東京都 — Tokyo,Tokyo,1[0-8]|19[0-8]|20
+option,JP,Japan,,state,,,,,,,,14,神奈川県,神奈川県 — Kanagawa,Kanagawa,2[1-5]|199
+option,JP,Japan,,state,,,,,,,,15,新潟県,新潟県 — Niigata,Niigata,9[45]|389
+option,JP,Japan,,state,,,,,,,,16,富山県,富山県 — Toyama,Toyama,93
+option,JP,Japan,,state,,,,,,,,17,石川県,石川県 — Ishikawa,Ishikawa,92|939
+option,JP,Japan,,state,,,,,,,,18,福井県,福井県 — Fukui,Fukui,91|922
+option,JP,Japan,,state,,,,,,,,19,山梨県,山梨県 — Yamanashi,Yamanashi,40
+option,JP,Japan,,state,,,,,,,,20,長野県,長野県 — Nagano,Nagano,3[89]|949
+option,JP,Japan,,state,,,,,,,,21,岐阜県,岐阜県 — Gifu,Gifu,50
+option,JP,Japan,,state,,,,,,,,22,静岡県,静岡県 — Shizuoka,Shizuoka,4[1-9]
+option,JP,Japan,,state,,,,,,,,23,愛知県,愛知県 — Aichi,Aichi,4[4-9]|431
+option,JP,Japan,,state,,,,,,,,24,三重県,三重県 — Mie,Mie,51|498|647
+option,JP,Japan,,state,,,,,,,,25,滋賀県,滋賀県 — Shiga,Shiga,52
+option,JP,Japan,,state,,,,,,,,26,京都府,京都府 — Kyoto,Kyoto,6[0-2]|520
+option,JP,Japan,,state,,,,,,,,27,大阪府,大阪府 — Osaka,Osaka,5[3-9]|618|630
+option,JP,Japan,,state,,,,,,,,28,兵庫県,兵庫県 — Hyogo,Hyogo,6[5-7]|563
+option,JP,Japan,,state,,,,,,,,29,奈良県,奈良県 — Nara,Nara,63|64[78]
+option,JP,Japan,,state,,,,,,,,30,和歌山県,和歌山県 — Wakayama,Wakayama,64|519
+option,JP,Japan,,state,,,,,,,,31,鳥取県,鳥取県 — Tottori,Tottori,68
+option,JP,Japan,,state,,,,,,,,32,島根県,島根県 — Shimane,Shimane,69|68[45]
+option,JP,Japan,,state,,,,,,,,33,岡山県,岡山県 — Okayama,Okayama,7[01]
+option,JP,Japan,,state,,,,,,,,34,広島県,広島県 — Hiroshima,Hiroshima,7[23]
+option,JP,Japan,,state,,,,,,,,35,山口県,山口県 — Yamaguchi,Yamaguchi,7[45]
+option,JP,Japan,,state,,,,,,,,36,徳島県,徳島県 — Tokushima,Tokushima,77
+option,JP,Japan,,state,,,,,,,,37,香川県,香川県 — Kagawa,Kagawa,76
+option,JP,Japan,,state,,,,,,,,38,愛媛県,愛媛県 — Ehime,Ehime,79
+option,JP,Japan,,state,,,,,,,,39,高知県,高知県 — Kochi,Kochi,78
+option,JP,Japan,,state,,,,,,,,40,福岡県,福岡県 — Fukuoka,Fukuoka,8[0-3]|871
+option,JP,Japan,,state,,,,,,,,41,佐賀県,佐賀県 — Saga,Saga,84
+option,JP,Japan,,state,,,,,,,,42,長崎県,長崎県 — Nagasaki,Nagasaki,85|81[17]|848
+option,JP,Japan,,state,,,,,,,,43,熊本県,熊本県 — Kumamoto,Kumamoto,86
+option,JP,Japan,,state,,,,,,,,44,大分県,大分県 — Oita,Oita,87|839
+option,JP,Japan,,state,,,,,,,,45,宮崎県,宮崎県 — Miyazaki,Miyazaki,88
+option,JP,Japan,,state,,,,,,,,46,鹿児島県,鹿児島県 — Kagoshima,Kagoshima,89
+option,JP,Japan,,state,,,,,,,,47,沖縄県,沖縄県 — Okinawa,Okinawa,90
+field,JP,Japan,3,city,City,text,true,,,,,,,,,
+field,JP,Japan,4,line1,Address line 1,text,true,Street address,,,,,,,,
+field,JP,Japan,5,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KE,Kenya,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KE,Kenya,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KE,Kenya,3,city,City,text,false,,,,,,,,,
+field,KE,Kenya,4,postal_code,Postal code,text,false,,20100,\d{5},,,,,,
+field,KG,Kyrgyzstan,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KG,Kyrgyzstan,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KG,Kyrgyzstan,3,postal_code,Postal code,text,false,,720001,\d{6},,,,,,
+field,KG,Kyrgyzstan,4,city,City,text,false,,,,,,,,,
+field,KH,Cambodia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KH,Cambodia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KH,Cambodia,3,city,City,text,false,,,,,,,,,
+field,KH,Cambodia,4,postal_code,Postal code,text,false,,120101,"\d{5,6}",,,,,,
+field,KI,Kiribati,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KI,Kiribati,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KI,Kiribati,3,state,Island,dropdown,false,,,,3,,,,,
+option,KI,Kiribati,,state,,,,,,,,1,Gilbert Islands,Gilbert Islands,,
+option,KI,Kiribati,,state,,,,,,,,2,Line Islands,Line Islands,,
+option,KI,Kiribati,,state,,,,,,,,3,Phoenix Islands,Phoenix Islands,,
+field,KI,Kiribati,4,city,City,text,false,,,,,,,,,
+field,KM,Comoros,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KM,Comoros,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KM,Comoros,3,city,City,text,false,,,,,,,,,
+field,KM,Comoros,4,postal_code,Postal code,text,false,,,,,,,,,
+field,KN,St. Kitts & Nevis,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KN,St. Kitts & Nevis,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KN,St. Kitts & Nevis,3,city,City,text,true,,,,,,,,,
+field,KN,St. Kitts & Nevis,4,state,Island,dropdown,true,,,,2,,,,,
+option,KN,St. Kitts & Nevis,,state,,,,,,,,1,Nevis,Nevis,,
+option,KN,St. Kitts & Nevis,,state,,,,,,,,2,St. Kitts,St. Kitts,,
+field,KR,South Korea,1,state,Do Si,dropdown,true,,,,17,,,,,
+option,KR,South Korea,,state,,,,,,,,1,강원도,강원 — Gangwon-do,Gangwon-do,2[456]\d{2}
+option,KR,South Korea,,state,,,,,,,,2,경기도,경기 — Gyeonggi-do,Gyeonggi-do,1[0-8]\d{2}
+option,KR,South Korea,,state,,,,,,,,3,경상남도,경남 — Gyeongsangnam-do,Gyeongsangnam-do,5[0-3]\d{2}
+option,KR,South Korea,,state,,,,,,,,4,경상북도,경북 — Gyeongsangbuk-do,Gyeongsangbuk-do,(?:3[6-9]|40)\d{2}
+option,KR,South Korea,,state,,,,,,,,5,광주광역시,광주 — Gwangju,Gwangju,6[12]\d{2}
+option,KR,South Korea,,state,,,,,,,,6,대구광역시,대구 — Daegu,Daegu,4[123]\d{2}
+option,KR,South Korea,,state,,,,,,,,7,대전광역시,대전 — Daejeon,Daejeon,3[45]\d{2}
+option,KR,South Korea,,state,,,,,,,,8,부산광역시,부산 — Busan,Busan,4[6-9]\d{2}
+option,KR,South Korea,,state,,,,,,,,9,서울특별시,서울 — Seoul,Seoul,0[1-8]\d{2}
+option,KR,South Korea,,state,,,,,,,,10,세종특별자치시,세종 — Sejong,Sejong,30[01]\d
+option,KR,South Korea,,state,,,,,,,,11,울산광역시,울산 — Ulsan,Ulsan,4[45]\d{2}
+option,KR,South Korea,,state,,,,,,,,12,인천광역시,인천 — Incheon,Incheon,2[1-3]\d{2}
+option,KR,South Korea,,state,,,,,,,,13,전라남도,전남 — Jeollanam-do,Jeollanam-do,5[7-9]\d{2}
+option,KR,South Korea,,state,,,,,,,,14,전라북도,전북 — Jeollabuk-do,Jeollabuk-do,5[4-6]\d{2}
+option,KR,South Korea,,state,,,,,,,,15,제주특별자치도,제주 — Jeju-do,Jeju-do,63[0-356]\d
+option,KR,South Korea,,state,,,,,,,,16,충청남도,충남 — Chungcheongnam-do,Chungcheongnam-do,3[1-3]\d{2}
+option,KR,South Korea,,state,,,,,,,,17,충청북도,충북 — Chungcheongbuk-do,Chungcheongbuk-do,2[789]\d{2}
+field,KR,South Korea,2,city,City,text,true,,,,,,,,,
+field,KR,South Korea,3,sublocality,District,text,false,,,,,,,,,
+field,KR,South Korea,4,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KR,South Korea,5,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KR,South Korea,6,postal_code,Postal code,text,true,,03051,\d{5},,,,,,
+field,KW,Kuwait,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KW,Kuwait,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KW,Kuwait,3,postal_code,Postal code,text,false,,54541,\d{5},,,,,,
+field,KW,Kuwait,4,city,City,text,false,,,,,,,,,
+field,KY,Cayman Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KY,Cayman Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,KY,Cayman Islands,3,state,Island,dropdown,true,,,,3,,,,,
+option,KY,Cayman Islands,,state,,,,,,,,1,Cayman Brac,Cayman Brac,,
+option,KY,Cayman Islands,,state,,,,,,,,2,Grand Cayman,Grand Cayman,,
+option,KY,Cayman Islands,,state,,,,,,,,3,Little Cayman,Little Cayman,,
+field,KY,Cayman Islands,4,postal_code,Postal code,text,false,,KY1-1100,KY\d-\d{4},,,,,,
+field,KZ,Kazakhstan,1,postal_code,Postal code,text,false,,040900,\d{6},,,,,,
+field,KZ,Kazakhstan,2,state,State / Province / Region,dropdown,false,,,,20,,,,,
+option,KZ,Kazakhstan,,state,,,,,,,,1,Almaty,Almaty,,
+option,KZ,Kazakhstan,,state,,,,,,,,2,Astana,Astana,,
+option,KZ,Kazakhstan,,state,,,,,,,,3,Shymkent,Shymkent,,
+option,KZ,Kazakhstan,,state,,,,,,,,4,Almatinskaya oblast',Almatinskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,5,Akmolinskaya oblast',Akmolinskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,6,Aktyubinskaya oblast',Aktyubinskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,7,Atyrauskaya oblast',Atyrauskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,8,Zapadno-Kazakhstanskaya oblast',Zapadno-Kazakhstanskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,9,Mangistauskaya oblast',Mangistauskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,10,Turkestankaya oblast',Turkestankaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,11,Pavlodarskaya oblast',Pavlodarskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,12,Karagandinskaya oblast',Karagandinskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,13,Kostanayskaya oblast',Kostanayskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,14,Kyzylordinskaya oblast',Kyzylordinskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,15,Vostochno-Kazakhstanskaya oblast',Vostochno-Kazakhstanskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,16,Severo-Kazakhstanskaya oblast',Severo-Kazakhstanskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,17,Zhambylskaya oblast',Zhambylskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,18,Abaiskaya oblast',Abaiskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,19,Zhetysuskaya oblast',Zhetysuskaya oblast',,
+option,KZ,Kazakhstan,,state,,,,,,,,20,Ulytauskaya oblast',Ulytauskaya oblast',,
+field,KZ,Kazakhstan,3,city,City,text,false,,,,,,,,,
+field,KZ,Kazakhstan,4,line1,Address line 1,text,true,Street address,,,,,,,,
+field,KZ,Kazakhstan,5,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LA,Laos,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LA,Laos,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LA,Laos,3,postal_code,Postal code,text,false,,01160,\d{5},,,,,,
+field,LA,Laos,4,city,City,text,false,,,,,,,,,
+field,LB,Lebanon,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LB,Lebanon,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LB,Lebanon,3,city,City,text,false,,,,,,,,,
+field,LB,Lebanon,4,postal_code,Postal code,text,false,,2038 3054,(?:\d{4})(?: ?(?:\d{4}))?,,,,,,
+field,LC,St. Lucia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LC,St. Lucia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LC,St. Lucia,3,city,City,text,false,,,,,,,,,
+field,LC,St. Lucia,4,postal_code,Postal code,text,false,,,,,,,,,
+field,LI,Liechtenstein,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LI,Liechtenstein,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LI,Liechtenstein,3,postal_code,Postal code,text,true,,9496,948[5-9]|949[0-8],,,,,,
+field,LI,Liechtenstein,4,city,City,text,true,,,,,,,,,
+field,LK,Sri Lanka,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LK,Sri Lanka,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LK,Sri Lanka,3,city,City,text,false,,,,,,,,,
+field,LK,Sri Lanka,4,postal_code,Postal code,text,false,,20000,\d{5},,,,,,
+field,LR,Liberia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LR,Liberia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LR,Liberia,3,postal_code,Postal code,text,false,,1000,\d{4},,,,,,
+field,LR,Liberia,4,city,City,text,false,,,,,,,,,
+field,LS,Lesotho,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LS,Lesotho,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LS,Lesotho,3,city,City,text,false,,,,,,,,,
+field,LS,Lesotho,4,postal_code,Postal code,text,false,,100,\d{3},,,,,,
+field,LT,Lithuania,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LT,Lithuania,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LT,Lithuania,3,postal_code,Postal code,text,true,,04340,\d{5},,,,,,
+field,LT,Lithuania,4,city,City,text,true,,,,,,,,,
+field,LT,Lithuania,5,state,State / Province / Region,text,false,,,,,,,,,
+field,LU,Luxembourg,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LU,Luxembourg,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LU,Luxembourg,3,postal_code,Postal code,text,true,,4750,\d{4},,,,,,
+field,LU,Luxembourg,4,city,City,text,true,,,,,,,,,
+field,LV,Latvia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,LV,Latvia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,LV,Latvia,3,state,State / Province / Region,text,false,,,,,,,,,
+field,LV,Latvia,4,city,City,text,true,,,,,,,,,
+field,LV,Latvia,5,postal_code,Postal code,text,true,,LV-1073,LV-\d{4},,,,,,
+field,MA,Morocco,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MA,Morocco,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MA,Morocco,3,postal_code,Postal code,text,false,,53000,\d{5},,,,,,
+field,MA,Morocco,4,city,City,text,false,,,,,,,,,
+field,MC,Monaco,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MC,Monaco,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MC,Monaco,3,postal_code,Postal code,text,false,,98000,980\d{2},,,,,,
+field,MC,Monaco,4,city,City,text,false,,,,,,,,,
+field,MC,Monaco,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,MD,Moldova,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MD,Moldova,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MD,Moldova,3,postal_code,Postal code,text,false,,2012,\d{4},,,,,,
+field,MD,Moldova,4,city,City,text,false,,,,,,,,,
+field,ME,Montenegro,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,ME,Montenegro,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,ME,Montenegro,3,postal_code,Postal code,text,false,,81257,8\d{4},,,,,,
+field,ME,Montenegro,4,city,City,text,false,,,,,,,,,
+field,MF,St. Martin,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MF,St. Martin,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MF,St. Martin,3,postal_code,Postal code,text,true,,97100,9[78][01]\d{2},,,,,,
+field,MF,St. Martin,4,city,City,text,true,,,,,,,,,
+field,MF,St. Martin,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,MG,Madagascar,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MG,Madagascar,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MG,Madagascar,3,postal_code,Postal code,text,false,,501,\d{3},,,,,,
+field,MG,Madagascar,4,city,City,text,false,,,,,,,,,
+field,MK,North Macedonia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MK,North Macedonia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MK,North Macedonia,3,postal_code,Postal code,text,false,,1314,\d{4},,,,,,
+field,MK,North Macedonia,4,city,City,text,false,,,,,,,,,
+field,MN,Mongolia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MN,Mongolia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MN,Mongolia,3,city,City,text,false,,,,,,,,,
+field,MN,Mongolia,4,state,State / Province / Region,dropdown,false,,,,22,,,,,
+option,MN,Mongolia,,state,,,,,,,,1,Ulaanbaatar,Ulaanbaatar,,
+option,MN,Mongolia,,state,,,,,,,,2,Arkhangai Province,Arkhangai Province,,
+option,MN,Mongolia,,state,,,,,,,,3,Bayankhongor Province,Bayankhongor Province,,
+option,MN,Mongolia,,state,,,,,,,,4,Bayan-Ölgii Province,Bayan-Ölgii Province,,
+option,MN,Mongolia,,state,,,,,,,,5,Bulgan Province,Bulgan Province,,
+option,MN,Mongolia,,state,,,,,,,,6,Darkhan-Uul Province,Darkhan-Uul Province,,
+option,MN,Mongolia,,state,,,,,,,,7,Dornod Province,Dornod Province,,
+option,MN,Mongolia,,state,,,,,,,,8,Dornogovi Province,Dornogovi Province,,
+option,MN,Mongolia,,state,,,,,,,,9,Dundgovi Province,Dundgovi Province,,
+option,MN,Mongolia,,state,,,,,,,,10,Zavkhan Province,Zavkhan Province,,
+option,MN,Mongolia,,state,,,,,,,,11,Govi-Altai Province,Govi-Altai Province,,
+option,MN,Mongolia,,state,,,,,,,,12,Govisümber Province,Govisümber Province,,
+option,MN,Mongolia,,state,,,,,,,,13,Khentii Province,Khentii Province,,
+option,MN,Mongolia,,state,,,,,,,,14,Khovd Province,Khovd Province,,
+option,MN,Mongolia,,state,,,,,,,,15,Khövsgöl Province,Khövsgöl Province,,
+option,MN,Mongolia,,state,,,,,,,,16,Ömnögovi Province,Ömnögovi Province,,
+option,MN,Mongolia,,state,,,,,,,,17,Orkhon Province,Orkhon Province,,
+option,MN,Mongolia,,state,,,,,,,,18,Övörkhangai Province,Övörkhangai Province,,
+option,MN,Mongolia,,state,,,,,,,,19,Selenge Province,Selenge Province,,
+option,MN,Mongolia,,state,,,,,,,,20,Sükhbaatar Province,Sükhbaatar Province,,
+option,MN,Mongolia,,state,,,,,,,,21,Töv Province,Töv Province,,
+option,MN,Mongolia,,state,,,,,,,,22,Uvs Province,Uvs Province,,
+field,MN,Mongolia,5,postal_code,Postal code,text,false,,65030,\d{5},,,,,,
+field,MQ,Martinique,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MQ,Martinique,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MQ,Martinique,3,postal_code,Postal code,text,true,,97220,9[78]2\d{2},,,,,,
+field,MQ,Martinique,4,city,City,text,true,,,,,,,,,
+field,MQ,Martinique,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,MR,Mauritania,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MR,Mauritania,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MR,Mauritania,3,city,City,text,false,,,,,,,,,
+field,MR,Mauritania,4,postal_code,Postal code,text,false,,,,,,,,,
+field,MS,Montserrat,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MS,Montserrat,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MS,Montserrat,3,city,City,text,false,,,,,,,,,
+field,MS,Montserrat,4,postal_code,Postal code,text,false,,,,,,,,,
+field,MT,Malta,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MT,Malta,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MT,Malta,3,city,City,text,false,,,,,,,,,
+field,MT,Malta,4,postal_code,Postal code,text,false,,NXR 01,"[A-Z]{3} ?\d{2,4}",,,,,,
+field,MU,Mauritius,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MU,Mauritius,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MU,Mauritius,3,postal_code,Postal code,text,false,,42602,\d{3}(?:\d{2}|[A-Z]{2}\d{3}),,,,,,
+field,MU,Mauritius,4,city,City,text,false,,,,,,,,,
+field,MV,Maldives,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MV,Maldives,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MV,Maldives,3,city,City,text,false,,,,,,,,,
+field,MV,Maldives,4,postal_code,Postal code,text,false,,20026,\d{5},,,,,,
+field,MW,Malawi,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MW,Malawi,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MW,Malawi,3,city,City,text,false,,,,,,,,,
+field,MW,Malawi,4,sorting_code,CEDEX,text,false,,,,,,,,,
+field,MX,Mexico,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MX,Mexico,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MX,Mexico,3,sublocality,Neighborhood,text,false,,,,,,,,,
+field,MX,Mexico,4,postal_code,Postal code,text,true,,02860,\d{5},,,,,,
+field,MX,Mexico,5,city,City,text,true,,,,,,,,,
+field,MX,Mexico,6,state,State,dropdown,true,,,,32,,,,,
+option,MX,Mexico,,state,,,,,,,,1,Ags.,Aguascalientes,,20
+option,MX,Mexico,,state,,,,,,,,2,B.C.,Baja California,,2[12]
+option,MX,Mexico,,state,,,,,,,,3,B.C.S.,Baja California Sur,,23
+option,MX,Mexico,,state,,,,,,,,4,Camp.,Campeche,,24
+option,MX,Mexico,,state,,,,,,,,5,Chis.,Chiapas,,29|30
+option,MX,Mexico,,state,,,,,,,,6,Chih.,Chihuahua,,3[1-3]
+option,MX,Mexico,,state,,,,,,,,7,CDMX,Ciudad de México,,0|1[0-6]
+option,MX,Mexico,,state,,,,,,,,8,Coah.,Coahuila de Zaragoza,,2[5-7]
+option,MX,Mexico,,state,,,,,,,,9,Col.,Colima,,28
+option,MX,Mexico,,state,,,,,,,,10,Dgo.,Durango,,3[45]
+option,MX,Mexico,,state,,,,,,,,11,Méx.,Estado de México,,5[0-7]
+option,MX,Mexico,,state,,,,,,,,12,Gto.,Guanajuato,,3[6-8]
+option,MX,Mexico,,state,,,,,,,,13,Gro.,Guerrero,,39|4[01]
+option,MX,Mexico,,state,,,,,,,,14,Hgo.,Hidalgo,,4[23]
+option,MX,Mexico,,state,,,,,,,,15,Jal.,Jalisco,,4[4-9]
+option,MX,Mexico,,state,,,,,,,,16,Mich.,Michoacán,,5[89]|6[01]
+option,MX,Mexico,,state,,,,,,,,17,Mor.,Morelos,,62
+option,MX,Mexico,,state,,,,,,,,18,Nay.,Nayarit,,63
+option,MX,Mexico,,state,,,,,,,,19,N.L.,Nuevo León,,6[4-7]
+option,MX,Mexico,,state,,,,,,,,20,Oax.,Oaxaca,,6[89]|7[01]
+option,MX,Mexico,,state,,,,,,,,21,Pue.,Puebla,,7[2-5]
+option,MX,Mexico,,state,,,,,,,,22,Qro.,Querétaro,,76
+option,MX,Mexico,,state,,,,,,,,23,Q.R.,Quintana Roo,,77
+option,MX,Mexico,,state,,,,,,,,24,S.L.P.,San Luis Potosí,,7[89]
+option,MX,Mexico,,state,,,,,,,,25,Sin.,Sinaloa,,8[0-2]
+option,MX,Mexico,,state,,,,,,,,26,Son.,Sonora,,8[3-5]
+option,MX,Mexico,,state,,,,,,,,27,Tab.,Tabasco,,86
+option,MX,Mexico,,state,,,,,,,,28,Tamps.,Tamaulipas,,8[7-9]
+option,MX,Mexico,,state,,,,,,,,29,Tlax.,Tlaxcala,,90
+option,MX,Mexico,,state,,,,,,,,30,Ver.,Veracruz,,9[1-6]
+option,MX,Mexico,,state,,,,,,,,31,Yuc.,Yucatán,,97
+option,MX,Mexico,,state,,,,,,,,32,Zac.,Zacatecas,,9[89]
+field,MY,Malaysia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MY,Malaysia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MY,Malaysia,3,sublocality,District,text,false,,,,,,,,,
+field,MY,Malaysia,4,postal_code,Postal code,text,true,,43000,\d{5},,,,,,
+field,MY,Malaysia,5,city,City,text,true,,,,,,,,,
+field,MY,Malaysia,6,state,State,dropdown,false,,,,16,,,,,
+option,MY,Malaysia,,state,,,,,,,,1,Johor,Johor,,79|8[0-6]
+option,MY,Malaysia,,state,,,,,,,,2,Kedah,Kedah,,0[5-9]|34950
+option,MY,Malaysia,,state,,,,,,,,3,Kelantan,Kelantan,,1[5-9]
+option,MY,Malaysia,,state,,,,,,,,4,Kuala Lumpur,Kuala Lumpur,,5|60
+option,MY,Malaysia,,state,,,,,,,,5,Labuan,Labuan,,87
+option,MY,Malaysia,,state,,,,,,,,6,Melaka,Melaka,,7[5-8]
+option,MY,Malaysia,,state,,,,,,,,7,Negeri Sembilan,Negeri Sembilan,,7[0-4]
+option,MY,Malaysia,,state,,,,,,,,8,Pahang,Pahang,,2[5-8]|[346]9
+option,MY,Malaysia,,state,,,,,,,,9,Perak,Perak,,3[0-6]|39000
+option,MY,Malaysia,,state,,,,,,,,10,Perlis,Perlis,,0[12]
+option,MY,Malaysia,,state,,,,,,,,11,Pulau Pinang,Pulau Pinang,,1[0-4]
+option,MY,Malaysia,,state,,,,,,,,12,Putrajaya,Putrajaya,,62
+option,MY,Malaysia,,state,,,,,,,,13,Sabah,Sabah,,8[89]|9[01]
+option,MY,Malaysia,,state,,,,,,,,14,Sarawak,Sarawak,,9[3-8]
+option,MY,Malaysia,,state,,,,,,,,15,Selangor,Selangor,,4[0-8]|6[3-8]
+option,MY,Malaysia,,state,,,,,,,,16,Terengganu,Terengganu,,2[0-4]
+field,MZ,Mozambique,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,MZ,Mozambique,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,MZ,Mozambique,3,postal_code,Postal code,text,false,,1102,\d{4},,,,,,
+field,MZ,Mozambique,4,city,City,text,false,,,,,,,,,
+field,MZ,Mozambique,5,state,State / Province / Region,dropdown,false,,,,11,,,,,
+option,MZ,Mozambique,,state,,,,,,,,1,Cabo Delgado,Cabo Delgado,,
+option,MZ,Mozambique,,state,,,,,,,,2,Cidade de Maputo,Cidade de Maputo,,
+option,MZ,Mozambique,,state,,,,,,,,3,Gaza,Gaza,,
+option,MZ,Mozambique,,state,,,,,,,,4,Inhambane,Inhambane,,
+option,MZ,Mozambique,,state,,,,,,,,5,Manica,Manica,,
+option,MZ,Mozambique,,state,,,,,,,,6,Maputo,Maputo,,
+option,MZ,Mozambique,,state,,,,,,,,7,Nampula,Nampula,,
+option,MZ,Mozambique,,state,,,,,,,,8,Niassa,Niassa,,
+option,MZ,Mozambique,,state,,,,,,,,9,Sofala,Sofala,,
+option,MZ,Mozambique,,state,,,,,,,,10,Tete,Tete,,
+option,MZ,Mozambique,,state,,,,,,,,11,Zambezia,Zambezia,,
+field,NA,Namibia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NA,Namibia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NA,Namibia,3,city,City,text,false,,,,,,,,,
+field,NA,Namibia,4,postal_code,Postal code,text,false,,10001,\d{5},,,,,,
+field,NC,New Caledonia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NC,New Caledonia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NC,New Caledonia,3,postal_code,Postal code,text,true,,98814,988\d{2},,,,,,
+field,NC,New Caledonia,4,city,City,text,true,,,,,,,,,
+field,NC,New Caledonia,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,NE,Niger,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NE,Niger,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NE,Niger,3,postal_code,Postal code,text,false,,8001,\d{4},,,,,,
+field,NE,Niger,4,city,City,text,false,,,,,,,,,
+field,NG,Nigeria,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NG,Nigeria,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NG,Nigeria,3,sublocality,District,text,false,,,,,,,,,
+field,NG,Nigeria,4,city,City,text,false,,,,,,,,,
+field,NG,Nigeria,5,postal_code,Postal code,text,false,,930283,\d{6},,,,,,
+field,NG,Nigeria,6,state,State,dropdown,false,,,,37,,,,,
+option,NG,Nigeria,,state,,,,,,,,1,Abia,Abia,,
+option,NG,Nigeria,,state,,,,,,,,2,Adamawa,Adamawa,,
+option,NG,Nigeria,,state,,,,,,,,3,Akwa Ibom,Akwa Ibom,,
+option,NG,Nigeria,,state,,,,,,,,4,Anambra,Anambra,,
+option,NG,Nigeria,,state,,,,,,,,5,Bauchi,Bauchi,,
+option,NG,Nigeria,,state,,,,,,,,6,Bayelsa,Bayelsa,,
+option,NG,Nigeria,,state,,,,,,,,7,Benue,Benue,,
+option,NG,Nigeria,,state,,,,,,,,8,Borno,Borno,,
+option,NG,Nigeria,,state,,,,,,,,9,Cross River,Cross River,,
+option,NG,Nigeria,,state,,,,,,,,10,Delta,Delta,,
+option,NG,Nigeria,,state,,,,,,,,11,Ebonyi,Ebonyi,,
+option,NG,Nigeria,,state,,,,,,,,12,Edo,Edo,,
+option,NG,Nigeria,,state,,,,,,,,13,Ekiti,Ekiti,,
+option,NG,Nigeria,,state,,,,,,,,14,Enugu,Enugu,,
+option,NG,Nigeria,,state,,,,,,,,15,Federal Capital Territory,Federal Capital Territory,,
+option,NG,Nigeria,,state,,,,,,,,16,Gombe,Gombe,,
+option,NG,Nigeria,,state,,,,,,,,17,Imo,Imo,,
+option,NG,Nigeria,,state,,,,,,,,18,Jigawa,Jigawa,,
+option,NG,Nigeria,,state,,,,,,,,19,Kaduna,Kaduna,,
+option,NG,Nigeria,,state,,,,,,,,20,Kano,Kano,,
+option,NG,Nigeria,,state,,,,,,,,21,Katsina,Katsina,,
+option,NG,Nigeria,,state,,,,,,,,22,Kebbi,Kebbi,,
+option,NG,Nigeria,,state,,,,,,,,23,Kogi,Kogi,,
+option,NG,Nigeria,,state,,,,,,,,24,Kwara,Kwara,,
+option,NG,Nigeria,,state,,,,,,,,25,Lagos,Lagos,,
+option,NG,Nigeria,,state,,,,,,,,26,Nasarawa,Nasarawa,,
+option,NG,Nigeria,,state,,,,,,,,27,Niger,Niger,,
+option,NG,Nigeria,,state,,,,,,,,28,Ogun State,Ogun State,,
+option,NG,Nigeria,,state,,,,,,,,29,Ondo,Ondo,,
+option,NG,Nigeria,,state,,,,,,,,30,Osun,Osun,,
+option,NG,Nigeria,,state,,,,,,,,31,Oyo,Oyo,,
+option,NG,Nigeria,,state,,,,,,,,32,Plateau,Plateau,,
+option,NG,Nigeria,,state,,,,,,,,33,Rivers,Rivers,,
+option,NG,Nigeria,,state,,,,,,,,34,Sokoto,Sokoto,,
+option,NG,Nigeria,,state,,,,,,,,35,Taraba,Taraba,,
+option,NG,Nigeria,,state,,,,,,,,36,Yobe,Yobe,,
+option,NG,Nigeria,,state,,,,,,,,37,Zamfara,Zamfara,,
+field,NL,Netherlands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NL,Netherlands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NL,Netherlands,3,postal_code,Postal code,text,true,,1234 AB,[1-9]\d{3} ?(?:[A-RT-Z][A-Z]|S[BCE-RT-Z]),,,,,,
+field,NL,Netherlands,4,city,City,text,true,,,,,,,,,
+field,NO,Norway,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NO,Norway,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NO,Norway,3,postal_code,Postal code,text,true,,0025,\d{4},,,,,,
+field,NO,Norway,4,city,Town or city,text,true,,,,,,,,,
+field,NP,Nepal,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NP,Nepal,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NP,Nepal,3,city,City,text,false,,,,,,,,,
+field,NP,Nepal,4,postal_code,Postal code,text,false,,44601,\d{5},,,,,,
+field,NR,Nauru,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NR,Nauru,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NR,Nauru,3,state,District,dropdown,true,,,,14,,,,,
+option,NR,Nauru,,state,,,,,,,,1,Aiwo District,Aiwo District,,
+option,NR,Nauru,,state,,,,,,,,2,Anabar District,Anabar District,,
+option,NR,Nauru,,state,,,,,,,,3,Anetan District,Anetan District,,
+option,NR,Nauru,,state,,,,,,,,4,Anibare District,Anibare District,,
+option,NR,Nauru,,state,,,,,,,,5,Baiti District,Baiti District,,
+option,NR,Nauru,,state,,,,,,,,6,Boe District,Boe District,,
+option,NR,Nauru,,state,,,,,,,,7,Buada District,Buada District,,
+option,NR,Nauru,,state,,,,,,,,8,Denigomodu District,Denigomodu District,,
+option,NR,Nauru,,state,,,,,,,,9,Ewa District,Ewa District,,
+option,NR,Nauru,,state,,,,,,,,10,Ijuw District,Ijuw District,,
+option,NR,Nauru,,state,,,,,,,,11,Meneng District,Meneng District,,
+option,NR,Nauru,,state,,,,,,,,12,Nibok District,Nibok District,,
+option,NR,Nauru,,state,,,,,,,,13,Uaboe District,Uaboe District,,
+option,NR,Nauru,,state,,,,,,,,14,Yaren District,Yaren District,,
+field,NU,Niue,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NU,Niue,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NU,Niue,3,city,City,text,false,,,,,,,,,
+field,NU,Niue,4,postal_code,Postal code,text,false,,,,,,,,,
+field,NZ,New Zealand,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,NZ,New Zealand,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,NZ,New Zealand,3,sublocality,District,text,false,,,,,,,,,
+field,NZ,New Zealand,4,city,City,text,true,,,,,,,,,
+field,NZ,New Zealand,5,postal_code,Postal code,text,true,,6001,\d{4},,,,,,
+field,OM,Oman,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,OM,Oman,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,OM,Oman,3,postal_code,Postal code,text,false,,133,(?:PC )?\d{3},,,,,,
+field,OM,Oman,4,city,City,text,false,,,,,,,,,
+field,PA,Panama,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PA,Panama,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PA,Panama,3,city,City,text,false,,,,,,,,,
+field,PA,Panama,4,state,State / Province / Region,dropdown,false,,,,13,,,,,
+option,PA,Panama,,state,,,,,,,,1,Bocas del Toro,Bocas del Toro,,
+option,PA,Panama,,state,,,,,,,,2,Chiriquí,Chiriquí,,
+option,PA,Panama,,state,,,,,,,,3,Coclé,Coclé,,
+option,PA,Panama,,state,,,,,,,,4,Colón,Colón,,
+option,PA,Panama,,state,,,,,,,,5,Darién,Darién,,
+option,PA,Panama,,state,,,,,,,,6,Herrera,Herrera,,
+option,PA,Panama,,state,,,,,,,,7,Los Santos,Los Santos,,
+option,PA,Panama,,state,,,,,,,,8,Panamá,Panamá,,
+option,PA,Panama,,state,,,,,,,,9,Veraguas,Veraguas,,
+option,PA,Panama,,state,,,,,,,,10,Panamá Oeste,Panamá Oeste,,
+option,PA,Panama,,state,,,,,,,,11,Emberá,Emberá,,
+option,PA,Panama,,state,,,,,,,,12,Guna Yala,Guna Yala,,
+option,PA,Panama,,state,,,,,,,,13,Ngäbe-Buglé,Ngäbe-Buglé,,
+field,PE,Peru,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PE,Peru,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PE,Peru,3,city,District,text,false,,,,,,,,,
+field,PE,Peru,4,postal_code,Postal code,text,false,,LIMA 23,"(?:LIMA \d{1,2}|CALLAO 0?\d)|[0-2]\d{4}",,,,,,
+field,PE,Peru,5,state,State / Province / Region,dropdown,false,,,,26,,,,,
+option,PE,Peru,,state,,,,,,,,1,Municipalidad Metropolitana de Lima,Municipalidad Metropolitana de Lima,,
+option,PE,Peru,,state,,,,,,,,2,Amazonas,Amazonas,,
+option,PE,Peru,,state,,,,,,,,3,Ancash,Ancash,,
+option,PE,Peru,,state,,,,,,,,4,Apurímac,Apurímac,,
+option,PE,Peru,,state,,,,,,,,5,Arequipa,Arequipa,,
+option,PE,Peru,,state,,,,,,,,6,Ayacucho,Ayacucho,,
+option,PE,Peru,,state,,,,,,,,7,Cajamarca,Cajamarca,,
+option,PE,Peru,,state,,,,,,,,8,Cusco,Cusco,,
+option,PE,Peru,,state,,,,,,,,9,El Callao,El Callao,,
+option,PE,Peru,,state,,,,,,,,10,Huancavelica,Huancavelica,,
+option,PE,Peru,,state,,,,,,,,11,Huánuco,Huánuco,,
+option,PE,Peru,,state,,,,,,,,12,Ica,Ica,,
+option,PE,Peru,,state,,,,,,,,13,Junín,Junín,,
+option,PE,Peru,,state,,,,,,,,14,La Libertad,La Libertad,,
+option,PE,Peru,,state,,,,,,,,15,Lambayeque,Lambayeque,,
+option,PE,Peru,,state,,,,,,,,16,Lima,Lima,,
+option,PE,Peru,,state,,,,,,,,17,Loreto,Loreto,,
+option,PE,Peru,,state,,,,,,,,18,Madre de Dios,Madre de Dios,,
+option,PE,Peru,,state,,,,,,,,19,Moquegua,Moquegua,,
+option,PE,Peru,,state,,,,,,,,20,Pasco,Pasco,,
+option,PE,Peru,,state,,,,,,,,21,Piura,Piura,,
+option,PE,Peru,,state,,,,,,,,22,Puno,Puno,,
+option,PE,Peru,,state,,,,,,,,23,San Martín,San Martín,,
+option,PE,Peru,,state,,,,,,,,24,Tacna,Tacna,,
+option,PE,Peru,,state,,,,,,,,25,Tumbes,Tumbes,,
+option,PE,Peru,,state,,,,,,,,26,Ucayali,Ucayali,,
+field,PF,French Polynesia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PF,French Polynesia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PF,French Polynesia,3,postal_code,Postal code,text,true,,98709,987\d{2},,,,,,
+field,PF,French Polynesia,4,city,City,text,true,,,,,,,,,
+field,PF,French Polynesia,5,state,Island,dropdown,true,,,,5,,,,,
+option,PF,French Polynesia,,state,,,,,,,,1,Windward Islands,Windward Islands,,
+option,PF,French Polynesia,,state,,,,,,,,2,Austral Islands,Austral Islands,,
+option,PF,French Polynesia,,state,,,,,,,,3,Tuamotu-Gambier,Tuamotu-Gambier,,
+option,PF,French Polynesia,,state,,,,,,,,4,Leeward Islands,Leeward Islands,,
+option,PF,French Polynesia,,state,,,,,,,,5,Marquesas Islands,Marquesas Islands,,
+field,PG,Papua New Guinea,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PG,Papua New Guinea,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PG,Papua New Guinea,3,city,City,text,true,,,,,,,,,
+field,PG,Papua New Guinea,4,postal_code,Postal code,text,false,,111,\d{3},,,,,,
+field,PG,Papua New Guinea,5,state,State / Province / Region,dropdown,true,,,,22,,,,,
+option,PG,Papua New Guinea,,state,,,,,,,,1,National Capital District,National Capital District,,
+option,PG,Papua New Guinea,,state,,,,,,,,2,Central,Central,,
+option,PG,Papua New Guinea,,state,,,,,,,,3,Chimbu,Chimbu,,
+option,PG,Papua New Guinea,,state,,,,,,,,4,Eastern Highlands,Eastern Highlands,,
+option,PG,Papua New Guinea,,state,,,,,,,,5,East New Britain,East New Britain,,
+option,PG,Papua New Guinea,,state,,,,,,,,6,East Sepik,East Sepik,,
+option,PG,Papua New Guinea,,state,,,,,,,,7,Enga,Enga,,
+option,PG,Papua New Guinea,,state,,,,,,,,8,Gulf,Gulf,,
+option,PG,Papua New Guinea,,state,,,,,,,,9,Hela,Hela,,
+option,PG,Papua New Guinea,,state,,,,,,,,10,Jiwaka,Jiwaka,,
+option,PG,Papua New Guinea,,state,,,,,,,,11,Madang,Madang,,
+option,PG,Papua New Guinea,,state,,,,,,,,12,Manus,Manus,,
+option,PG,Papua New Guinea,,state,,,,,,,,13,Milne Bay,Milne Bay,,
+option,PG,Papua New Guinea,,state,,,,,,,,14,Morobe,Morobe,,
+option,PG,Papua New Guinea,,state,,,,,,,,15,New Ireland,New Ireland,,
+option,PG,Papua New Guinea,,state,,,,,,,,16,Northern,Northern,,
+option,PG,Papua New Guinea,,state,,,,,,,,17,West Sepik,West Sepik,,
+option,PG,Papua New Guinea,,state,,,,,,,,18,Southern Highlands,Southern Highlands,,
+option,PG,Papua New Guinea,,state,,,,,,,,19,Western,Western,,
+option,PG,Papua New Guinea,,state,,,,,,,,20,Western Highlands,Western Highlands,,
+option,PG,Papua New Guinea,,state,,,,,,,,21,West New Britain,West New Britain,,
+option,PG,Papua New Guinea,,state,,,,,,,,22,Bougainville,Bougainville,,
+field,PH,Philippines,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PH,Philippines,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PH,Philippines,3,sublocality,District,text,false,,,,,,,,,
+field,PH,Philippines,4,city,City,text,false,,,,,,,,,
+field,PH,Philippines,5,postal_code,Postal code,text,false,,1008,\d{4},,,,,,
+field,PH,Philippines,6,state,State / Province / Region,dropdown,false,,,,82,,,,,
+option,PH,Philippines,,state,,,,,,,,1,Abra,Abra,,28[0-2]
+option,PH,Philippines,,state,,,,,,,,2,Agusan del Norte,Agusan del Norte,,86[01]
+option,PH,Philippines,,state,,,,,,,,3,Agusan del Sur,Agusan del Sur,,85[01]
+option,PH,Philippines,,state,,,,,,,,4,Aklan,Aklan,,56[01]
+option,PH,Philippines,,state,,,,,,,,5,Albay,Albay,,45[01]
+option,PH,Philippines,,state,,,,,,,,6,Antique,Antique,,57[01]
+option,PH,Philippines,,state,,,,,,,,7,Apayao,Apayao,,380[0-68]
+option,PH,Philippines,,state,,,,,,,,8,Aurora,Aurora,,320
+option,PH,Philippines,,state,,,,,,,,9,Basilan,Basilan,,730
+option,PH,Philippines,,state,,,,,,,,10,Bataan,Bataan,,21[01]
+option,PH,Philippines,,state,,,,,,,,11,Batanes,Batanes,,390
+option,PH,Philippines,,state,,,,,,,,12,Batangas,Batangas,,42[0-3]
+option,PH,Philippines,,state,,,,,,,,13,Benguet,Benguet,,26(0|1[0-5])
+option,PH,Philippines,,state,,,,,,,,14,Biliran,Biliran,,65(4[3-9]|5)
+option,PH,Philippines,,state,,,,,,,,15,Bohol,Bohol,,63[0-3]
+option,PH,Philippines,,state,,,,,,,,16,Bukidnon,Bukidnon,,87[0-2]
+option,PH,Philippines,,state,,,,,,,,17,Bulacan,Bulacan,,30[0-2]
+option,PH,Philippines,,state,,,,,,,,18,Cagayan,Cagayan,,35[0-2]
+option,PH,Philippines,,state,,,,,,,,19,Camarines Norte,Camarines Norte,,46[01]
+option,PH,Philippines,,state,,,,,,,,20,Camarines Sur,Camarines Sur,,44[0-3]
+option,PH,Philippines,,state,,,,,,,,21,Camiguin,Camiguin,,910
+option,PH,Philippines,,state,,,,,,,,22,Capiz,Capiz,,58[01]
+option,PH,Philippines,,state,,,,,,,,23,Catanduanes,Catanduanes,,48[01]
+option,PH,Philippines,,state,,,,,,,,24,Cavite,Cavite,,41[0-2]
+option,PH,Philippines,,state,,,,,,,,25,Cebu,Cebu,,60[0-5]
+option,PH,Philippines,,state,,,,,,,,26,Compostela Valley,Compostela Valley,,88[01]
+option,PH,Philippines,,state,,,,,,,,27,Cotabato,Cotabato,,94[01]
+option,PH,Philippines,,state,,,,,,,,28,Davao del Norte,Davao del Norte,,81[0-2]
+option,PH,Philippines,,state,,,,,,,,29,Davao del Sur,Davao del Sur,,80[01]
+option,PH,Philippines,,state,,,,,,,,30,Davao Occidental,Davao Occidental,,801[1-5]
+option,PH,Philippines,,state,,,,,,,,31,Davao Oriental,Davao Oriental,,82[01]
+option,PH,Philippines,,state,,,,,,,,32,Dinagat Islands,Dinagat Islands,,84[12]
+option,PH,Philippines,,state,,,,,,,,33,Eastern Samar,Eastern Samar,,68[0-2]
+option,PH,Philippines,,state,,,,,,,,34,Guimaras,Guimaras,,504[4-6]
+option,PH,Philippines,,state,,,,,,,,35,Ifugao,Ifugao,,36[01]
+option,PH,Philippines,,state,,,,,,,,36,Ilocos Norte,Ilocos Norte,,29[0-2]
+option,PH,Philippines,,state,,,,,,,,37,Ilocos Sur,Ilocos Sur,,27[0-3]
+option,PH,Philippines,,state,,,,,,,,38,Iloilo,Iloilo,,50([0-3]|4[0-3])
+option,PH,Philippines,,state,,,,,,,,39,Isabela,Isabela,,33[0-3]
+option,PH,Philippines,,state,,,,,,,,40,Kalinga,Kalinga,,38(0[79]|1[0-4])
+option,PH,Philippines,,state,,,,,,,,41,La Union,La Union,,25[0-2]
+option,PH,Philippines,,state,,,,,,,,42,Laguna,Laguna,,40[0-3]
+option,PH,Philippines,,state,,,,,,,,43,Lanao del Norte,Lanao del Norte,,92[0-2]
+option,PH,Philippines,,state,,,,,,,,44,Lanao del Sur,Lanao del Sur,,9(3[0-2]|7[01])
+option,PH,Philippines,,state,,,,,,,,45,Leyte,Leyte,,65([0-3]|4[0-2])
+option,PH,Philippines,,state,,,,,,,,46,Maguindanao,Maguindanao,,96[01]
+option,PH,Philippines,,state,,,,,,,,47,Marinduque,Marinduque,,490
+option,PH,Philippines,,state,,,,,,,,48,Masbate,Masbate,,54[0-2]
+option,PH,Philippines,,state,,,,,,,,49,Metro Manila,Metro Manila,,
+option,PH,Philippines,,state,,,,,,,,50,Mindoro Occidental,Mindoro Occidental,,51[01]
+option,PH,Philippines,,state,,,,,,,,51,Mindoro Oriental,Mindoro Oriental,,52[01]
+option,PH,Philippines,,state,,,,,,,,52,Misamis Occidental,Misamis Occidental,,72[01]
+option,PH,Philippines,,state,,,,,,,,53,Misamis Oriental,Misamis Oriental,,90[0-2]
+option,PH,Philippines,,state,,,,,,,,54,Mountain Province,Mountain Province,,26(1[6-9]|2[0-5])
+option,PH,Philippines,,state,,,,,,,,55,Negros Occidental,Negros Occidental,,61[0-3]
+option,PH,Philippines,,state,,,,,,,,56,Negros Oriental,Negros Oriental,,62[0-2]
+option,PH,Philippines,,state,,,,,,,,57,Northern Samar,Northern Samar,,64[0-2]
+option,PH,Philippines,,state,,,,,,,,58,Nueva Ecija,Nueva Ecija,,31[0-3]
+option,PH,Philippines,,state,,,,,,,,59,Nueva Vizcaya,Nueva Vizcaya,,37[01]
+option,PH,Philippines,,state,,,,,,,,60,Palawan,Palawan,,53[0-2]
+option,PH,Philippines,,state,,,,,,,,61,Pampanga,Pampanga,,20[0-2]
+option,PH,Philippines,,state,,,,,,,,62,Pangasinan,Pangasinan,,24[0-4]
+option,PH,Philippines,,state,,,,,,,,63,Quezon Province,Quezon Province,,43[0-4]
+option,PH,Philippines,,state,,,,,,,,64,Quirino,Quirino,,340
+option,PH,Philippines,,state,,,,,,,,65,Rizal,Rizal,,1[89]
+option,PH,Philippines,,state,,,,,,,,66,Romblon,Romblon,,55[01]
+option,PH,Philippines,,state,,,,,,,,67,Samar,Samar,,67[0-2]
+option,PH,Philippines,,state,,,,,,,,68,Sarangani,Sarangani,,8015
+option,PH,Philippines,,state,,,,,,,,69,Siquijor,Siquijor,,62(2[5-9]|30)
+option,PH,Philippines,,state,,,,,,,,70,Sorsogon,Sorsogon,,47[01]
+option,PH,Philippines,,state,,,,,,,,71,South Cotabato,South Cotabato,,95[01]
+option,PH,Philippines,,state,,,,,,,,72,Southern Leyte,Southern Leyte,,66[10]
+option,PH,Philippines,,state,,,,,,,,73,Sultan Kudarat,Sultan Kudarat,,98[01]
+option,PH,Philippines,,state,,,,,,,,74,Sulu,Sulu,,74[01]
+option,PH,Philippines,,state,,,,,,,,75,Surigao del Norte,Surigao del Norte,,84[0-2]
+option,PH,Philippines,,state,,,,,,,,76,Surigao del Sur,Surigao del Sur,,83[01]
+option,PH,Philippines,,state,,,,,,,,77,Tarlac,Tarlac,,23[01]
+option,PH,Philippines,,state,,,,,,,,78,Tawi-Tawi,Tawi-Tawi,,750
+option,PH,Philippines,,state,,,,,,,,79,Zambales,Zambales,,22[01]
+option,PH,Philippines,,state,,,,,,,,80,Zamboanga del Norte,Zamboanga del Norte,,71[0-2]
+option,PH,Philippines,,state,,,,,,,,81,Zamboanga del Sur,Zamboanga del Sur,,70[0-4]
+option,PH,Philippines,,state,,,,,,,,82,Zamboanga Sibuguey,Zamboanga Sibuguey,,70[0-4]
+field,PK,Pakistan,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PK,Pakistan,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PK,Pakistan,3,sublocality,District,text,false,,,,,,,,,
+field,PK,Pakistan,4,city,City,text,false,,,,,,,,,
+field,PK,Pakistan,5,postal_code,Postal code,text,false,,44000,\d{5},,,,,,
+field,PL,Poland,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PL,Poland,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PL,Poland,3,postal_code,Postal code,text,true,,00-950,\d{2}-\d{3},,,,,,
+field,PL,Poland,4,city,City,text,true,,,,,,,,,
+field,PM,St. Pierre & Miquelon,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PM,St. Pierre & Miquelon,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PM,St. Pierre & Miquelon,3,postal_code,Postal code,text,true,,97500,9[78]5\d{2},,,,,,
+field,PM,St. Pierre & Miquelon,4,city,City,text,true,,,,,,,,,
+field,PM,St. Pierre & Miquelon,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,PN,Pitcairn Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PN,Pitcairn Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PN,Pitcairn Islands,3,city,City,text,true,,,,,,,,,
+field,PN,Pitcairn Islands,4,postal_code,Postal code,text,true,,PCRN 1ZZ,PCRN 1ZZ,,,,,,
+field,PR,Puerto Rico,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PR,Puerto Rico,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PR,Puerto Rico,3,city,City,text,true,,,,,,,,,
+field,PR,Puerto Rico,4,postal_code,ZIP,text,true,,00930,(00[679]\d{2})(?:[ \-](\d{4}))?,,,,,,
+field,PS,Palestinian Territories,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PS,Palestinian Territories,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PS,Palestinian Territories,3,city,City,text,false,,,,,,,,,
+field,PS,Palestinian Territories,4,postal_code,Postal code,text,false,,,,,,,,,
+field,PT,Portugal,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PT,Portugal,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PT,Portugal,3,postal_code,Postal code,text,true,,2725-079,\d{4}-\d{3},,,,,,
+field,PT,Portugal,4,city,City,text,true,,,,,,,,,
+field,PY,Paraguay,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,PY,Paraguay,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,PY,Paraguay,3,postal_code,Postal code,text,false,,1536,\d{4},,,,,,
+field,PY,Paraguay,4,city,City,text,false,,,,,,,,,
+field,QA,Qatar,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,QA,Qatar,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,QA,Qatar,3,city,City,text,false,,,,,,,,,
+field,QA,Qatar,4,postal_code,Postal code,text,false,,,,,,,,,
+field,RE,Réunion,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,RE,Réunion,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,RE,Réunion,3,postal_code,Postal code,text,true,,97400,9[78]4\d{2},,,,,,
+field,RE,Réunion,4,city,City,text,true,,,,,,,,,
+field,RE,Réunion,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,RO,Romania,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,RO,Romania,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,RO,Romania,3,postal_code,Postal code,text,true,,060274,\d{6},,,,,,
+field,RO,Romania,4,state,State / Province / Region,text,false,,,,,,,,,
+field,RO,Romania,5,city,City,text,true,,,,,,,,,
+field,RS,Serbia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,RS,Serbia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,RS,Serbia,3,postal_code,Postal code,text,false,,106314,"\d{5,6}",,,,,,
+field,RS,Serbia,4,city,City,text,false,,,,,,,,,
+field,RW,Rwanda,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,RW,Rwanda,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,RW,Rwanda,3,city,City,text,false,,,,,,,,,
+field,RW,Rwanda,4,postal_code,Postal code,text,false,,,,,,,,,
+field,SA,Saudi Arabia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SA,Saudi Arabia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SA,Saudi Arabia,3,city,City,text,false,,,,,,,,,
+field,SA,Saudi Arabia,4,postal_code,Postal code,text,false,,11564,\d{5},,,,,,
+field,SB,Solomon Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SB,Solomon Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SB,Solomon Islands,3,city,City,text,false,,,,,,,,,
+field,SB,Solomon Islands,4,postal_code,Postal code,text,false,,,,,,,,,
+field,SC,Seychelles,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SC,Seychelles,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SC,Seychelles,3,city,City,text,false,,,,,,,,,
+field,SC,Seychelles,4,state,Island,text,false,,,,,,,,,
+field,SE,Sweden,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SE,Sweden,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SE,Sweden,3,postal_code,Postal code,text,true,,11455,\d{3} ?\d{2},,,,,,
+field,SE,Sweden,4,city,Town or city,text,true,,,,,,,,,
+field,SG,Singapore,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SG,Singapore,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SG,Singapore,3,postal_code,Postal code,text,true,,546080,\d{6},,,,,,
+field,SH,St. Helena,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SH,St. Helena,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SH,St. Helena,3,city,City,text,true,,,,,,,,,
+field,SH,St. Helena,4,postal_code,Postal code,text,true,,STHL 1ZZ,(?:ASCN|STHL) 1ZZ,,,,,,
+field,SI,Slovenia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SI,Slovenia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SI,Slovenia,3,postal_code,Postal code,text,false,,4000,\d{4},,,,,,
+field,SI,Slovenia,4,city,City,text,false,,,,,,,,,
+field,SJ,Svalbard & Jan Mayen,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SJ,Svalbard & Jan Mayen,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SJ,Svalbard & Jan Mayen,3,postal_code,Postal code,text,true,,9170,\d{4},,,,,,
+field,SJ,Svalbard & Jan Mayen,4,city,Town or city,text,true,,,,,,,,,
+field,SK,Slovakia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SK,Slovakia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SK,Slovakia,3,postal_code,Postal code,text,true,,010 01,\d{3} ?\d{2},,,,,,
+field,SK,Slovakia,4,city,City,text,true,,,,,,,,,
+field,SL,Sierra Leone,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SL,Sierra Leone,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SL,Sierra Leone,3,city,City,text,false,,,,,,,,,
+field,SL,Sierra Leone,4,postal_code,Postal code,text,false,,,,,,,,,
+field,SM,San Marino,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SM,San Marino,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SM,San Marino,3,postal_code,Postal code,text,true,,47890,4789\d,,,,,,
+field,SM,San Marino,4,city,City,text,false,,,,,,,,,
+field,SN,Senegal,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SN,Senegal,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SN,Senegal,3,postal_code,Postal code,text,false,,12500,\d{5},,,,,,
+field,SN,Senegal,4,city,City,text,false,,,,,,,,,
+field,SR,Suriname,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SR,Suriname,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SR,Suriname,3,city,City,text,false,,,,,,,,,
+field,SR,Suriname,4,state,State / Province / Region,dropdown,false,,,,10,,,,,
+option,SR,Suriname,,state,,,,,,,,1,Brokopondo,Brokopondo,,
+option,SR,Suriname,,state,,,,,,,,2,Commewijne,Commewijne,,
+option,SR,Suriname,,state,,,,,,,,3,Coronie,Coronie,,
+option,SR,Suriname,,state,,,,,,,,4,Marowijne,Marowijne,,
+option,SR,Suriname,,state,,,,,,,,5,Nickerie,Nickerie,,
+option,SR,Suriname,,state,,,,,,,,6,Para,Para,,
+option,SR,Suriname,,state,,,,,,,,7,Paramaribo,Paramaribo,,
+option,SR,Suriname,,state,,,,,,,,8,Saramacca,Saramacca,,
+option,SR,Suriname,,state,,,,,,,,9,Sipaliwini,Sipaliwini,,
+option,SR,Suriname,,state,,,,,,,,10,Wanica,Wanica,,
+field,ST,São Tomé & Príncipe,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,ST,São Tomé & Príncipe,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,ST,São Tomé & Príncipe,3,city,City,text,false,,,,,,,,,
+field,ST,São Tomé & Príncipe,4,postal_code,Postal code,text,false,,,,,,,,,
+field,SV,El Salvador,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SV,El Salvador,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SV,El Salvador,3,city,City,text,true,,,,,,,,,
+field,SV,El Salvador,4,state,State / Province / Region,dropdown,true,,,,14,,,,,
+option,SV,El Salvador,,state,,,,,,,,1,Ahuachapan,Ahuachapán,,CP 21
+option,SV,El Salvador,,state,,,,,,,,2,Cabanas,Cabañas,,CP 12
+option,SV,El Salvador,,state,,,,,,,,3,Calatenango,Chalatenango,,CP 13
+option,SV,El Salvador,,state,,,,,,,,4,Cuscatlan,Cuscatlán,,CP 14
+option,SV,El Salvador,,state,,,,,,,,5,La Libertad,La Libertad,,CP 15
+option,SV,El Salvador,,state,,,,,,,,6,La Paz,La Paz,,CP 16
+option,SV,El Salvador,,state,,,,,,,,7,La Union,La Unión,,CP 31
+option,SV,El Salvador,,state,,,,,,,,8,Morazan,Morazán,,CP 32
+option,SV,El Salvador,,state,,,,,,,,9,San Miguel,San Miguel,,CP 33
+option,SV,El Salvador,,state,,,,,,,,10,San Salvador,San Salvador,,CP 11
+option,SV,El Salvador,,state,,,,,,,,11,San Vicente,San Vicente,,CP 17
+option,SV,El Salvador,,state,,,,,,,,12,Santa Ana,Santa Ana,,CP 22
+option,SV,El Salvador,,state,,,,,,,,13,Sonsonate,Sonsonate,,CP 23
+option,SV,El Salvador,,state,,,,,,,,14,Usulutan,Usulután,,CP 34
+field,SX,Sint Maarten,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SX,Sint Maarten,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SX,Sint Maarten,3,city,City,text,false,,,,,,,,,
+field,SX,Sint Maarten,4,postal_code,Postal code,text,false,,,,,,,,,
+field,SZ,Eswatini,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,SZ,Eswatini,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,SZ,Eswatini,3,city,City,text,false,,,,,,,,,
+field,SZ,Eswatini,4,postal_code,Postal code,text,false,,H100,[HLMS]\d{3},,,,,,
+field,TC,Turks & Caicos Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TC,Turks & Caicos Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TC,Turks & Caicos Islands,3,city,City,text,true,,,,,,,,,
+field,TC,Turks & Caicos Islands,4,postal_code,Postal code,text,true,,TKCA 1ZZ,TKCA 1ZZ,,,,,,
+field,TD,Chad,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TD,Chad,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TD,Chad,3,city,City,text,false,,,,,,,,,
+field,TD,Chad,4,postal_code,Postal code,text,false,,,,,,,,,
+field,TF,French Southern Territories,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TF,French Southern Territories,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TF,French Southern Territories,3,city,City,text,false,,,,,,,,,
+field,TF,French Southern Territories,4,postal_code,Postal code,text,false,,,,,,,,,
+field,TG,Togo,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TG,Togo,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TG,Togo,3,city,City,text,false,,,,,,,,,
+field,TG,Togo,4,postal_code,Postal code,text,false,,,,,,,,,
+field,TH,Thailand,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TH,Thailand,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TH,Thailand,3,sublocality,District,text,false,,,,,,,,,
+field,TH,Thailand,4,city,City,text,false,,,,,,,,,
+field,TH,Thailand,5,state,State / Province / Region,dropdown,false,,,,77,,,,,
+option,TH,Thailand,,state,,,,,,,,1,กระบี่,กระบี่ — Krabi,Krabi,81
+option,TH,Thailand,,state,,,,,,,,2,กรุงเทพมหานคร,กรุงเทพมหานคร — Bangkok,Bangkok,10
+option,TH,Thailand,,state,,,,,,,,3,กาญจนบุรี,กาญจนบุรี — Kanchanaburi,Kanchanaburi,71
+option,TH,Thailand,,state,,,,,,,,4,กาฬสินธุ์,กาฬสินธุ์ — Kalasin,Kalasin,46
+option,TH,Thailand,,state,,,,,,,,5,กำแพงเพชร,กำแพงเพชร — Kamphaeng Phet,Kamphaeng Phet,62
+option,TH,Thailand,,state,,,,,,,,6,ขอนแก่น,ขอนแก่น — Khon Kaen,Khon Kaen,40
+option,TH,Thailand,,state,,,,,,,,7,จังหวัด บึงกาฬ,จังหวัด บึงกาฬ — Bueng Kan,Bueng Kan,
+option,TH,Thailand,,state,,,,,,,,8,จันทบุรี,จันทบุรี — Chanthaburi,Chanthaburi,22
+option,TH,Thailand,,state,,,,,,,,9,ฉะเชิงเทรา,ฉะเชิงเทรา — Chachoengsao,Chachoengsao,24
+option,TH,Thailand,,state,,,,,,,,10,ชลบุรี,ชลบุรี — Chon Buri,Chon Buri,20
+option,TH,Thailand,,state,,,,,,,,11,ชัยนาท,ชัยนาท — Chai Nat,Chai Nat,17
+option,TH,Thailand,,state,,,,,,,,12,ชัยภูมิ,ชัยภูมิ — Chaiyaphum,Chaiyaphum,36
+option,TH,Thailand,,state,,,,,,,,13,ชุมพร,ชุมพร — Chumpon,Chumpon,86
+option,TH,Thailand,,state,,,,,,,,14,เชียงราย,เชียงราย — Chiang Rai,Chiang Rai,57
+option,TH,Thailand,,state,,,,,,,,15,เชียงใหม่,เชียงใหม่ — Chiang Mai,Chiang Mai,50
+option,TH,Thailand,,state,,,,,,,,16,ตรัง,ตรัง — Trang,Trang,92
+option,TH,Thailand,,state,,,,,,,,17,ตราด,ตราด — Trat,Trat,23
+option,TH,Thailand,,state,,,,,,,,18,ตาก,ตาก — Tak,Tak,63
+option,TH,Thailand,,state,,,,,,,,19,นครนายก,นครนายก — Nakhon Nayok,Nakhon Nayok,26
+option,TH,Thailand,,state,,,,,,,,20,นครปฐม,นครปฐม — Nakhon Pathom,Nakhon Pathom,73
+option,TH,Thailand,,state,,,,,,,,21,นครพนม,นครพนม — Nakhon Phanom,Nakhon Phanom,48
+option,TH,Thailand,,state,,,,,,,,22,นครราชสีมา,นครราชสีมา — Nakhon Ratchasima,Nakhon Ratchasima,30
+option,TH,Thailand,,state,,,,,,,,23,นครศรีธรรมราช,นครศรีธรรมราช — Nakhon Si Thammarat,Nakhon Si Thammarat,80
+option,TH,Thailand,,state,,,,,,,,24,นครสวรรค์,นครสวรรค์ — Nakhon Sawan,Nakhon Sawan,60
+option,TH,Thailand,,state,,,,,,,,25,นนทบุรี,นนทบุรี — Nonthaburi,Nonthaburi,11
+option,TH,Thailand,,state,,,,,,,,26,นราธิวาส,นราธิวาส — Narathiwat,Narathiwat,96
+option,TH,Thailand,,state,,,,,,,,27,น่าน,น่าน — Nan,Nan,55
+option,TH,Thailand,,state,,,,,,,,28,บุรีรัมย์,บุรีรัมย์ — Buri Ram,Buri Ram,31
+option,TH,Thailand,,state,,,,,,,,29,ปทุมธานี,ปทุมธานี — Pathum Thani,Pathum Thani,12
+option,TH,Thailand,,state,,,,,,,,30,ประจวบคีรีขันธ์,ประจวบคีรีขันธ์ — Prachuap Khiri Khan,Prachuap Khiri Khan,77
+option,TH,Thailand,,state,,,,,,,,31,ปราจีนบุรี,ปราจีนบุรี — Prachin Buri,Prachin Buri,25
+option,TH,Thailand,,state,,,,,,,,32,ปัตตานี,ปัตตานี — Pattani,Pattani,94
+option,TH,Thailand,,state,,,,,,,,33,พระนครศรีอยุธยา,พระนครศรีอยุธยา — Phra Nakhon Si Ayutthaya,Phra Nakhon Si Ayutthaya,13
+option,TH,Thailand,,state,,,,,,,,34,พะเยา,พะเยา — Phayao,Phayao,56
+option,TH,Thailand,,state,,,,,,,,35,พังงา,พังงา — Phang Nga,Phang Nga,82
+option,TH,Thailand,,state,,,,,,,,36,พัทลุง,พัทลุง — Phattalung,Phattalung,93
+option,TH,Thailand,,state,,,,,,,,37,พิจิตร,พิจิตร — Phichit,Phichit,66
+option,TH,Thailand,,state,,,,,,,,38,พิษณุโลก,พิษณุโลก — Phitsanulok,Phitsanulok,65
+option,TH,Thailand,,state,,,,,,,,39,เพชรบุรี,เพชรบุรี — Phetchaburi,Phetchaburi,76
+option,TH,Thailand,,state,,,,,,,,40,เพชรบูรณ์,เพชรบูรณ์ — Phetchabun,Phetchabun,67
+option,TH,Thailand,,state,,,,,,,,41,แพร่,แพร่ — Phrae,Phrae,54
+option,TH,Thailand,,state,,,,,,,,42,ภูเก็ต,ภูเก็ต — Phuket,Phuket,83
+option,TH,Thailand,,state,,,,,,,,43,มหาสารคาม,มหาสารคาม — Maha Sarakham,Maha Sarakham,44
+option,TH,Thailand,,state,,,,,,,,44,มุกดาหาร,มุกดาหาร — Mukdahan,Mukdahan,49
+option,TH,Thailand,,state,,,,,,,,45,แม่ฮ่องสอน,แม่ฮ่องสอน — Mae Hong Son,Mae Hong Son,58
+option,TH,Thailand,,state,,,,,,,,46,ยโสธร,ยโสธร — Yasothon,Yasothon,35
+option,TH,Thailand,,state,,,,,,,,47,ยะลา,ยะลา — Yala,Yala,95
+option,TH,Thailand,,state,,,,,,,,48,ร้อยเอ็ด,ร้อยเอ็ด — Roi Et,Roi Et,45
+option,TH,Thailand,,state,,,,,,,,49,ระนอง,ระนอง — Ranong,Ranong,85
+option,TH,Thailand,,state,,,,,,,,50,ระยอง,ระยอง — Rayong,Rayong,21
+option,TH,Thailand,,state,,,,,,,,51,ราชบุรี,ราชบุรี — Ratchaburi,Ratchaburi,70
+option,TH,Thailand,,state,,,,,,,,52,ลพบุรี,ลพบุรี — Lop Buri,Lop Buri,15
+option,TH,Thailand,,state,,,,,,,,53,ลำปาง,ลำปาง — Lampang,Lampang,52
+option,TH,Thailand,,state,,,,,,,,54,ลำพูน,ลำพูน — Lamphun,Lamphun,51
+option,TH,Thailand,,state,,,,,,,,55,เลย,เลย — Loei,Loei,42
+option,TH,Thailand,,state,,,,,,,,56,ศรีสะเกษ,ศรีสะเกษ — Si Sa Ket,Si Sa Ket,33
+option,TH,Thailand,,state,,,,,,,,57,สกลนคร,สกลนคร — Sakon Nakhon,Sakon Nakhon,47
+option,TH,Thailand,,state,,,,,,,,58,สงขลา,สงขลา — Songkhla,Songkhla,90
+option,TH,Thailand,,state,,,,,,,,59,สตูล,สตูล — Satun,Satun,91
+option,TH,Thailand,,state,,,,,,,,60,สมุทรปราการ,สมุทรปราการ — Samut Prakan,Samut Prakan,10
+option,TH,Thailand,,state,,,,,,,,61,สมุทรสงคราม,สมุทรสงคราม — Samut Songkhram,Samut Songkhram,75
+option,TH,Thailand,,state,,,,,,,,62,สมุทรสาคร,สมุทรสาคร — Samut Sakhon,Samut Sakhon,74
+option,TH,Thailand,,state,,,,,,,,63,สระแก้ว,สระแก้ว — Sa Kaeo,Sa Kaeo,27
+option,TH,Thailand,,state,,,,,,,,64,สระบุรี,สระบุรี — Saraburi,Saraburi,18
+option,TH,Thailand,,state,,,,,,,,65,สิงห์บุรี,สิงห์บุรี — Sing Buri,Sing Buri,16
+option,TH,Thailand,,state,,,,,,,,66,สุโขทัย,สุโขทัย — Sukhothai,Sukhothai,64
+option,TH,Thailand,,state,,,,,,,,67,สุพรรณบุรี,สุพรรณบุรี — Suphanburi,Suphanburi,72
+option,TH,Thailand,,state,,,,,,,,68,สุราษฎร์ธานี,สุราษฎร์ธานี — Surat Thani,Surat Thani,84
+option,TH,Thailand,,state,,,,,,,,69,สุรินทร์,สุรินทร์ — Surin,Surin,32
+option,TH,Thailand,,state,,,,,,,,70,หนองคาย,หนองคาย — Nong Khai,Nong Khai,43
+option,TH,Thailand,,state,,,,,,,,71,หนองบัวลำภู,หนองบัวลำภู — Nong Bua Lam Phu,Nong Bua Lam Phu,39
+option,TH,Thailand,,state,,,,,,,,72,อ่างทอง,อ่างทอง — Ang Thong,Ang Thong,14
+option,TH,Thailand,,state,,,,,,,,73,อำนาจเจริญ,อำนาจเจริญ — Amnat Charoen,Amnat Charoen,37
+option,TH,Thailand,,state,,,,,,,,74,อุดรธานี,อุดรธานี — Udon Thani,Udon Thani,41
+option,TH,Thailand,,state,,,,,,,,75,อุตรดิตถ์,อุตรดิตถ์ — Uttaradit,Uttaradit,53
+option,TH,Thailand,,state,,,,,,,,76,อุทัยธานี,อุทัยธานี — Uthai Thani,Uthai Thani,61
+option,TH,Thailand,,state,,,,,,,,77,อุบลราชธานี,อุบลราชธานี — Ubon Ratchathani,Ubon Ratchathani,34
+field,TH,Thailand,6,postal_code,Postal code,text,false,,10150,\d{5},,,,,,
+field,TJ,Tajikistan,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TJ,Tajikistan,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TJ,Tajikistan,3,postal_code,Postal code,text,false,,735450,\d{6},,,,,,
+field,TJ,Tajikistan,4,city,City,text,false,,,,,,,,,
+field,TK,Tokelau,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TK,Tokelau,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TK,Tokelau,3,city,City,text,false,,,,,,,,,
+field,TK,Tokelau,4,postal_code,Postal code,text,false,,,,,,,,,
+field,TL,Timor-Leste,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TL,Timor-Leste,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TL,Timor-Leste,3,city,City,text,false,,,,,,,,,
+field,TL,Timor-Leste,4,postal_code,Postal code,text,false,,,,,,,,,
+field,TM,Turkmenistan,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TM,Turkmenistan,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TM,Turkmenistan,3,postal_code,Postal code,text,false,,744000,\d{6},,,,,,
+field,TM,Turkmenistan,4,city,City,text,false,,,,,,,,,
+field,TN,Tunisia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TN,Tunisia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TN,Tunisia,3,postal_code,Postal code,text,false,,1002,\d{4},,,,,,
+field,TN,Tunisia,4,city,City,text,false,,,,,,,,,
+field,TO,Tonga,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TO,Tonga,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TO,Tonga,3,city,City,text,false,,,,,,,,,
+field,TO,Tonga,4,postal_code,Postal code,text,false,,,,,,,,,
+field,TR,Türkiye,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TR,Türkiye,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TR,Türkiye,3,postal_code,Postal code,text,true,,01960,\d{5},,,,,,
+field,TR,Türkiye,4,city,District,text,true,,,,,,,,,
+field,TR,Türkiye,5,state,State / Province / Region,dropdown,false,,,,81,,,,,
+option,TR,Türkiye,,state,,,,,,,,1,Adana,Adana,,01
+option,TR,Türkiye,,state,,,,,,,,2,Adıyaman,Adıyaman,,02
+option,TR,Türkiye,,state,,,,,,,,3,Afyon,Afyon,,03
+option,TR,Türkiye,,state,,,,,,,,4,Ağrı,Ağrı,,04
+option,TR,Türkiye,,state,,,,,,,,5,Aksaray,Aksaray,,68
+option,TR,Türkiye,,state,,,,,,,,6,Amasya,Amasya,,05
+option,TR,Türkiye,,state,,,,,,,,7,Ankara,Ankara,,06
+option,TR,Türkiye,,state,,,,,,,,8,Antalya,Antalya,,07
+option,TR,Türkiye,,state,,,,,,,,9,Ardahan,Ardahan,,75
+option,TR,Türkiye,,state,,,,,,,,10,Artvin,Artvin,,08
+option,TR,Türkiye,,state,,,,,,,,11,Aydın,Aydın,,09
+option,TR,Türkiye,,state,,,,,,,,12,Balıkesir,Balıkesir,,10
+option,TR,Türkiye,,state,,,,,,,,13,Bartın,Bartın,,74
+option,TR,Türkiye,,state,,,,,,,,14,Batman,Batman,,72
+option,TR,Türkiye,,state,,,,,,,,15,Bayburt,Bayburt,,69
+option,TR,Türkiye,,state,,,,,,,,16,Bilecik,Bilecik,,11
+option,TR,Türkiye,,state,,,,,,,,17,Bingöl,Bingöl,,12
+option,TR,Türkiye,,state,,,,,,,,18,Bitlis,Bitlis,,13
+option,TR,Türkiye,,state,,,,,,,,19,Bolu,Bolu,,14
+option,TR,Türkiye,,state,,,,,,,,20,Burdur,Burdur,,15
+option,TR,Türkiye,,state,,,,,,,,21,Bursa,Bursa,,16
+option,TR,Türkiye,,state,,,,,,,,22,Çanakkale,Çanakkale,,17
+option,TR,Türkiye,,state,,,,,,,,23,Çankırı,Çankırı,,18
+option,TR,Türkiye,,state,,,,,,,,24,Çorum,Çorum,,19
+option,TR,Türkiye,,state,,,,,,,,25,Denizli,Denizli,,20
+option,TR,Türkiye,,state,,,,,,,,26,Diyarbakır,Diyarbakır,,21
+option,TR,Türkiye,,state,,,,,,,,27,Düzce,Düzce,,81
+option,TR,Türkiye,,state,,,,,,,,28,Edirne,Edirne,,22
+option,TR,Türkiye,,state,,,,,,,,29,Elazığ,Elazığ,,23
+option,TR,Türkiye,,state,,,,,,,,30,Erzincan,Erzincan,,24
+option,TR,Türkiye,,state,,,,,,,,31,Erzurum,Erzurum,,25
+option,TR,Türkiye,,state,,,,,,,,32,Eskişehir,Eskişehir,,26
+option,TR,Türkiye,,state,,,,,,,,33,Gaziantep,Gaziantep,,27
+option,TR,Türkiye,,state,,,,,,,,34,Giresun,Giresun,,28
+option,TR,Türkiye,,state,,,,,,,,35,Gümüşhane,Gümüşhane,,29
+option,TR,Türkiye,,state,,,,,,,,36,Hakkari,Hakkari,,30
+option,TR,Türkiye,,state,,,,,,,,37,Hatay,Hatay,,31
+option,TR,Türkiye,,state,,,,,,,,38,Iğdır,Iğdır,,76
+option,TR,Türkiye,,state,,,,,,,,39,Isparta,Isparta,,32
+option,TR,Türkiye,,state,,,,,,,,40,İstanbul,İstanbul,,34
+option,TR,Türkiye,,state,,,,,,,,41,İzmir,İzmir,,35
+option,TR,Türkiye,,state,,,,,,,,42,Kahramanmaraş,Kahramanmaraş,,46
+option,TR,Türkiye,,state,,,,,,,,43,Karabük,Karabük,,78
+option,TR,Türkiye,,state,,,,,,,,44,Karaman,Karaman,,70
+option,TR,Türkiye,,state,,,,,,,,45,Kars,Kars,,36
+option,TR,Türkiye,,state,,,,,,,,46,Kastamonu,Kastamonu,,37
+option,TR,Türkiye,,state,,,,,,,,47,Kayseri,Kayseri,,38
+option,TR,Türkiye,,state,,,,,,,,48,Kırıkkale,Kırıkkale,,71
+option,TR,Türkiye,,state,,,,,,,,49,Kırklareli,Kırklareli,,39
+option,TR,Türkiye,,state,,,,,,,,50,Kırşehir,Kırşehir,,40
+option,TR,Türkiye,,state,,,,,,,,51,Kilis,Kilis,,79
+option,TR,Türkiye,,state,,,,,,,,52,Kocaeli,Kocaeli,,41
+option,TR,Türkiye,,state,,,,,,,,53,Konya,Konya,,42
+option,TR,Türkiye,,state,,,,,,,,54,Kütahya,Kütahya,,43
+option,TR,Türkiye,,state,,,,,,,,55,Malatya,Malatya,,44
+option,TR,Türkiye,,state,,,,,,,,56,Manisa,Manisa,,45
+option,TR,Türkiye,,state,,,,,,,,57,Mardin,Mardin,,47
+option,TR,Türkiye,,state,,,,,,,,58,Mersin,Mersin,,33
+option,TR,Türkiye,,state,,,,,,,,59,Muğla,Muğla,,48
+option,TR,Türkiye,,state,,,,,,,,60,Muş,Muş,,49
+option,TR,Türkiye,,state,,,,,,,,61,Nevşehir,Nevşehir,,50
+option,TR,Türkiye,,state,,,,,,,,62,Niğde,Niğde,,51
+option,TR,Türkiye,,state,,,,,,,,63,Ordu,Ordu,,52
+option,TR,Türkiye,,state,,,,,,,,64,Osmaniye,Osmaniye,,80
+option,TR,Türkiye,,state,,,,,,,,65,Rize,Rize,,53
+option,TR,Türkiye,,state,,,,,,,,66,Sakarya,Sakarya,,54
+option,TR,Türkiye,,state,,,,,,,,67,Samsun,Samsun,,55
+option,TR,Türkiye,,state,,,,,,,,68,Siirt,Siirt,,56
+option,TR,Türkiye,,state,,,,,,,,69,Sinop,Sinop,,57
+option,TR,Türkiye,,state,,,,,,,,70,Sivas,Sivas,,58
+option,TR,Türkiye,,state,,,,,,,,71,Şanlıurfa,Şanlıurfa,,63
+option,TR,Türkiye,,state,,,,,,,,72,Şırnak,Şırnak,,73
+option,TR,Türkiye,,state,,,,,,,,73,Tekirdağ,Tekirdağ,,59
+option,TR,Türkiye,,state,,,,,,,,74,Tokat,Tokat,,60
+option,TR,Türkiye,,state,,,,,,,,75,Trabzon,Trabzon,,61
+option,TR,Türkiye,,state,,,,,,,,76,Tunceli,Tunceli,,62
+option,TR,Türkiye,,state,,,,,,,,77,Uşak,Uşak,,64
+option,TR,Türkiye,,state,,,,,,,,78,Van,Van,,65
+option,TR,Türkiye,,state,,,,,,,,79,Yalova,Yalova,,77
+option,TR,Türkiye,,state,,,,,,,,80,Yozgat,Yozgat,,66
+option,TR,Türkiye,,state,,,,,,,,81,Zonguldak,Zonguldak,,67
+field,TT,Trinidad & Tobago,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TT,Trinidad & Tobago,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TT,Trinidad & Tobago,3,city,City,text,false,,,,,,,,,
+field,TT,Trinidad & Tobago,4,postal_code,Postal code,text,false,,,,,,,,,
+field,TV,Tuvalu,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TV,Tuvalu,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TV,Tuvalu,3,city,City,text,false,,,,,,,,,
+field,TV,Tuvalu,4,state,Island,dropdown,false,,,,9,,,,,
+option,TV,Tuvalu,,state,,,,,,,,1,Funafuti,Funafuti,,
+option,TV,Tuvalu,,state,,,,,,,,2,Nanumanga,Nanumanga,,
+option,TV,Tuvalu,,state,,,,,,,,3,Nanumea,Nanumea,,
+option,TV,Tuvalu,,state,,,,,,,,4,Niulakita,Niulakita,,
+option,TV,Tuvalu,,state,,,,,,,,5,Niutao,Niutao,,
+option,TV,Tuvalu,,state,,,,,,,,6,Nui,Nui,,
+option,TV,Tuvalu,,state,,,,,,,,7,Nukufetau,Nukufetau,,
+option,TV,Tuvalu,,state,,,,,,,,8,Nukulaelae,Nukulaelae,,
+option,TV,Tuvalu,,state,,,,,,,,9,Vaitupu,Vaitupu,,
+field,TW,Taiwan,1,postal_code,Postal code,text,true,,104,"\d{3}(?:\d{2,3})?",,,,,,
+field,TW,Taiwan,2,state,County,dropdown,true,,,,22,,,,,
+option,TW,Taiwan,,state,,,,,,,,1,台中市,台中市 — Taichung City,Taichung City,4[0-3]
+option,TW,Taiwan,,state,,,,,,,,2,台北市,台北市 — Taipei City,Taipei City,1[01]
+option,TW,Taiwan,,state,,,,,,,,3,台東縣,台東縣 — Taitung County,Taitung County,9[56]
+option,TW,Taiwan,,state,,,,,,,,4,台南市,台南市 — Tainan City,Tainan City,7[0-4]
+option,TW,Taiwan,,state,,,,,,,,5,宜蘭縣,宜蘭縣 — Yilan County,Yilan County,2[67]
+option,TW,Taiwan,,state,,,,,,,,6,花蓮縣,花蓮縣 — Hualien County,Hualien County,9[78]
+option,TW,Taiwan,,state,,,,,,,,7,金門縣,金門縣 — Kinmen County,Kinmen County,89
+option,TW,Taiwan,,state,,,,,,,,8,南投縣,南投縣 — Nantou County,Nantou County,5[45]
+option,TW,Taiwan,,state,,,,,,,,9,屏東縣,屏東縣 — Pingtung County,Pingtung County,9[0-4]
+option,TW,Taiwan,,state,,,,,,,,10,苗栗縣,苗栗縣 — Miaoli County,Miaoli County,3[56]
+option,TW,Taiwan,,state,,,,,,,,11,桃園市,桃園市 — Taoyuan City,Taoyuan City,3[23]
+option,TW,Taiwan,,state,,,,,,,,12,高雄市,高雄市 — Kaohsiung City,Kaohsiung City,8[02-5]|81[1-579]
+option,TW,Taiwan,,state,,,,,,,,13,基隆市,基隆市 — Keelung City,Keelung City,20[0-6]
+option,TW,Taiwan,,state,,,,,,,,14,連江縣,連江縣 — Lienchiang County,Lienchiang County,209|21[012]
+option,TW,Taiwan,,state,,,,,,,,15,雲林縣,雲林縣 — Yunlin County,Yunlin County,6[3-5]
+option,TW,Taiwan,,state,,,,,,,,16,新北市,新北市 — New Taipei City,New Taipei City,20[78]|2[2345]
+option,TW,Taiwan,,state,,,,,,,,17,新竹市,新竹市 — Hsinchu City,Hsinchu City,300
+option,TW,Taiwan,,state,,,,,,,,18,新竹縣,新竹縣 — Hsinchu County,Hsinchu County,30[2-8]|31
+option,TW,Taiwan,,state,,,,,,,,19,嘉義市,嘉義市 — Chiayi City,Chiayi City,600
+option,TW,Taiwan,,state,,,,,,,,20,嘉義縣,嘉義縣 — Chiayi County,Chiayi County,60[1-9]|6[12]
+option,TW,Taiwan,,state,,,,,,,,21,彰化縣,彰化縣 — Changhua County,Changhua County,5[0123]
+option,TW,Taiwan,,state,,,,,,,,22,澎湖縣,澎湖縣 — Penghu County,Penghu County,88
+field,TW,Taiwan,3,city,District,text,true,,,,,,,,,
+field,TW,Taiwan,4,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TW,Taiwan,5,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TZ,Tanzania,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,TZ,Tanzania,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,TZ,Tanzania,3,postal_code,Postal code,text,false,,6090,"\d{4,5}",,,,,,
+field,TZ,Tanzania,4,city,City,text,false,,,,,,,,,
+field,UA,Ukraine,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,UA,Ukraine,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,UA,Ukraine,3,city,City,text,true,,,,,,,,,
+field,UA,Ukraine,4,state,Oblast,dropdown,false,,,,23,,,,,
+option,UA,Ukraine,,state,,,,,,,,1,Вінницька область,Вінницька область — Vinnyts'ka oblast,Vinnyts'ka oblast,9[5-8]
+option,UA,Ukraine,,state,,,,,,,,2,Волинська область,Волинська область — Volyns'ka oblast,Volyns'ka oblast,2[1-4]
+option,UA,Ukraine,,state,,,,,,,,3,Дніпропетровська область,Дніпропетровська область — Dnipropetrovsk oblast,Dnipropetrovsk oblast,4[3-5]
+option,UA,Ukraine,,state,,,,,,,,4,Житомирська область,Житомирська область — Zhytomyrs'ka oblast,Zhytomyrs'ka oblast,49|5[0-3]
+option,UA,Ukraine,,state,,,,,,,,5,Закарпатська область,Закарпатська область — Zakarpats'ka oblast,Zakarpats'ka oblast,8[3-7]
+option,UA,Ukraine,,state,,,,,,,,6,Запорізька область,Запорізька область — Zaporiz'ka oblast,Zaporiz'ka oblast,1[0-3]
+option,UA,Ukraine,,state,,,,,,,,7,Івано-Франківська область,Івано-Франківська область — Ivano-Frankivs'ka oblast,Ivano-Frankivs'ka oblast,8[89]|90
+option,UA,Ukraine,,state,,,,,,,,8,місто Київ,Київ — Kyiv city,Kyiv city,69|7[0-2]
+option,UA,Ukraine,,state,,,,,,,,9,Київська область,Київська область — Kiev oblast,Kiev oblast,7[6-8]
+option,UA,Ukraine,,state,,,,,,,,10,Кіровоградська область,Кіровоградська область — Kirovohrads'ka oblast,Kirovohrads'ka oblast,0[1-6]
+option,UA,Ukraine,,state,,,,,,,,11,Львівська область,Львівська область — Lviv oblast,Lviv oblast,0[7-9]
+option,UA,Ukraine,,state,,,,,,,,12,Миколаївська область,Миколаївська область — Mykolaivs'ka oblast,Mykolaivs'ka oblast,2[5-8]
+option,UA,Ukraine,,state,,,,,,,,13,Одеська область,Одеська область — Odessa oblast,Odessa oblast,9[1-4]
+option,UA,Ukraine,,state,,,,,,,,14,Полтавська область,Полтавська область — Poltavs'ka oblast,Poltavs'ka oblast,79|8[0-2]
+option,UA,Ukraine,,state,,,,,,,,15,Рівненська область,Рівненська область — Rivnens'ka oblast,Rivnens'ka oblast,5[4-7]
+option,UA,Ukraine,,state,,,,,,,,16,Сумська область,Сумська область — Sums'ka oblast,Sums'ka oblast,6[5-8]
+option,UA,Ukraine,,state,,,,,,,,17,Тернопільська область,Тернопільська область — Ternopil's'ka oblast,Ternopil's'ka oblast,3[6-9]
+option,UA,Ukraine,,state,,,,,,,,18,Харківська область,Харківська область — Kharkiv oblast,Kharkiv oblast,3[3-5]
+option,UA,Ukraine,,state,,,,,,,,19,Херсонська область,Херсонська область — Khersons'ka oblast,Khersons'ka oblast,99
+option,UA,Ukraine,,state,,,,,,,,20,Хмельницька область,Хмельницька область — Khmel'nyts'ka oblast,Khmel'nyts'ka oblast,4[0-2]
+option,UA,Ukraine,,state,,,,,,,,21,Черкаська область,Черкаська область — Cherkas'ka oblast,Cherkas'ka oblast,4[6-8]
+option,UA,Ukraine,,state,,,,,,,,22,Чернівецька область,Чернівецька область — Chernivets'ka oblast,Chernivets'ka oblast,6[1-4]
+option,UA,Ukraine,,state,,,,,,,,23,Чернігівська область,Чернігівська область — Chernihivs'ka oblast,Chernihivs'ka oblast,7[3-5]
+field,UA,Ukraine,5,postal_code,Postal code,text,true,,15432,\d{5},,,,,,
+field,UG,Uganda,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,UG,Uganda,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,UG,Uganda,3,city,City,text,false,,,,,,,,,
+field,UG,Uganda,4,postal_code,Postal code,text,false,,,,,,,,,
+field,US,United States,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,US,United States,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,US,United States,3,city,City,text,true,,,,,,,,,
+field,US,United States,4,state,State,dropdown,true,,,,62,,,,,
+option,US,United States,,state,,,,,,,,1,AL,Alabama,,3[56]
+option,US,United States,,state,,,,,,,,2,AK,Alaska,,99[5-9]
+option,US,United States,,state,,,,,,,,3,AS,American Samoa,,96799
+option,US,United States,,state,,,,,,,,4,AZ,Arizona,,8[56]
+option,US,United States,,state,,,,,,,,5,AR,Arkansas,,71[6-9]|72
+option,US,United States,,state,,,,,,,,6,AA,Armed Forces (AA),,340
+option,US,United States,,state,,,,,,,,7,AE,Armed Forces (AE),,09
+option,US,United States,,state,,,,,,,,8,AP,Armed Forces (AP),,96[2-6]
+option,US,United States,,state,,,,,,,,9,CA,California,,9[0-5]|96[01]
+option,US,United States,,state,,,,,,,,10,CO,Colorado,,8[01]
+option,US,United States,,state,,,,,,,,11,CT,Connecticut,,06
+option,US,United States,,state,,,,,,,,12,DE,Delaware,,19[7-9]
+option,US,United States,,state,,,,,,,,13,DC,District of Columbia,,20[02-5]|569
+option,US,United States,,state,,,,,,,,14,FL,Florida,,3[23]|34[1-9]
+option,US,United States,,state,,,,,,,,15,GA,Georgia,,3[01]|398|39901
+option,US,United States,,state,,,,,,,,16,GU,Guam,,969([1-2]\d|3[12])
+option,US,United States,,state,,,,,,,,17,HI,Hawaii,,967[0-8]|9679[0-8]|968
+option,US,United States,,state,,,,,,,,18,ID,Idaho,,83[2-9]
+option,US,United States,,state,,,,,,,,19,IL,Illinois,,6[0-2]
+option,US,United States,,state,,,,,,,,20,IN,Indiana,,4[67]
+option,US,United States,,state,,,,,,,,21,IA,Iowa,,5[0-2]
+option,US,United States,,state,,,,,,,,22,KS,Kansas,,6[67]
+option,US,United States,,state,,,,,,,,23,KY,Kentucky,,4[01]|42[0-7]
+option,US,United States,,state,,,,,,,,24,LA,Louisiana,,70|71[0-5]
+option,US,United States,,state,,,,,,,,25,ME,Maine,,039|04
+option,US,United States,,state,,,,,,,,26,MH,Marshall Islands,,969[67]
+option,US,United States,,state,,,,,,,,27,MD,Maryland,,20[6-9]|21
+option,US,United States,,state,,,,,,,,28,MA,Massachusetts,,01|02[0-7]|05501|05544
+option,US,United States,,state,,,,,,,,29,MI,Michigan,,4[89]
+option,US,United States,,state,,,,,,,,30,FM,Micronesia,,9694[1-4]
+option,US,United States,,state,,,,,,,,31,MN,Minnesota,,55|56[0-7]
+option,US,United States,,state,,,,,,,,32,MS,Mississippi,,38[6-9]|39[0-7]
+option,US,United States,,state,,,,,,,,33,MO,Missouri,,6[3-5]
+option,US,United States,,state,,,,,,,,34,MT,Montana,,59
+option,US,United States,,state,,,,,,,,35,NE,Nebraska,,6[89]
+option,US,United States,,state,,,,,,,,36,NV,Nevada,,889|89
+option,US,United States,,state,,,,,,,,37,NH,New Hampshire,,03[0-8]
+option,US,United States,,state,,,,,,,,38,NJ,New Jersey,,0[78]
+option,US,United States,,state,,,,,,,,39,NM,New Mexico,,87|88[0-4]
+option,US,United States,,state,,,,,,,,40,NY,New York,,1[0-4]|06390|00501|00544
+option,US,United States,,state,,,,,,,,41,NC,North Carolina,,2[78]
+option,US,United States,,state,,,,,,,,42,ND,North Dakota,,58
+option,US,United States,,state,,,,,,,,43,MP,Northern Mariana Islands,,9695[0-2]
+option,US,United States,,state,,,,,,,,44,OH,Ohio,,4[3-5]
+option,US,United States,,state,,,,,,,,45,OK,Oklahoma,,7[34]
+option,US,United States,,state,,,,,,,,46,OR,Oregon,,97
+option,US,United States,,state,,,,,,,,47,PW,Palau,,969(39|40)
+option,US,United States,,state,,,,,,,,48,PA,Pennsylvania,,1[5-8]|19[0-6]
+option,US,United States,,state,,,,,,,,49,PR,Puerto Rico,,00[679]
+option,US,United States,,state,,,,,,,,50,RI,Rhode Island,,02[89]
+option,US,United States,,state,,,,,,,,51,SC,South Carolina,,29
+option,US,United States,,state,,,,,,,,52,SD,South Dakota,,57
+option,US,United States,,state,,,,,,,,53,TN,Tennessee,,37|38[0-5]
+option,US,United States,,state,,,,,,,,54,TX,Texas,,7[5-9]|885|73301|73344
+option,US,United States,,state,,,,,,,,55,UT,Utah,,84
+option,US,United States,,state,,,,,,,,56,VT,Vermont,,05
+option,US,United States,,state,,,,,,,,57,VI,Virgin Islands,,008
+option,US,United States,,state,,,,,,,,58,VA,Virginia,,201|2[23]|24[0-6]
+option,US,United States,,state,,,,,,,,59,WA,Washington,,98|99[0-4]
+option,US,United States,,state,,,,,,,,60,WV,West Virginia,,24[7-9]|2[56]
+option,US,United States,,state,,,,,,,,61,WI,Wisconsin,,5[34]
+option,US,United States,,state,,,,,,,,62,WY,Wyoming,,82|83[01]|83414
+field,US,United States,5,postal_code,ZIP,text,true,,95014,(\d{5})(?:[ \-](\d{4}))?,,,,,,
+field,UY,Uruguay,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,UY,Uruguay,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,UY,Uruguay,3,postal_code,Postal code,text,false,,11600,\d{5},,,,,,
+field,UY,Uruguay,4,city,City,text,false,,,,,,,,,
+field,UY,Uruguay,5,state,State / Province / Region,dropdown,false,,,,19,,,,,
+option,UY,Uruguay,,state,,,,,,,,1,Artigas,Artigas,,55
+option,UY,Uruguay,,state,,,,,,,,2,Canelones,Canelones,,9[01]|1[456]
+option,UY,Uruguay,,state,,,,,,,,3,Cerro Largo,Cerro Largo,,37
+option,UY,Uruguay,,state,,,,,,,,4,Colonia,Colonia,,70|75204
+option,UY,Uruguay,,state,,,,,,,,5,Durazno,Durazno,,97
+option,UY,Uruguay,,state,,,,,,,,6,Flores,Flores,,85
+option,UY,Uruguay,,state,,,,,,,,7,Florida,Florida,,94|9060|97005
+option,UY,Uruguay,,state,,,,,,,,8,Lavalleja,Lavalleja,,30
+option,UY,Uruguay,,state,,,,,,,,9,Maldonado,Maldonado,,20
+option,UY,Uruguay,,state,,,,,,,,10,Montevideo,Montevideo,,1|91600
+option,UY,Uruguay,,state,,,,,,,,11,Paysandú,Paysandú,,60
+option,UY,Uruguay,,state,,,,,,,,12,Río Negro,Río Negro,,65|60002
+option,UY,Uruguay,,state,,,,,,,,13,Rivera,Rivera,,40
+option,UY,Uruguay,,state,,,,,,,,14,Rocha,Rocha,,27
+option,UY,Uruguay,,state,,,,,,,,15,Salto,Salto,,50
+option,UY,Uruguay,,state,,,,,,,,16,San José,San José,,80
+option,UY,Uruguay,,state,,,,,,,,17,Soriano,Soriano,,75|70003
+option,UY,Uruguay,,state,,,,,,,,18,Tacuarembó,Tacuarembó,,45
+option,UY,Uruguay,,state,,,,,,,,19,Treinta y Tres,Treinta y Tres,,33|30203|30204|30302|37007
+field,UZ,Uzbekistan,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,UZ,Uzbekistan,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,UZ,Uzbekistan,3,postal_code,Postal code,text,false,,702100,\d{6},,,,,,
+field,UZ,Uzbekistan,4,city,City,text,false,,,,,,,,,
+field,UZ,Uzbekistan,5,state,State / Province / Region,dropdown,false,,,,14,,,,,
+option,UZ,Uzbekistan,,state,,,,,,,,1,Tashkent,Tashkent,,
+option,UZ,Uzbekistan,,state,,,,,,,,2,Andijan Region,Andijan Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,3,Bukhara Region,Bukhara Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,4,Fergana Region,Fergana Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,5,Jizzakh Region,Jizzakh Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,6,Namangan Region,Namangan Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,7,Navoiy Region,Navoiy Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,8,Qashqadaryo Region,Qashqadaryo Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,9,Samarqand Region,Samarqand Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,10,Sirdaryo Region,Sirdaryo Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,11,Surxondaryo Region,Surxondaryo Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,12,Tashkent Region,Tashkent Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,13,Xorazm Region,Xorazm Region,,
+option,UZ,Uzbekistan,,state,,,,,,,,14,Karakalpakstan,Karakalpakstan,,
+field,VA,Vatican City,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,VA,Vatican City,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,VA,Vatican City,3,postal_code,Postal code,text,false,,00120,00120,,,,,,
+field,VA,Vatican City,4,city,City,text,false,,,,,,,,,
+field,VC,St. Vincent & Grenadines,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,VC,St. Vincent & Grenadines,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,VC,St. Vincent & Grenadines,3,city,City,text,false,,,,,,,,,
+field,VC,St. Vincent & Grenadines,4,postal_code,Postal code,text,false,,VC0100,VC\d{4},,,,,,
+field,VG,British Virgin Islands,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,VG,British Virgin Islands,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,VG,British Virgin Islands,3,city,City,text,false,,,,,,,,,
+field,VG,British Virgin Islands,4,postal_code,Postal code,text,false,,VG1110,VG\d{4},,,,,,
+field,VN,Vietnam,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,VN,Vietnam,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,VN,Vietnam,3,city,City,text,false,,,,,,,,,
+field,VN,Vietnam,4,state,State / Province / Region,dropdown,false,,,,63,,,,,
+option,VN,Vietnam,,state,,,,,,,,1,An Giang,An Giang — An Giang Province,An Giang Province,
+option,VN,Vietnam,,state,,,,,,,,2,Bà Rịa–Vũng Tàu,Bà Rịa–Vũng Tàu — Ba Ria-Vung Tau Province,Ba Ria-Vung Tau Province,
+option,VN,Vietnam,,state,,,,,,,,3,Bạc Liêu,Bạc Liêu — Bac Lieu Province,Bac Lieu Province,
+option,VN,Vietnam,,state,,,,,,,,4,Bắc Giang,Bắc Giang — Bac Giang Province,Bac Giang Province,
+option,VN,Vietnam,,state,,,,,,,,5,Bắc Kạn,Bắc Kạn — Bac Kan Province,Bac Kan Province,
+option,VN,Vietnam,,state,,,,,,,,6,Bắc Ninh,Bắc Ninh — Bac Ninh Province,Bac Ninh Province,
+option,VN,Vietnam,,state,,,,,,,,7,Bến Tre,Bến Tre — Ben Tre Province,Ben Tre Province,
+option,VN,Vietnam,,state,,,,,,,,8,Bình Dương,Bình Dương — Binh Duong Province,Binh Duong Province,
+option,VN,Vietnam,,state,,,,,,,,9,Bình Định,Bình Định — Binh Dinh Province,Binh Dinh Province,
+option,VN,Vietnam,,state,,,,,,,,10,Bình Phước,Bình Phước — Binh Phuoc Province,Binh Phuoc Province,
+option,VN,Vietnam,,state,,,,,,,,11,Bình Thuận,Bình Thuận — Binh Thuan Province,Binh Thuan Province,
+option,VN,Vietnam,,state,,,,,,,,12,Cà Mau,Cà Mau — Ca Mau Province,Ca Mau Province,
+option,VN,Vietnam,,state,,,,,,,,13,Cao Bằng,Cao Bằng — Cao Bang Province,Cao Bang Province,
+option,VN,Vietnam,,state,,,,,,,,14,Cần Thơ,Cần Thơ — Can Tho City,Can Tho City,
+option,VN,Vietnam,,state,,,,,,,,15,Đà Nẵng,Đà Nẵng — Da Nang City,Da Nang City,
+option,VN,Vietnam,,state,,,,,,,,16,Đắk Lắk,Đắk Lắk — Dak Lak Province,Dak Lak Province,
+option,VN,Vietnam,,state,,,,,,,,17,Đăk Nông,Đăk Nông — Dak Nong Province,Dak Nong Province,
+option,VN,Vietnam,,state,,,,,,,,18,Điện Biên,Điện Biên — Dien Bien Province,Dien Bien Province,
+option,VN,Vietnam,,state,,,,,,,,19,Đồng Nai,Đồng Nai — Dong Nai Province,Dong Nai Province,
+option,VN,Vietnam,,state,,,,,,,,20,Đồng Tháp,Đồng Tháp — Dong Thap Province,Dong Thap Province,
+option,VN,Vietnam,,state,,,,,,,,21,Gia Lai,Gia Lai — Gia Lai Province,Gia Lai Province,
+option,VN,Vietnam,,state,,,,,,,,22,Hà Giang,Hà Giang — Ha Giang Province,Ha Giang Province,
+option,VN,Vietnam,,state,,,,,,,,23,Hà Nam,Hà Nam — Ha Nam Province,Ha Nam Province,
+option,VN,Vietnam,,state,,,,,,,,24,Hà Nội,Hà Nội — Hanoi City,Hanoi City,
+option,VN,Vietnam,,state,,,,,,,,25,Hà Tĩnh,Hà Tĩnh — Ha Tinh Province,Ha Tinh Province,
+option,VN,Vietnam,,state,,,,,,,,26,Hải Dương,Hải Dương — Hai Duong Province,Hai Duong Province,
+option,VN,Vietnam,,state,,,,,,,,27,Hải Phòng,Hải Phòng — Haiphong City,Haiphong City,
+option,VN,Vietnam,,state,,,,,,,,28,Hậu Giang,Hậu Giang — Hau Giang Province,Hau Giang Province,
+option,VN,Vietnam,,state,,,,,,,,29,Hòa Bình,Hòa Bình — Hoa Binh Province,Hoa Binh Province,
+option,VN,Vietnam,,state,,,,,,,,30,Hưng Yên,Hưng Yên — Hung Yen Province,Hung Yen Province,
+option,VN,Vietnam,,state,,,,,,,,31,Khánh Hòa,Khánh Hòa — Khanh Hoa Province,Khanh Hoa Province,
+option,VN,Vietnam,,state,,,,,,,,32,Kiên Giang,Kiên Giang — Kien Giang Province,Kien Giang Province,
+option,VN,Vietnam,,state,,,,,,,,33,Kon Tum,Kon Tum — Kon Tum Province,Kon Tum Province,
+option,VN,Vietnam,,state,,,,,,,,34,Lai Châu,Lai Châu — Lai Chau Province,Lai Chau Province,
+option,VN,Vietnam,,state,,,,,,,,35,Lạng Sơn,Lạng Sơn — Lang Song Province,Lang Song Province,
+option,VN,Vietnam,,state,,,,,,,,36,Lào Cai,Lào Cai — Lao Cai Province,Lao Cai Province,
+option,VN,Vietnam,,state,,,,,,,,37,Lâm Đồng,Lâm Đồng — Lam Dong Province,Lam Dong Province,
+option,VN,Vietnam,,state,,,,,,,,38,Long An,Long An — Long An Province,Long An Province,
+option,VN,Vietnam,,state,,,,,,,,39,Nam Định,Nam Định — Nam Dinh Province,Nam Dinh Province,
+option,VN,Vietnam,,state,,,,,,,,40,Nghệ An,Nghệ An — Nghe An Province,Nghe An Province,
+option,VN,Vietnam,,state,,,,,,,,41,Ninh Bình,Ninh Bình — Ninh Binh Province,Ninh Binh Province,
+option,VN,Vietnam,,state,,,,,,,,42,Ninh Thuận,Ninh Thuận — Ninh Thuan Province,Ninh Thuan Province,
+option,VN,Vietnam,,state,,,,,,,,43,Phú Thọ,Phú Thọ — Phu Tho Province,Phu Tho Province,
+option,VN,Vietnam,,state,,,,,,,,44,Phú Yên,Phú Yên — Phu Yen Province,Phu Yen Province,
+option,VN,Vietnam,,state,,,,,,,,45,Quảng Bình,Quảng Bình — Quang Binh Province,Quang Binh Province,
+option,VN,Vietnam,,state,,,,,,,,46,Quảng Nam,Quảng Nam — Quang Nam Province,Quang Nam Province,
+option,VN,Vietnam,,state,,,,,,,,47,Quảng Ngãi,Quảng Ngãi — Quang Ngai Province,Quang Ngai Province,
+option,VN,Vietnam,,state,,,,,,,,48,Quảng Ninh,Quảng Ninh — Quang Ninh Province,Quang Ninh Province,
+option,VN,Vietnam,,state,,,,,,,,49,Quảng Trị,Quảng Trị — Quang Tri Province,Quang Tri Province,
+option,VN,Vietnam,,state,,,,,,,,50,Sóc Trăng,Sóc Trăng — Soc Trang Province,Soc Trang Province,
+option,VN,Vietnam,,state,,,,,,,,51,Sơn La,Sơn La — Son La Province,Son La Province,
+option,VN,Vietnam,,state,,,,,,,,52,Tây Ninh,Tây Ninh — Tay Ninh Province,Tay Ninh Province,
+option,VN,Vietnam,,state,,,,,,,,53,Thái Bình,Thái Bình — Thai Binh Province,Thai Binh Province,
+option,VN,Vietnam,,state,,,,,,,,54,Thái Nguyên,Thái Nguyên — Thai Nguyen Province,Thai Nguyen Province,
+option,VN,Vietnam,,state,,,,,,,,55,Thanh Hóa,Thanh Hóa — Thanh Hoa Province,Thanh Hoa Province,
+option,VN,Vietnam,,state,,,,,,,,56,Thành phố Hồ Chí Minh,Thành phố Hồ Chí Minh — Ho Chi Minh City,Ho Chi Minh City,
+option,VN,Vietnam,,state,,,,,,,,57,Thừa Thiên–Huế,Thừa Thiên–Huế — Thua Thien-Hue Province,Thua Thien-Hue Province,
+option,VN,Vietnam,,state,,,,,,,,58,Tiền Giang,Tiền Giang — Tien Giang Province,Tien Giang Province,
+option,VN,Vietnam,,state,,,,,,,,59,Trà Vinh,Trà Vinh — Tra Vinh Province,Tra Vinh Province,
+option,VN,Vietnam,,state,,,,,,,,60,Tuyên Quang,Tuyên Quang — Tuyen Quang Province,Tuyen Quang Province,
+option,VN,Vietnam,,state,,,,,,,,61,Vĩnh Long,Vĩnh Long — Vinh Long Province,Vinh Long Province,
+option,VN,Vietnam,,state,,,,,,,,62,Vĩnh Phúc,Vĩnh Phúc — Vinh Phuc Province,Vinh Phuc Province,
+option,VN,Vietnam,,state,,,,,,,,63,Yên Bái,Yên Bái — Yen Bai Province,Yen Bai Province,
+field,VN,Vietnam,5,postal_code,Postal code,text,false,,70010,\d{5}\d?,,,,,,
+field,VU,Vanuatu,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,VU,Vanuatu,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,VU,Vanuatu,3,city,City,text,false,,,,,,,,,
+field,VU,Vanuatu,4,postal_code,Postal code,text,false,,,,,,,,,
+field,WF,Wallis & Futuna,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,WF,Wallis & Futuna,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,WF,Wallis & Futuna,3,postal_code,Postal code,text,true,,98600,986\d{2},,,,,,
+field,WF,Wallis & Futuna,4,city,City,text,true,,,,,,,,,
+field,WF,Wallis & Futuna,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,WS,Samoa,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,WS,Samoa,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,WS,Samoa,3,city,City,text,false,,,,,,,,,
+field,WS,Samoa,4,postal_code,Postal code,text,false,,,,,,,,,
+field,YT,Mayotte,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,YT,Mayotte,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,YT,Mayotte,3,postal_code,Postal code,text,true,,97600,976\d{2},,,,,,
+field,YT,Mayotte,4,city,City,text,true,,,,,,,,,
+field,YT,Mayotte,5,sorting_code,CEDEX,text,false,,,,,,,,,
+field,ZA,South Africa,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,ZA,South Africa,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,ZA,South Africa,3,sublocality,District,text,false,,,,,,,,,
+field,ZA,South Africa,4,city,City,text,true,,,,,,,,,
+field,ZA,South Africa,5,postal_code,Postal code,text,true,,0083,\d{4},,,,,,
+field,ZM,Zambia,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,ZM,Zambia,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,ZM,Zambia,3,postal_code,Postal code,text,false,,50100,\d{5},,,,,,
+field,ZM,Zambia,4,city,City,text,false,,,,,,,,,
+field,ZW,Zimbabwe,1,line1,Address line 1,text,true,Street address,,,,,,,,
+field,ZW,Zimbabwe,2,line2,Address line 2,text,false,"Apt., suite, unit number, etc. (optional)",,,,,,,,
+field,ZW,Zimbabwe,3,city,City,text,false,,,,,,,,,
+field,ZW,Zimbabwe,4,postal_code,Postal code,text,false,,,,,,,,,

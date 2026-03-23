@@ -323,11 +323,69 @@ let DATA = [];
 let DROPDOWN_OPTS = {};
 
 (async function init() { try {
-  const resp = await fetch("stripe-address-data.json");
+  const resp = await fetch("engrid-address-fields.csv");
   if (!resp.ok) throw new Error(`Failed to load data: ${resp.status} ${resp.statusText}`);
-  const json = await resp.json();
-  DATA = json.fields;
-  DROPDOWN_OPTS = json.dropdownOptions;
+  const csvText = await resp.text();
+
+  // Parse CSV
+  function parseCSV(text) {
+    const rows = [];
+    let current = '', inQuotes = false, fields = [], i = 0;
+    while (i <= text.length) {
+      const ch = text[i] || '';
+      if (inQuotes) {
+        if (ch === '"' && text[i+1] === '"') { current += '"'; i += 2; }
+        else if (ch === '"') { inQuotes = false; i++; }
+        else { current += ch; i++; }
+      } else {
+        if (ch === '"') { inQuotes = true; i++; }
+        else if (ch === ',' ) { fields.push(current); current = ''; i++; }
+        else if (ch === '\n' || ch === '\r' || i === text.length) {
+          fields.push(current); current = '';
+          if (fields.length > 1 || fields[0] !== '') rows.push(fields);
+          fields = [];
+          if (ch === '\r' && text[i+1] === '\n') i++;
+          i++;
+        } else { current += ch; i++; }
+      }
+    }
+    return rows;
+  }
+
+  const csvRows = parseCSV(csvText);
+  const headers = csvRows[0];
+  const hIdx = {};
+  headers.forEach((h, i) => hIdx[h] = i);
+
+  // Split into field rows and option rows
+  for (let r = 1; r < csvRows.length; r++) {
+    const row = csvRows[r];
+    const type = row[hIdx['row_type']];
+    if (type === 'field') {
+      DATA.push({
+        country_code: row[hIdx['country_code']],
+        country_name: row[hIdx['country_name']],
+        field_order: row[hIdx['field_order']],
+        field_id: row[hIdx['field_id']],
+        label: row[hIdx['label']],
+        type: row[hIdx['type']],
+        required: row[hIdx['required']],
+        placeholder: row[hIdx['placeholder']],
+        example: row[hIdx['example']],
+        format_regex: row[hIdx['format_regex']],
+        dropdown_option_count: row[hIdx['dropdown_option_count']]
+      });
+    } else if (type === 'option') {
+      const cc = row[hIdx['country_code']];
+      if (!DROPDOWN_OPTS[cc]) DROPDOWN_OPTS[cc] = [];
+      DROPDOWN_OPTS[cc].push({
+        v: row[hIdx['option_value']],
+        d: row[hIdx['option_display_label']],
+        l: row[hIdx['option_latin_name']] || '',
+        p: row[hIdx['postal_code_pattern']] || ''
+      });
+    }
+  }
 
   // Group by country
   const countries = {};
@@ -1249,9 +1307,9 @@ https://github.com/4site-interactive-studios/mailing-address-formatting
 
 Key files to review:
 - index.html — The reference tool with all v2 enhancements implemented
-- stripe-address-data.json — Combined address field data (922 fields across 215 countries + 1,291 dropdown options across 50 countries with real state/province names)
-- stripe_address_fields_by_country.csv — Source: field definitions per country (field_id, label, type, required, placeholder, format_regex, dropdown_option_count)
-- stripe_dropdown_options_by_country.csv — Source: dropdown option values with display labels, Latin transliterations, and per-subdivision postal code patterns
+- engrid-address-fields.csv — Single combined data file (2,206 rows: 922 field definitions + 1,291 dropdown options across 215 countries). Uses row_type column to distinguish "field" rows from "option" rows. Contains field definitions (field_id, label, type, required, placeholder, format_regex) and dropdown options (option_value, option_display_label, option_latin_name, postal_code_pattern)
+- stripe_address_fields_by_country.csv — Original source: field definitions per country
+- stripe_dropdown_options_by_country.csv — Original source: dropdown option values
 
 ## Current ENgrid v1 Implementation
 
@@ -1263,7 +1321,7 @@ It handles ~10 countries with hardcoded state/province arrays and basic label tr
 ## Enhancements to Implement
 
 ### 1. Expand Country Coverage (10 → 215 countries)
-Import field definitions from stripe-address-data.json to support all 215 countries. Each country specifies which fields to show, their order, labels, types, and validation patterns.
+Import field definitions from engrid-address-fields.csv to support all 215 countries. Each country specifies which fields to show, their order, labels, types, and validation patterns.
 
 ### 2. Real Dropdown Options (50 countries)
 Replace hardcoded state arrays with the dropdown options data. This includes:
@@ -1307,7 +1365,7 @@ Add ISO 3166-1 alpha-3 code matching alongside existing 2-letter and full name m
 
 ## Implementation Guidelines
 
-- Load stripe-address-data.json dynamically rather than hardcoding all data inline
+- Load engrid-address-fields.csv dynamically and parse it (row_type column separates field vs option rows)
 - Maintain backward compatibility with existing ENgrid form structures
 - Keep the cookie-based state persistence that v1 already has
 - Preserve the multiple address context support (supporter, shipping, billing, info field pairs)
@@ -1342,7 +1400,7 @@ Add ISO 3166-1 alpha-3 code matching alongside existing 2-letter and full name m
 
   } catch(e) {
     console.error('Init error:', e);
-    document.getElementById('formPreview').innerHTML = '<div style="color:var(--red);padding:20px">Failed to load address data. Please ensure stripe-address-data.json is accessible.</div>';
+    document.getElementById('formPreview').innerHTML = '<div style="color:var(--red);padding:20px">Failed to load address data. Please ensure engrid-address-fields.csv is accessible.</div>';
   }
 })();
 </script>
