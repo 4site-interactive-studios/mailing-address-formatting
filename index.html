@@ -358,33 +358,54 @@ let DROPDOWN_OPTS = {};
   headers.forEach((h, i) => hIdx[h] = i);
 
   // Split into field rows and option rows
+  // field_order present = field row; empty = option row
+  // country_name only on first row per country; carry forward
+  let lastCountryName = '';
+  let currentDropdownCount = 0;
+  let currentDropdownField = null;
   for (let r = 1; r < csvRows.length; r++) {
     const row = csvRows[r];
-    const type = row[hIdx['row_type']];
-    if (type === 'field') {
-      DATA.push({
-        country_code: row[hIdx['country_code']],
-        country_name: row[hIdx['country_name']],
-        field_order: row[hIdx['field_order']],
-        field_id: row[hIdx['field_id']],
-        label: row[hIdx['label']],
-        type: row[hIdx['type']],
-        required: row[hIdx['required']],
-        placeholder: row[hIdx['placeholder']],
-        example: row[hIdx['example']],
-        format_regex: row[hIdx['format_regex']],
-        dropdown_option_count: row[hIdx['dropdown_option_count']]
-      });
-    } else if (type === 'option') {
-      const cc = row[hIdx['country_code']];
+    const cc = row[hIdx['country_code']] || '';
+    const name = row[hIdx['country_name']] || '';
+    if (name) lastCountryName = name;
+    const fieldOrder = row[hIdx['field_order']] || '';
+
+    if (fieldOrder) {
+      // Backfill dropdown_option_count on previous dropdown field
+      if (currentDropdownField && currentDropdownCount > 0) {
+        currentDropdownField.dropdown_option_count = currentDropdownCount;
+      }
+      currentDropdownCount = 0;
+      const f = {
+        country_code: cc,
+        country_name: lastCountryName,
+        field_order: fieldOrder,
+        field_id: row[hIdx['field_id']] || '',
+        label: row[hIdx['label']] || '',
+        type: row[hIdx['type']] || '',
+        required: row[hIdx['required']] || '',
+        placeholder: row[hIdx['placeholder']] || '',
+        example: row[hIdx['example']] || '',
+        format_regex: row[hIdx['format_regex']] || '',
+        dropdown_option_count: ''
+      };
+      DATA.push(f);
+      currentDropdownField = (f.type === 'dropdown') ? f : null;
+    } else {
+      // Option row
       if (!DROPDOWN_OPTS[cc]) DROPDOWN_OPTS[cc] = [];
       DROPDOWN_OPTS[cc].push({
-        v: row[hIdx['option_value']],
-        d: row[hIdx['option_display_label']],
+        v: row[hIdx['option_value']] || '',
+        d: row[hIdx['option_display_label']] || '',
         l: row[hIdx['option_latin_name']] || '',
         p: row[hIdx['postal_code_pattern']] || ''
       });
+      currentDropdownCount++;
     }
+  }
+  // Backfill last dropdown field
+  if (currentDropdownField && currentDropdownCount > 0) {
+    currentDropdownField.dropdown_option_count = currentDropdownCount;
   }
 
   // Group by country
