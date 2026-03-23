@@ -408,6 +408,25 @@ let DROPDOWN_OPTS = {};
     currentDropdownField.dropdown_option_count = currentDropdownCount;
   }
 
+  // Validate CSV structure
+  const requiredCols = ['country_code','field_order','field_id','label','type'];
+  const missingCols = requiredCols.filter(c => !(c in hIdx));
+  if (missingCols.length) throw new Error('Missing CSV columns: ' + missingCols.join(', '));
+  if (DATA.length === 0) throw new Error('No field data found in CSV');
+
+  // Pre-validate regex patterns and cache compiled versions
+  const compiledRegex = {};
+  DATA.forEach(f => {
+    if (f.format_regex) {
+      try {
+        compiledRegex[f.country_code + ':' + f.field_id] = new RegExp('^(?:' + f.format_regex + ')$');
+      } catch(e) {
+        console.warn('Invalid regex for ' + f.country_code + '/' + f.field_id + ':', f.format_regex);
+        f.format_regex = ''; // Clear invalid regex to prevent runtime errors
+      }
+    }
+  });
+
   // Group by country
   const countries = {};
   const countryList = [];
@@ -543,7 +562,6 @@ let DROPDOWN_OPTS = {};
       const badgeText = f.required ? 'Required' : 'Optional';
       const ac = stripeAutocomplete[f.field_id] || '';
       const ariaReq = f.required ? 'true' : 'false';
-      const isDigitOnly = f.format_regex && /^\\d\{\\d+\}$|^\\d\+$/.test(f.format_regex);
       let inputHtml;
       if (f.type === 'dropdown') {
         let opts = `<option value="">Select ${escHtml(f.label)}...</option>`;
@@ -599,7 +617,6 @@ let DROPDOWN_OPTS = {};
         const fid = el.dataset.field;
         if (fid && savedValues[fid]) {
           if (el.tagName === 'SELECT') {
-            // Try exact match first, then case-insensitive
             const opts = Array.from(el.options);
             const exact = opts.find(o => o.value === savedValues[fid]);
             if (exact) { el.value = exact.value; }
@@ -615,59 +632,13 @@ let DROPDOWN_OPTS = {};
       });
     }
 
-    // Inline validation on blur and input
-    preview.querySelectorAll('.form-input').forEach(el => {
-      const validate = () => validateField(el);
-      el.addEventListener('blur', validate);
-      el.addEventListener('change', validate);
-      el.addEventListener('input', () => { if (el.classList.contains('invalid')) validate(); });
-    });
-
-    // Re-validate postal code when state changes
-    const stateInput = preview.querySelector('[data-field="state"]');
-    if (stateInput) {
-      stateInput.addEventListener('change', () => {
-        const postalInput = preview.querySelector('[data-field="postal_code"]');
-        if (postalInput && postalInput.value.trim()) validateField(postalInput);
-      });
-    }
-
-    // Quick Fill
-    const qfBtn = document.getElementById('quickFillBtn');
-    if (qfBtn) {
-      qfBtn.addEventListener('click', () => {
-        const fill = {line1:'3431 14th St NW', line2:'Suite 1', city:'Washington', state:'DC', postal_code:'20009'};
-        preview.querySelectorAll('.form-input').forEach(el => {
-          const fid = el.dataset.field;
-          if (fid && fill[fid]) {
-            if (el.tagName === 'SELECT') {
-              const opt = Array.from(el.options).find(o => o.value === fill[fid]);
-              if (opt) el.value = opt.value;
-            } else {
-              el.value = fill[fid];
-            }
-            el.classList.add('valid');
-            el.classList.remove('invalid');
-          }
-        });
-        // Clear any previous errors
-        preview.querySelectorAll('.field-error').forEach(el => el.textContent = '');
-        const resultEl = document.getElementById('submitResult');
-        resultEl.className = ''; resultEl.textContent = '';
-      });
-    }
-
-    // Submit & Reset
-    document.getElementById('formSubmitBtn').addEventListener('click', handleSubmit);
-    document.getElementById('formResetBtn').addEventListener('click', handleReset);
-
     // Table
     renderFieldTable(sorted);
 
     // Copy buttons
     document.getElementById('copyJsonBtn').addEventListener('click', () => {
       const json = JSON.stringify({country: code, fields: sorted.map(f => ({...f, autocomplete: stripeAutocomplete[f.field_id] || null}))}, null, 2);
-      navigator.clipboard.writeText(json).then(() => { document.getElementById('copyJsonBtn').textContent = 'Copied!'; setTimeout(() => document.getElementById('copyJsonBtn').textContent = 'Copy as JSON', 1500); }).catch(() => { document.getElementById('copyJsonBtn').textContent = 'Failed'; setTimeout(() => document.getElementById('copyJsonBtn').textContent = 'Copy as JSON', 1500); });
+      copyToClipboard(json, 'copyJsonBtn', 'Copy as JSON');
     });
     document.getElementById('copyHtmlBtn').addEventListener('click', () => {
       const lines = sorted.map(f => {
@@ -675,7 +646,7 @@ let DROPDOWN_OPTS = {};
         if (f.type === 'dropdown') return `<select name="${escHtml(f.field_id)}"${ac ? ` autocomplete="${escHtml(ac)}"` : ''} aria-required="${f.required}"${f.required ? ' required' : ''}><option value="">Select ${escHtml(f.label)}...</option></select>`;
         return `<input type="text" name="${escHtml(f.field_id)}"${ac ? ` autocomplete="${escHtml(ac)}"` : ''} aria-required="${f.required}"${f.required ? ' required' : ''}${f.placeholder ? ` placeholder="${escHtml(f.placeholder)}"` : ''}${f.format_regex ? ` pattern="${escHtml(f.format_regex)}"` : ''}>`;
       });
-      navigator.clipboard.writeText(lines.join('\n')).then(() => { document.getElementById('copyHtmlBtn').textContent = 'Copied!'; setTimeout(() => document.getElementById('copyHtmlBtn').textContent = 'Copy as HTML', 1500); }).catch(() => { document.getElementById('copyHtmlBtn').textContent = 'Failed'; setTimeout(() => document.getElementById('copyHtmlBtn').textContent = 'Copy as HTML', 1500); });
+      copyToClipboard(lines.join('\n'), 'copyHtmlBtn', 'Copy as HTML');
     });
   }
 
@@ -750,13 +721,12 @@ let DROPDOWN_OPTS = {};
     if (required && !val) {
       error = `${label} is required`;
     } else if (val && regex) {
-      try {
-        const re = new RegExp('^(?:' + regex + ')$');
-        if (!re.test(val)) {
-          const hint = humanizeRegex(regex, fieldId, label);
-          error = hint || `${label} format is invalid`;
-        }
-      } catch(e) {}
+      const reKey = currentCountryCode + ':' + fieldId;
+      const re = compiledRegex[reKey];
+      if (re && !re.test(val)) {
+        const hint = humanizeRegex(regex, fieldId, label);
+        error = hint || `${label} format is invalid`;
+      }
     }
 
     // Subdivision postal code validation (state-aware)
@@ -778,7 +748,7 @@ let DROPDOWN_OPTS = {};
               const stateLabel = stateEl.tagName === 'SELECT' ? stateEl.options[stateEl.selectedIndex]?.text : stateVal;
               error = `${label} does not appear to match ${stateLabel || 'the selected state'} (expected pattern: ${subdivPattern})`;
             }
-          } catch(e) {}
+          } catch(e) { console.warn('Subdivision regex error:', e.message); }
         }
       }
     }
@@ -821,6 +791,27 @@ let DROPDOWN_OPTS = {};
     const resultEl = document.getElementById('submitResult');
     resultEl.className = '';
     resultEl.textContent = '';
+  }
+
+  function copyToClipboard(text, btnId, defaultLabel) {
+    const btn = document.getElementById(btnId);
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = defaultLabel, 1500);
+      }).catch(() => {
+        btn.textContent = 'Failed';
+        setTimeout(() => btn.textContent = defaultLabel, 1500);
+      });
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); btn.textContent = 'Copied!'; }
+      catch(e) { btn.textContent = 'Failed'; }
+      document.body.removeChild(ta);
+      setTimeout(() => btn.textContent = defaultLabel, 1500);
+    }
   }
 
   function escHtml(s) {
@@ -1005,6 +996,48 @@ let DROPDOWN_OPTS = {};
     document.getElementById('mainCountryDropdown'),
     renderFormPreview
   );
+
+  // Event delegation on form preview (attached once, survives re-renders)
+  const previewContainer = document.getElementById('formPreview');
+  previewContainer.addEventListener('focusout', e => {
+    if (e.target.classList.contains('form-input')) validateField(e.target);
+  });
+  previewContainer.addEventListener('change', e => {
+    if (e.target.classList.contains('form-input')) {
+      validateField(e.target);
+      // Re-validate postal code when state changes
+      if (e.target.dataset.field === 'state') {
+        const postalInput = previewContainer.querySelector('[data-field="postal_code"]');
+        if (postalInput && postalInput.value.trim()) validateField(postalInput);
+      }
+    }
+  });
+  previewContainer.addEventListener('input', e => {
+    if (e.target.classList.contains('form-input') && e.target.classList.contains('invalid')) validateField(e.target);
+  });
+
+  // Delegated click handlers for submit, reset, quick fill
+  document.querySelector('.main-content').addEventListener('click', e => {
+    if (e.target.id === 'formSubmitBtn') handleSubmit();
+    else if (e.target.id === 'formResetBtn') handleReset();
+    else if (e.target.id === 'quickFillBtn') {
+      const fill = {line1:'3431 14th St NW', line2:'Suite 1', city:'Washington', state:'DC', postal_code:'20009'};
+      previewContainer.querySelectorAll('.form-input').forEach(el => {
+        const fid = el.dataset.field;
+        if (fid && fill[fid]) {
+          if (el.tagName === 'SELECT') {
+            const opt = Array.from(el.options).find(o => o.value === fill[fid]);
+            if (opt) el.value = opt.value;
+          } else { el.value = fill[fid]; }
+          el.classList.add('valid');
+          el.classList.remove('invalid');
+        }
+      });
+      previewContainer.querySelectorAll('.field-error').forEach(el => el.textContent = '');
+      const resultEl = document.getElementById('submitResult');
+      resultEl.className = ''; resultEl.textContent = '';
+    }
+  });
 
   mainSelector.selectOption('US');
   renderStats();
@@ -1409,13 +1442,7 @@ Add ISO 3166-1 alpha-3 code matching alongside existing 2-letter and full name m
 
     document.getElementById('developerPrompt').textContent = prompt;
     document.getElementById('copyPromptBtn').addEventListener('click', () => {
-      navigator.clipboard.writeText(prompt).then(() => {
-        document.getElementById('copyPromptBtn').textContent = 'Copied!';
-        setTimeout(() => document.getElementById('copyPromptBtn').textContent = 'Copy Prompt', 1500);
-      }).catch(() => {
-        document.getElementById('copyPromptBtn').textContent = 'Failed';
-        setTimeout(() => document.getElementById('copyPromptBtn').textContent = 'Copy Prompt', 1500);
-      });
+      copyToClipboard(prompt, 'copyPromptBtn', 'Copy Prompt');
     });
   }
 
