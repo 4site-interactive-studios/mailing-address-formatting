@@ -483,7 +483,7 @@ let DROPDOWN_OPTS = {};
         <div class="field-error" data-error-for="${f.field_id}"></div>
         ${hint}
       </div>`;
-    }).join('') + `<div class="submit-row"><button class="submit-btn" id="formSubmitBtn">Validate &amp; Submit</button><button class="reset-btn" id="formResetBtn">Clear Form</button></div><div id="submitResult"></div>`;
+    }).join('') + `${code === 'US' ? '<div style="margin-top:8px"><button class="copy-btn" id="quickFillBtn">Quick Fill: 4Site Studios</button></div>' : ''}<div class="submit-row"><button class="submit-btn" id="formSubmitBtn">Validate &amp; Submit</button><button class="reset-btn" id="formResetBtn">Clear Form</button></div><div id="submitResult"></div>`;
 
     // Restore saved values into matching fields
     if (Object.keys(savedValues).length) {
@@ -521,6 +521,31 @@ let DROPDOWN_OPTS = {};
       stateInput.addEventListener('change', () => {
         const postalInput = preview.querySelector('[data-field="postal_code"]');
         if (postalInput && postalInput.value.trim()) validateField(postalInput);
+      });
+    }
+
+    // Quick Fill
+    const qfBtn = document.getElementById('quickFillBtn');
+    if (qfBtn) {
+      qfBtn.addEventListener('click', () => {
+        const fill = {line1:'3431 14th St NW', line2:'Suite 1', city:'Washington', state:'DC', postal_code:'20009'};
+        preview.querySelectorAll('.form-input').forEach(el => {
+          const fid = el.dataset.field;
+          if (fid && fill[fid]) {
+            if (el.tagName === 'SELECT') {
+              const opt = Array.from(el.options).find(o => o.value === fill[fid]);
+              if (opt) el.value = opt.value;
+            } else {
+              el.value = fill[fid];
+            }
+            el.classList.add('valid');
+            el.classList.remove('invalid');
+          }
+        });
+        // Clear any previous errors
+        preview.querySelectorAll('.field-error').forEach(el => el.textContent = '');
+        const resultEl = document.getElementById('submitResult');
+        resultEl.className = ''; resultEl.textContent = '';
       });
     }
 
