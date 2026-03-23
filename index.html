@@ -311,6 +311,7 @@ let DROPDOWN_OPTS = {};
 
 (async function init() { try {
   const resp = await fetch("stripe-address-data.json");
+  if (!resp.ok) throw new Error(`Failed to load data: ${resp.status} ${resp.statusText}`);
   const json = await resp.json();
   DATA = json.fields;
   DROPDOWN_OPTS = json.dropdownOptions;
@@ -367,7 +368,7 @@ let DROPDOWN_OPTS = {};
       const q = (filter || '').toLowerCase();
       const matches = q ? countryList.filter(c => matchesCountryQuery(c, q)) : countryList;
       dropdownEl.innerHTML = matches.map((c, i) =>
-        `<div class="country-option" data-code="${c.code}" data-idx="${i}"><span>${c.name}</span><span class="code">${c.code}${c.alpha3 ? ' / ' + c.alpha3 : ''}</span></div>`
+        `<div class="country-option" data-code="${c.code}" data-idx="${i}"><span>${escHtml(c.name)}</span><span class="code">${c.code}${c.alpha3 ? ' / ' + c.alpha3 : ''}</span></div>`
       ).join('');
       highlightIdx = 0;
       updateHighlight();
@@ -574,15 +575,15 @@ let DROPDOWN_OPTS = {};
     // Copy buttons
     document.getElementById('copyJsonBtn').addEventListener('click', () => {
       const json = JSON.stringify({country: code, fields: sorted.map(f => ({...f, autocomplete: stripeAutocomplete[f.field_id] || null}))}, null, 2);
-      navigator.clipboard.writeText(json).then(() => { document.getElementById('copyJsonBtn').textContent = 'Copied!'; setTimeout(() => document.getElementById('copyJsonBtn').textContent = 'Copy as JSON', 1500); });
+      navigator.clipboard.writeText(json).then(() => { document.getElementById('copyJsonBtn').textContent = 'Copied!'; setTimeout(() => document.getElementById('copyJsonBtn').textContent = 'Copy as JSON', 1500); }).catch(() => { document.getElementById('copyJsonBtn').textContent = 'Failed'; setTimeout(() => document.getElementById('copyJsonBtn').textContent = 'Copy as JSON', 1500); });
     });
     document.getElementById('copyHtmlBtn').addEventListener('click', () => {
       const lines = sorted.map(f => {
         const ac = stripeAutocomplete[f.field_id] || '';
-        if (f.type === 'dropdown') return `<select name="${f.field_id}"${ac ? ` autocomplete="${ac}"` : ''} aria-required="${f.required}"${f.required ? ' required' : ''}><option value="">Select ${f.label}...</option></select>`;
-        return `<input type="text" name="${f.field_id}"${ac ? ` autocomplete="${ac}"` : ''} aria-required="${f.required}"${f.required ? ' required' : ''}${f.placeholder ? ` placeholder="${f.placeholder}"` : ''}${f.format_regex ? ` pattern="${f.format_regex}"` : ''}>`;
+        if (f.type === 'dropdown') return `<select name="${escHtml(f.field_id)}"${ac ? ` autocomplete="${escHtml(ac)}"` : ''} aria-required="${f.required}"${f.required ? ' required' : ''}><option value="">Select ${escHtml(f.label)}...</option></select>`;
+        return `<input type="text" name="${escHtml(f.field_id)}"${ac ? ` autocomplete="${escHtml(ac)}"` : ''} aria-required="${f.required}"${f.required ? ' required' : ''}${f.placeholder ? ` placeholder="${escHtml(f.placeholder)}"` : ''}${f.format_regex ? ` pattern="${escHtml(f.format_regex)}"` : ''}>`;
       });
-      navigator.clipboard.writeText(lines.join('\n')).then(() => { document.getElementById('copyHtmlBtn').textContent = 'Copied!'; setTimeout(() => document.getElementById('copyHtmlBtn').textContent = 'Copy as HTML', 1500); });
+      navigator.clipboard.writeText(lines.join('\n')).then(() => { document.getElementById('copyHtmlBtn').textContent = 'Copied!'; setTimeout(() => document.getElementById('copyHtmlBtn').textContent = 'Copy as HTML', 1500); }).catch(() => { document.getElementById('copyHtmlBtn').textContent = 'Failed'; setTimeout(() => document.getElementById('copyHtmlBtn').textContent = 'Copy as HTML', 1500); });
     });
   }
 
@@ -674,12 +675,11 @@ let DROPDOWN_OPTS = {};
         const subdivPattern = getSubdivisionPostalPattern(currentCountryCode, stateVal);
         if (subdivPattern) {
           try {
-            // For US: extract just the 5-digit prefix for subdivision matching (handles ZIP+4 and PO Box)
-            let testVal = val;
+            // Extract postal prefix for subdivision matching
+            // US patterns match first 2-3 digits of ZIP; strip ZIP+4/PO Box suffixes first
+            let testVal = val.replace(/[- ].*/, '');
             if (currentCountryCode === 'US') {
-              testVal = val.replace(/[- ].*/,'').substring(0, (currentCountryCode === 'US' ? 5 : val.length));
-              // Only test the first 3 digits against subdivision pattern for US
-              testVal = val.replace(/[- ].*/,'').substring(0, 3);
+              testVal = testVal.substring(0, 3);
             }
             const subdivRe = new RegExp('^(?:' + subdivPattern + ')');
             if (!subdivRe.test(testVal)) {
@@ -793,7 +793,7 @@ let DROPDOWN_OPTS = {};
     compareSelections.forEach((code, i) => {
       const div = document.createElement('div');
       div.className = 'country-select-wrap';
-      div.innerHTML = `<input class="search-input" type="text" placeholder="Country ${i+1}..." value="${countries[code] ? countries[code].name + ' (' + code + ')' : ''}" autocomplete="off"><div class="country-dropdown"></div>`;
+      div.innerHTML = `<input class="search-input" type="text" placeholder="Country ${i+1}..." value="${countries[code] ? escHtml(countries[code].name) + ' (' + code + ')' : ''}" autocomplete="off"><div class="country-dropdown"></div>`;
       wrap.appendChild(div);
       createCountrySelector(div, div.querySelector('input'), div.querySelector('.country-dropdown'), (c) => {
         compareSelections[i] = c;
@@ -823,7 +823,7 @@ let DROPDOWN_OPTS = {};
     grid.innerHTML = selected.map(code => {
       const c = countries[code];
       return `<div class="compare-col">
-        <h3>${c.name} <span class="code">${c.code}</span></h3>
+        <h3>${escHtml(c.name)} <span class="code">${c.code}</span></h3>
         ${c.fields.sort((a,b) => a.order - b.order).map(f => `<div class="compare-field-row${diffFields.has(f.field_id) ? ' compare-diff' : ''}">
           <div class="compare-order">${f.order}</div>
           <div class="compare-field-info">
@@ -890,7 +890,7 @@ let DROPDOWN_OPTS = {};
     document.getElementById('filterCount').textContent = `${list.length} of ${countryList.length} countries`;
     document.getElementById('filteredCountryList').innerHTML = list.map(c =>
       `<div class="country-list-item" data-code="${c.code}">
-        <span>${c.name} <span class="code" style="color:var(--text2);margin-left:4px">${c.code}</span></span>
+        <span>${escHtml(c.name)} <span class="code" style="color:var(--text2);margin-left:4px">${c.code}</span></span>
         <span class="field-count">${c.fields.length} fields</span>
       </div>`
     ).join('');
@@ -1224,7 +1224,10 @@ let DROPDOWN_OPTS = {};
   }
 
   initEngrid();
-  } catch(e) { console.error('Init error:', e); }
+  } catch(e) {
+    console.error('Init error:', e);
+    document.getElementById('formPreview').innerHTML = '<div style="color:var(--red);padding:20px">Failed to load address data. Please ensure stripe-address-data.json is accessible.</div>';
+  }
 })();
 </script>
 </body>
