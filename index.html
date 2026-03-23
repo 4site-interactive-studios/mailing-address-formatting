@@ -412,6 +412,14 @@ let DROPDOWN_OPTS = {};
   // --- Form Preview ---
   let currentCountryCode = null;
   function renderFormPreview(code) {
+    // Preserve current field values before re-rendering
+    const savedValues = {};
+    const preview = document.getElementById('formPreview');
+    preview.querySelectorAll('.form-input').forEach(el => {
+      const val = el.value.trim();
+      if (val && el.dataset.field) savedValues[el.dataset.field] = val;
+    });
+
     currentCountryCode = code;
     const c = countries[code];
     if (!c) return;
@@ -425,7 +433,6 @@ let DROPDOWN_OPTS = {};
     document.getElementById('tableCountryLabel').textContent = `${c.code} — ${c.name}`;
 
     const sorted = c.fields.slice().sort((a,b) => a.order - b.order);
-    const preview = document.getElementById('formPreview');
     preview.innerHTML = sorted.map(f => {
       const badgeClass = f.required ? 'badge-required' : 'badge-optional';
       const badgeText = f.required ? 'Required' : 'Optional';
@@ -477,6 +484,28 @@ let DROPDOWN_OPTS = {};
         ${hint}
       </div>`;
     }).join('') + `<div class="submit-row"><button class="submit-btn" id="formSubmitBtn">Validate &amp; Submit</button><button class="reset-btn" id="formResetBtn">Clear Form</button></div><div id="submitResult"></div>`;
+
+    // Restore saved values into matching fields
+    if (Object.keys(savedValues).length) {
+      preview.querySelectorAll('.form-input').forEach(el => {
+        const fid = el.dataset.field;
+        if (fid && savedValues[fid]) {
+          if (el.tagName === 'SELECT') {
+            // Try exact match first, then case-insensitive
+            const opts = Array.from(el.options);
+            const exact = opts.find(o => o.value === savedValues[fid]);
+            if (exact) { el.value = exact.value; }
+            else {
+              const ci = opts.find(o => o.value.toLowerCase() === savedValues[fid].toLowerCase() || o.textContent.toLowerCase() === savedValues[fid].toLowerCase());
+              if (ci) el.value = ci.value;
+            }
+          } else {
+            el.value = savedValues[fid];
+          }
+          if (el.value) el.classList.add('valid');
+        }
+      });
+    }
 
     // Inline validation on blur and input
     preview.querySelectorAll('.form-input').forEach(el => {
