@@ -12,12 +12,12 @@
   --accent2:#7a73ff;--green:#3ecf8e;--yellow:#f5a623;--red:#e25950;
   --radius:8px;--radius-lg:12px;
 }
-html{font-size:14px;scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+html{font-size:14px;scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;overflow-x:hidden}
 a{color:var(--accent2);text-decoration:none}
 input,select,button{font:inherit;color:inherit}
 
-.container{max-width:1400px;margin:0 auto;padding:20px}
+.container{max-width:1400px;margin:0 auto;padding:20px;overflow:hidden}
 
 header{background:var(--bg2);border-bottom:1px solid var(--border);padding:16px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
 header .container{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
@@ -46,7 +46,7 @@ header .container{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .main-grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
 @media(max-width:900px){.main-grid{grid-template-columns:1fr}}
 
-.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:20px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:20px;overflow:hidden}
 .card h2{font-size:1.1rem;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px}
 .card h2 .count{background:var(--bg4);padding:2px 8px;border-radius:12px;font-size:.8rem;color:var(--text2);font-weight:400}
 
@@ -132,11 +132,13 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
 .diff-better{color:var(--green)}
 .eng-field-card{padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px;background:var(--bg3)}
 .eng-field-card .eng-label{font-weight:600;margin-bottom:4px}
-.eng-field-card .eng-attrs{font-size:.8rem;color:var(--text2);font-family:monospace}
+.eng-field-card .eng-attrs{font-size:.8rem;color:var(--text2);font-family:monospace;word-break:break-all;overflow-wrap:break-word}
 .eng-field-card .eng-attrs span{display:inline-block;margin-right:12px;margin-bottom:2px}
 .eng-field-card .eng-attrs .attr-key{color:var(--text2)}
 .eng-field-card .eng-attrs .attr-val{color:var(--accent2)}
 .eng-field-card .eng-attrs .attr-new{color:var(--green)}
+.eng-field-card.eng-diff{border-color:var(--yellow);background:rgba(245,166,35,.06)}
+.eng-field-card .eng-attrs .attr-diff{color:var(--yellow);font-weight:600;text-decoration:underline;text-decoration-color:var(--yellow);text-underline-offset:2px}
 
 .data-table th.sortable{cursor:pointer;user-select:none}
 .data-table th.sortable:hover{color:var(--accent2)}
@@ -183,25 +185,32 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
     <button class="tab-btn active" data-tab="explorer" role="tab" aria-selected="true">Explorer</button>
     <button class="tab-btn" data-tab="compare" role="tab" aria-selected="false">Compare</button>
     <button class="tab-btn" data-tab="filter" role="tab" aria-selected="false">Filter Countries</button>
-    <button class="tab-btn" data-tab="engrid" role="tab" aria-selected="false">v1 vs v2 Diff</button>
+    <button class="tab-btn" data-tab="engrid" role="tab" aria-selected="false">ENgrid v1 vs v2 Diff</button>
   </div>
 
   <!-- EXPLORER TAB -->
   <div id="tab-explorer" role="tabpanel">
     <div class="main-grid">
       <div class="main-content">
-        <div style="margin-bottom:16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          <div class="country-select-wrap" id="mainCountrySelect">
-            <input class="search-input" type="text" placeholder="Search country by name or code..." aria-label="Search countries" id="mainCountryInput" autocomplete="off">
-            <div class="country-dropdown" id="mainCountryDropdown"></div>
+        <div class="card">
+          <h2>Form Preview <span class="count" id="previewCountryLabel">US — United States</span></h2>
+          <div style="margin-bottom:16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <div class="country-select-wrap" id="mainCountrySelect">
+              <input class="search-input" type="text" placeholder="Search country by name or code..." aria-label="Search countries" id="mainCountryInput" autocomplete="off">
+              <div class="country-dropdown" id="mainCountryDropdown"></div>
+            </div>
+            <span id="quickFillWrap"></span>
           </div>
-          <span id="quickFillWrap"></span>
+          <div class="form-preview" id="formPreview" aria-live="polite"></div>
         </div>
 
         <div class="card">
-          <h2>Form Preview <span class="count" id="previewCountryLabel">US — United States</span></h2>
-          <div style="margin-bottom:12px;font-size:.95rem;font-weight:600;color:var(--accent2)" id="recipientLabel">To:</div>
-          <div class="form-preview" id="formPreview" aria-live="polite"></div>
+          <h2>Recipient Block Translation <span class="count" id="recipientCountryLabel">US — United States</span></h2>
+          <p style="color:var(--text2);font-size:.85rem;margin-bottom:10px">In Engaging Networks advocacy actions, the Recipient Block label is translated to the selected country's primary language.</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:1.5rem;font-weight:700;color:var(--accent2)" id="recipientLabel">To:</span>
+            <span style="color:var(--text2);font-size:.85rem" id="recipientNote">English (default)</span>
+          </div>
         </div>
 
         <div class="card">
@@ -427,10 +436,12 @@ let DROPDOWN_OPTS = {};
     document.getElementById('previewCountryLabel').textContent = `${c.code} — ${c.name}`;
 
     // Recipient label
+    const recipientLangs = {FR:'French',DE:'German',NL:'Dutch',ES:'Spanish',IT:'Italian',PT:'Portuguese',BR:'Portuguese'};
     const recipientEl = document.getElementById('recipientLabel');
     const rl = recipientLabels[code] || 'To:';
     recipientEl.textContent = rl;
-    recipientEl.title = code in recipientLabels ? `Translated from ENgrid (${c.name})` : 'Default (English)';
+    document.getElementById('recipientCountryLabel').textContent = `${c.code} — ${c.name}`;
+    document.getElementById('recipientNote').textContent = code in recipientLabels ? `${recipientLangs[code]} translation` : 'English (default)';
     document.getElementById('tableCountryLabel').textContent = `${c.code} — ${c.name}`;
 
     const sorted = c.fields.slice().sort((a,b) => a.order - b.order);
@@ -1096,30 +1107,56 @@ let DROPDOWN_OPTS = {};
     document.getElementById('engridEngridLabel').textContent = label + (engridData[code] ? '' : ' (default)');
     document.getElementById('engridDiffLabel').textContent = label;
 
-    // Stripe side (enhanced)
+    // Build diff map for highlighting
     const stripeFields = stripe.fields.slice().sort((a,b) => a.order - b.order);
+    const fieldDiffs = {};
+    stripeFields.forEach(f => {
+      const ef = eng.fields.find(x => x.field_id === f.field_id);
+      const diffs = new Set();
+      if (ef) {
+        if (f.label !== ef.label) diffs.add('label');
+        if (f.type !== ef.type) diffs.add('type');
+        if (f.required !== ef.ariaRequired) diffs.add('required');
+        if (f.format_regex && !ef.type) diffs.add('pattern');
+        if (f.type === 'dropdown' && ef.type !== 'select') diffs.add('type');
+      } else {
+        diffs.add('missing');
+      }
+      // v2 has extras: pattern, aria-label
+      if (f.format_regex) diffs.add('pattern');
+      if (f.type === 'dropdown') diffs.add('aria-label');
+      fieldDiffs[f.field_id] = diffs;
+    });
+
+    // v2 side (enhanced)
     document.getElementById('engridStripeFields').innerHTML = stripeFields.map(f => {
       const ac = stripeAutocomplete[f.field_id] || '—';
-      return `<div class="eng-field-card">
+      const ef = eng.fields.find(x => x.field_id === f.field_id);
+      const d = fieldDiffs[f.field_id] || new Set();
+      const hasDiff = ef && (d.has('label') || d.has('type') || d.has('pattern') || d.has('aria-label'));
+      const dc = (attr) => d.has(attr) ? 'attr-diff' : 'attr-new';
+      return `<div class="eng-field-card${hasDiff ? ' eng-diff' : ''}">
         <div class="eng-label">${escHtml(f.label)} <span class="badge ${f.required ? 'badge-required' : 'badge-optional'}">${f.required ? 'Req' : 'Opt'}</span></div>
         <div class="eng-attrs">
-          <span><span class="attr-key">type=</span><span class="attr-val">"${f.type}"</span></span>
+          <span><span class="attr-key">type=</span><span class="${d.has('type') ? 'attr-diff' : 'attr-val'}">"${f.type}"</span></span>
           <span><span class="attr-key">autocomplete=</span><span class="attr-new">"${ac}"</span></span>
           <span><span class="attr-key">aria-required=</span><span class="attr-new">"${f.required}"</span></span>
-          ${f.format_regex ? `<span><span class="attr-key">pattern=</span><span class="attr-new">"${escHtml(f.format_regex)}"</span></span>` : ''}
+          ${f.format_regex ? `<span><span class="attr-key">pattern=</span><span class="attr-diff">"${escHtml(f.format_regex)}"</span></span>` : ''}
           ${f.dropdown_option_count ? `<span><span class="attr-key">options=</span><span class="attr-val">${f.dropdown_option_count} named</span></span>` : ''}
-          ${f.type === 'dropdown' ? `<span><span class="attr-key">aria-label=</span><span class="attr-new">"${escHtml(f.label)}"</span></span>` : ''}
+          ${f.type === 'dropdown' ? `<span><span class="attr-key">aria-label=</span><span class="attr-diff">"${escHtml(f.label)}"</span></span>` : ''}
         </div>
       </div>`;
     }).join('');
 
-    // ENgrid side
+    // v1 side (original)
     document.getElementById('engridEngridFields').innerHTML = eng.fields.map(ef => {
+      const sf = stripeFields.find(x => x.field_id === ef.field_id);
       const hasOptions = ef.field_id === 'state' && eng.stateOptions;
-      return `<div class="eng-field-card">
+      const hasDiff = sf && (sf.label !== ef.label || sf.type !== ef.type || sf.format_regex);
+      return `<div class="eng-field-card${hasDiff ? ' eng-diff' : ''}">
         <div class="eng-label">${escHtml(ef.label)} <span class="badge ${ef.ariaRequired ? 'badge-required' : 'badge-optional'}">${ef.ariaRequired ? 'Req' : 'Opt'}</span></div>
         <div class="eng-attrs">
-          <span><span class="attr-key">type=</span><span class="attr-val">"${ef.type}"</span></span>
+          <span><span class="attr-key">type=</span><span class="${sf && sf.type !== ef.type ? 'attr-diff' : 'attr-val'}">"${ef.type}"</span></span>
           <span><span class="attr-key">autocomplete=</span><span class="attr-new">"${ef.autocomplete}"</span></span>
           <span><span class="attr-key">aria-required=</span><span class="attr-new">"${ef.ariaRequired}"</span></span>
           ${hasOptions ? `<span><span class="attr-key">options=</span><span class="attr-val">${eng.stateOptions.length} named</span></span>` : ''}
