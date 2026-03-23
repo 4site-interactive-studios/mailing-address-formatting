@@ -242,7 +242,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
       <p style="color:var(--text2);margin-bottom:16px;font-size:.9rem">HTML attribute enhancements from ENgrid's <code style="color:var(--accent2)">translate-fields.ts</code> that could improve Stripe's AddressElement for accessibility, autofill, and UX.</p>
       <div class="data-table-wrap">
         <table class="data-table" id="enhancementsTable">
-          <thead><tr><th>Enhancement</th><th>Attribute</th><th>Stripe Current</th><th>ENgrid Approach</th><th>Benefit</th></tr></thead>
+          <thead><tr><th>Enhancement</th><th>Attribute</th><th>Stripe Current</th><th>ENgrid Approach</th><th>Benefit</th><th>Status</th></tr></thead>
           <tbody id="enhancementsBody"></tbody>
         </table>
       </div>
@@ -282,7 +282,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
 let DATA = [];
 let DROPDOWN_OPTS = {};
 
-(async function init() {
+(async function init() { try {
   const resp = await fetch("stripe-address-data.json");
   const json = await resp.json();
   DATA = json.fields;
@@ -377,6 +377,13 @@ let DROPDOWN_OPTS = {};
     return { selectOption };
   }
 
+  // Stripe autocomplete mapping (what Stripe uses internally)
+  const stripeAutocomplete = {
+    line1:'address-line1', line2:'address-line2', city:'address-level2',
+    state:'address-level1', postal_code:'postal-code', country:'country',
+    sublocality:'address-level3', sorting_code:null
+  };
+
   // --- Form Preview ---
   let currentCountryCode = null;
   function renderFormPreview(code) {
@@ -391,6 +398,9 @@ let DROPDOWN_OPTS = {};
     preview.innerHTML = sorted.map(f => {
       const badgeClass = f.required ? 'badge-required' : 'badge-optional';
       const badgeText = f.required ? 'Required' : 'Optional';
+      const ac = stripeAutocomplete[f.field_id] || '';
+      const ariaReq = f.required ? 'true' : 'false';
+      const isDigitOnly = f.format_regex && /^\\d\{\\d+\}$|^\\d\+$/.test(f.format_regex);
       let inputHtml;
       if (f.type === 'dropdown') {
         let opts = `<option value="">Select ${escHtml(f.label)}...</option>`;
@@ -401,9 +411,11 @@ let DROPDOWN_OPTS = {};
           const n = f.dropdown_option_count || 0;
           for (let i = 1; i <= n; i++) opts += `<option value="option_${i}">${escHtml(f.label)} option ${i}</option>`;
         }
-        inputHtml = `<select class="form-input" data-field="${f.field_id}" data-required="${f.required}" data-regex="">${opts}</select>`;
+        inputHtml = `<select class="form-input" data-field="${f.field_id}" data-required="${f.required}" data-regex=""${ac ? ` autocomplete="${ac}"` : ''} aria-required="${ariaReq}" aria-label="${escHtml(f.label)}">${opts}</select>`;
       } else {
-        inputHtml = `<input class="form-input" type="text" placeholder="${escHtml(f.placeholder || '')}" data-field="${f.field_id}" data-required="${f.required}" data-regex="${escHtml(f.format_regex)}">`;
+        const patternAttr = f.format_regex ? ` pattern="${escHtml(f.format_regex)}"` : '';
+        const inputmodeAttr = f.field_id === 'postal_code' && f.format_regex && /^\\d[\d{}]+$/.test(f.format_regex) ? ' inputmode="numeric"' : '';
+        inputHtml = `<input class="form-input" type="text" placeholder="${escHtml(f.placeholder || '')}" data-field="${f.field_id}" data-required="${f.required}" data-regex="${escHtml(f.format_regex)}"${ac ? ` autocomplete="${ac}"` : ''} aria-required="${ariaReq}"${patternAttr}${inputmodeAttr}>`;
       }
       let hint = '';
       if (f.format_regex) hint += `<div class="field-hint">Regex: ${escHtml(f.format_regex)}</div>`;
@@ -793,37 +805,36 @@ let DROPDOWN_OPTS = {};
     ]
   };
 
-  // Stripe autocomplete mapping (what Stripe uses internally)
-  const stripeAutocomplete = {
-    line1:'address-line1', line2:'address-line2', city:'address-level2',
-    state:'address-level1', postal_code:'postal-code', country:'country',
-    sublocality:'address-level3', sorting_code:null
-  };
-
   // Enhancements table
   function renderEnhancements() {
     const enhancements = [
-      {name:'autocomplete attribute',attr:'autocomplete="postal-code"',stripe:'Not exposed in rendered HTML (shadow DOM)',engrid:'Explicit autocomplete on every field: address-line1, address-line2, address-level1, address-level2, postal-code, country',benefit:'Enables browser/OS autofill for address forms, improving conversion rates and mobile UX'},
-      {name:'aria-required',attr:'aria-required="true"',stripe:'Not set on inputs',engrid:'Can be inferred from field config; recommended addition',benefit:'Screen readers announce required fields, improving accessibility for visually impaired users'},
-      {name:'Grouped dropdown options',attr:'<option disabled>',stripe:'Flat list of options',engrid:'US states grouped with separators: States, US Territories, Armed Forces',benefit:'Easier scanning of long option lists, reduces user errors for military/territory addresses'},
-      {name:'Named option values',attr:'<option value="CA">California</option>',stripe:'Options not exposed (count only in CSV)',engrid:'Full label+value pairs with both abbreviation and full name formats',benefit:'Supports both code-based (CA) and name-based (California) backends'},
-      {name:'Dynamic field type swap',attr:'type="text" vs <select>',stripe:'Fixed dropdown or text per country',engrid:'Swaps between <select> and <input type="text"> based on whether predefined values exist',benefit:'Countries without predefined states get free-text input instead of an empty dropdown'},
-      {name:'Localized state labels',attr:'Label text',stripe:'Generic "State / Province / Region" for many countries',engrid:'Localized: Estado (MX/BR), Région (FR), Bundesland (DE), Provincie (NL), Provincia (ES)',benefit:'More natural UX for non-English speakers; matches local terminology'},
-      {name:'State value persistence',attr:'Cookie-based',stripe:'No persistence between page loads',engrid:'Remembers selected state via cookie (1-day expiry, secure, SameSite=none)',benefit:'Returning users see their previous state selection, reducing form friction'},
-      {name:'3-letter ISO code support',attr:'Country matching',stripe:'2-letter ISO codes only',engrid:'Matches on 2-letter, 3-letter, and full country name simultaneously',benefit:'More resilient to different backend country code formats'},
-      {name:'Recipient label translation',attr:'UI text',stripe:'Not applicable (address only)',engrid:'Translates "To:" label per country (À: for FR, Zu: for DE, Aan: for NL)',benefit:'Full form localization beyond just address fields'},
-      {name:'Multiple address contexts',attr:'Field mapping',stripe:'Single address form',engrid:'Maps 4 field pairs: supporter, shipping, billing, info — each with independent state',benefit:'Supports complex donation/e-commerce forms with multiple addresses'},
+      {name:'autocomplete attribute',attr:'autocomplete="postal-code"',stripe:'Now added to all fields via ENgrid mapping',engrid:'Explicit autocomplete on every field: address-line1, address-line2, address-level1, address-level2, postal-code, country',benefit:'Enables browser/OS autofill for address forms, improving conversion rates and mobile UX',status:'done'},
+      {name:'aria-required',attr:'aria-required="true"',stripe:'Now set on all fields based on required flag',engrid:'Can be inferred from field config; recommended addition',benefit:'Screen readers announce required fields, improving accessibility for visually impaired users',status:'done'},
+      {name:'pattern attribute',attr:'pattern="\\d{5}"',stripe:'Now applied from format_regex on text inputs',engrid:'Not used (no regex validation)',benefit:'Native browser validation on form submit; visible in DevTools for debugging',status:'done'},
+      {name:'inputmode for postal codes',attr:'inputmode="numeric"',stripe:'Now set on digit-only postal code fields',engrid:'Not used',benefit:'Mobile keyboards show number pad for postal codes, reducing input errors',status:'done'},
+      {name:'aria-label for dropdowns',attr:'aria-label="State"',stripe:'Now set on all select elements',engrid:'Implicit from wrapper label element',benefit:'Screen readers announce the dropdown purpose even without visible label association',status:'done'},
+      {name:'Named option values',attr:'<option value="CA">California</option>',stripe:'Now populated with real names from dropdown CSV',engrid:'Full label+value pairs with both abbreviation and full name formats',benefit:'Supports both code-based (CA) and name-based (California) backends',status:'done'},
+      {name:'Localized state labels',attr:'Label text',stripe:'Already uses localized labels from Stripe CSV data',engrid:'Localized: Estado (MX/BR), Région (FR), Bundesland (DE), Provincie (NL), Provincia (ES)',benefit:'More natural UX for non-English speakers; matches local terminology',status:'done'},
+      {name:'3-letter ISO code support',attr:'Country matching',stripe:'Now supported in country search',engrid:'Matches on 2-letter, 3-letter, and full country name simultaneously',benefit:'More resilient to different backend country code formats',status:'done'},
+      {name:'Grouped dropdown options',attr:'<option disabled>',stripe:'Flat list of options',engrid:'US states grouped with separators: States, US Territories, Armed Forces',benefit:'Easier scanning of long option lists, reduces user errors for military/territory addresses',status:'na'},
+      {name:'State value persistence',attr:'Cookie-based',stripe:'No persistence between page loads',engrid:'Remembers selected state via cookie (1-day expiry, secure, SameSite=none)',benefit:'Returning users see their previous state selection, reducing form friction',status:'na'},
+      {name:'Recipient label translation',attr:'UI text',stripe:'Not applicable (address only)',engrid:'Translates "To:" label per country (À: for FR, Zu: for DE, Aan: for NL)',benefit:'Full form localization beyond just address fields',status:'na'},
+      {name:'Multiple address contexts',attr:'Field mapping',stripe:'Single address form',engrid:'Maps 4 field pairs: supporter, shipping, billing, info — each with independent state',benefit:'Supports complex donation/e-commerce forms with multiple addresses',status:'na'},
     ];
 
-    document.getElementById('enhancementsBody').innerHTML = enhancements.map(e =>
-      `<tr>
+    document.getElementById('enhancementsBody').innerHTML = enhancements.map(e => {
+      const statusHtml = e.status === 'done'
+        ? '<span class="badge badge-required" style="background:rgba(62,207,142,.15);color:var(--green)">Implemented</span>'
+        : '<span class="badge badge-optional" style="font-size:.65rem">N/A — docs only</span>';
+      return `<tr>
         <td style="font-weight:500">${e.name}</td>
         <td class="mono">${escHtml(e.attr)}</td>
         <td>${e.stripe}</td>
         <td>${e.engrid}</td>
         <td style="color:var(--green)">${e.benefit}</td>
-      </tr>`
-    ).join('');
+        <td>${statusHtml}</td>
+      </tr>`;
+    }).join('');
   }
 
   function getEngridForCountry(code) {
@@ -840,7 +851,7 @@ let DROPDOWN_OPTS = {};
     document.getElementById('engridEngridLabel').textContent = label + (engridData[code] ? '' : ' (default)');
     document.getElementById('engridDiffLabel').textContent = label;
 
-    // Stripe side
+    // Stripe side (enhanced)
     const stripeFields = stripe.fields.slice().sort((a,b) => a.order - b.order);
     document.getElementById('engridStripeFields').innerHTML = stripeFields.map(f => {
       const ac = stripeAutocomplete[f.field_id] || '—';
@@ -848,10 +859,11 @@ let DROPDOWN_OPTS = {};
         <div class="eng-label">${escHtml(f.label)} <span class="badge ${f.required ? 'badge-required' : 'badge-optional'}">${f.required ? 'Req' : 'Opt'}</span></div>
         <div class="eng-attrs">
           <span><span class="attr-key">type=</span><span class="attr-val">"${f.type}"</span></span>
-          <span><span class="attr-key">autocomplete=</span><span class="attr-val">"${ac}"</span></span>
-          ${f.format_regex ? `<span><span class="attr-key">pattern=</span><span class="attr-val">"${escHtml(f.format_regex)}"</span></span>` : ''}
-          ${f.dropdown_option_count ? `<span><span class="attr-key">options=</span><span class="attr-val">${f.dropdown_option_count}</span></span>` : ''}
-          <span><span class="attr-key">aria-required=</span><span class="attr-val diff-missing">(not set)</span></span>
+          <span><span class="attr-key">autocomplete=</span><span class="attr-new">"${ac}"</span></span>
+          <span><span class="attr-key">aria-required=</span><span class="attr-new">"${f.required}"</span></span>
+          ${f.format_regex ? `<span><span class="attr-key">pattern=</span><span class="attr-new">"${escHtml(f.format_regex)}"</span></span>` : ''}
+          ${f.dropdown_option_count ? `<span><span class="attr-key">options=</span><span class="attr-val">${f.dropdown_option_count} named</span></span>` : ''}
+          ${f.type === 'dropdown' ? `<span><span class="attr-key">aria-label=</span><span class="attr-new">"${escHtml(f.label)}"</span></span>` : ''}
         </div>
       </div>`;
     }).join('');
@@ -894,16 +906,19 @@ let DROPDOWN_OPTS = {};
       // Autocomplete
       const sAc = sf ? (stripeAutocomplete[sf.field_id]||'(none)') : '—';
       const eAc = ef ? ef.autocomplete : '—';
-      rows.push({attr:'autocomplete', s: sf ? '(shadow DOM)' : '—', e:eAc, diff: 'Enhancement'});
+      const acDiff = sAc === eAc ? 'Same' : (sAc && eAc && sAc !== '—' && eAc !== '—') ? 'Same' : 'Different';
+      rows.push({attr:'autocomplete', s:sAc, e:eAc, diff: acDiff});
       // aria-required
-      rows.push({attr:'aria-required', s:'(not set)', e: ef ? String(ef.ariaRequired) : '—', diff:'Enhancement'});
-      // Regex
+      const sAriaReq = sf ? String(sf.required) : '—';
+      const eAriaReq = ef ? String(ef.ariaRequired) : '—';
+      rows.push({attr:'aria-required', s:sAriaReq, e:eAriaReq, diff: sAriaReq === eAriaReq ? 'Same' : 'Different'});
+      // Pattern
       if (sf && sf.format_regex) {
-        rows.push({attr:'pattern/regex', s:sf.format_regex, e:'(not used)', diff:'Stripe only'});
+        rows.push({attr:'pattern', s:sf.format_regex, e:'(not used)', diff:'Stripe enhanced'});
       }
 
       rows.forEach((r, i) => {
-        const diffClass = r.diff === 'Same' ? 'diff-same' : r.diff === 'Enhancement' ? 'diff-better' : r.diff === 'Different' ? 'diff-different' : 'diff-missing';
+        const diffClass = r.diff === 'Same' ? 'diff-same' : r.diff === 'Stripe enhanced' ? 'diff-better' : r.diff === 'Enhancement' ? 'diff-better' : r.diff === 'Different' ? 'diff-different' : 'diff-missing';
         diffRows += `<tr>
           ${i === 0 ? `<td rowspan="${rows.length}" style="font-weight:500;vertical-align:top;border-right:1px solid var(--border)">${fid}</td>` : ''}
           <td class="mono">${r.attr}</td>
@@ -927,6 +942,7 @@ let DROPDOWN_OPTS = {};
   }
 
   initEngrid();
+  } catch(e) { console.error('Init error:', e); }
 })();
 </script>
 </body>
