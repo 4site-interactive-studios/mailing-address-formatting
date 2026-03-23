@@ -190,11 +190,12 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
   <div id="tab-explorer" role="tabpanel">
     <div class="main-grid">
       <div class="main-content">
-        <div style="margin-bottom:16px">
+        <div style="margin-bottom:16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
           <div class="country-select-wrap" id="mainCountrySelect">
             <input class="search-input" type="text" placeholder="Search country by name or code..." aria-label="Search countries" id="mainCountryInput" autocomplete="off">
             <div class="country-dropdown" id="mainCountryDropdown"></div>
           </div>
+          <span id="quickFillWrap"></span>
         </div>
 
         <div class="card">
@@ -483,7 +484,10 @@ let DROPDOWN_OPTS = {};
         <div class="field-error" data-error-for="${f.field_id}"></div>
         ${hint}
       </div>`;
-    }).join('') + `${code === 'US' ? '<div style="margin-top:8px"><button class="copy-btn" id="quickFillBtn">Quick Fill: 4Site Studios</button></div>' : ''}<div class="submit-row"><button class="submit-btn" id="formSubmitBtn">Validate &amp; Submit</button><button class="reset-btn" id="formResetBtn">Clear Form</button></div><div id="submitResult"></div>`;
+    }).join('') + `<div class="submit-row"><button class="submit-btn" id="formSubmitBtn">Validate &amp; Submit</button><button class="reset-btn" id="formResetBtn">Clear Form</button></div><div id="submitResult"></div>`;
+
+    // Quick fill button next to country selector
+    document.getElementById('quickFillWrap').innerHTML = code === 'US' ? '<button class="copy-btn" id="quickFillBtn">Quick Fill: 4Site Studios</button>' : '';
 
     // Restore saved values into matching fields
     if (Object.keys(savedValues).length) {
