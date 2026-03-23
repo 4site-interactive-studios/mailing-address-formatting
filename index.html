@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ENgrid + Stripe Enhanced - Address Fields by Country</title>
+<title>ENgrid Address Fields v2 (Stripe + AI Enhanced)</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -160,8 +160,8 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
 <header>
 <div class="container">
   <div class="logo">
-    <svg viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.939 3.478 1.612 3.478 2.666 0 .926-.695 1.46-2.029 1.46-2.326 0-5.179-1.042-7.164-2.349L3.631 21.7C5.639 23.043 8.788 24 11.84 24c2.648 0 4.807-.689 6.311-1.932 1.632-1.333 2.478-3.267 2.478-5.585 0-4.132-2.507-5.804-6.653-7.333z"/></svg>
-    <h1>ENgrid + Stripe Enhanced - Address Fields by Country</h1>
+    <svg viewBox="0 0 28 28" width="28" height="28"><rect rx="6" width="28" height="28" fill="var(--accent)"/><text x="14" y="19" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="sans-serif">EN</text></svg>
+    <h1>ENgrid Address Fields v2 <span style="font-weight:400;font-size:.85rem;color:var(--text2)">(Stripe + AI Enhanced)</span></h1>
   </div>
 </div>
 </header>
@@ -171,7 +171,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
     <button class="tab-btn active" data-tab="explorer">Explorer</button>
     <button class="tab-btn" data-tab="compare">Compare</button>
     <button class="tab-btn" data-tab="filter">Filter Countries</button>
-    <button class="tab-btn" data-tab="engrid">ENgrid vs Stripe</button>
+    <button class="tab-btn" data-tab="engrid">v1 vs v2 Diff</button>
   </div>
 
   <!-- EXPLORER TAB -->
@@ -241,11 +241,11 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
   <!-- ENGRID VS STRIPE TAB -->
   <div id="tab-engrid" class="hidden">
     <div class="card" style="margin-bottom:20px">
-      <h2>ENgrid vs Stripe — Suggested Enhancements</h2>
-      <p style="color:var(--text2);margin-bottom:16px;font-size:.9rem">HTML attribute enhancements from ENgrid's <code style="color:var(--accent2)">translate-fields.ts</code> that could improve Stripe's AddressElement for accessibility, autofill, and UX.</p>
+      <h2>v1 → v2 Enhancements</h2>
+      <p style="color:var(--text2);margin-bottom:16px;font-size:.9rem">Improvements in ENgrid Address Fields v2 combining the best of ENgrid v1's <code style="color:var(--accent2)">translate-fields.ts</code>, Stripe's AddressElement data, and AI-driven enhancements for accessibility, autofill, and UX.</p>
       <div class="data-table-wrap">
         <table class="data-table" id="enhancementsTable">
-          <thead><tr><th>Enhancement</th><th>Attribute</th><th>Stripe Current</th><th>ENgrid Approach</th><th>Benefit</th><th>Status</th></tr></thead>
+          <thead><tr><th>Enhancement</th><th>Attribute</th><th>v2 Implementation</th><th>v1 Approach</th><th>Benefit</th><th>Status</th></tr></thead>
           <tbody id="enhancementsBody"></tbody>
         </table>
       </div>
@@ -260,11 +260,11 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
 
     <div class="engrid-compare-grid">
       <div class="card">
-        <h2>Stripe <span class="count" id="engridStripeLabel">US — United States</span></h2>
+        <h2>v2 (Enhanced) <span class="count" id="engridStripeLabel">US — United States</span></h2>
         <div id="engridStripeFields"></div>
       </div>
       <div class="card">
-        <h2>ENgrid <span class="count" id="engridEngridLabel">US — United States</span></h2>
+        <h2>v1 (Original) <span class="count" id="engridEngridLabel">US — United States</span></h2>
         <div id="engridEngridFields"></div>
       </div>
     </div>
@@ -273,7 +273,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
       <h2>Detailed Field-by-Field Diff <span class="count" id="engridDiffLabel">US — United States</span></h2>
       <div class="data-table-wrap">
         <table class="data-table">
-          <thead><tr><th>Field</th><th>Attribute</th><th>Stripe</th><th>ENgrid</th><th>Diff</th></tr></thead>
+          <thead><tr><th>Field</th><th>Attribute</th><th>v2</th><th>v1</th><th>Diff</th></tr></thead>
           <tbody id="engridDiffBody"></tbody>
         </table>
       </div>
@@ -695,7 +695,7 @@ let DROPDOWN_OPTS = {};
   initCompare();
   initFilters();
 
-  // --- ENgrid vs Stripe ---
+  // --- v1 vs v2 Diff ---
   const engridData = {
     US: {
       stateLabel: 'State', stateType: 'dropdown',
