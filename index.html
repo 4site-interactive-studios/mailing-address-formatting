@@ -137,6 +137,18 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
 .eng-field-card .eng-attrs .attr-key{color:var(--text2)}
 .eng-field-card .eng-attrs .attr-val{color:var(--accent2)}
 .eng-field-card .eng-attrs .attr-new{color:var(--green)}
+
+.data-table th.sortable{cursor:pointer;user-select:none}
+.data-table th.sortable:hover{color:var(--accent2)}
+.data-table th.sortable::after{content:'';display:inline-block;margin-left:4px;opacity:.4}
+.data-table th.sort-asc::after{content:'\25B2';opacity:1}
+.data-table th.sort-desc::after{content:'\25BC';opacity:1}
+.copy-btn{background:var(--bg4);border:1px solid var(--border);color:var(--text2);border-radius:var(--radius);padding:6px 14px;cursor:pointer;font-size:.8rem;transition:all .2s}
+.copy-btn:hover{border-color:var(--accent);color:var(--text)}
+.field-hint-human{font-size:.78rem;color:var(--green);margin-top:2px}
+.compare-diff{background:rgba(245,166,35,.08);border-left:3px solid var(--yellow);padding-left:8px}
+.filter-clear{padding:6px 12px;border:1px solid var(--red);background:transparent;color:var(--red);border-radius:20px;cursor:pointer;font-size:.8rem;transition:all .2s;white-space:nowrap}
+.filter-clear:hover{background:var(--red);color:#fff}
 .hidden{display:none!important}
 
 /* Scrollbar */
@@ -167,20 +179,20 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
 </header>
 
 <div class="container">
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="explorer">Explorer</button>
-    <button class="tab-btn" data-tab="compare">Compare</button>
-    <button class="tab-btn" data-tab="filter">Filter Countries</button>
-    <button class="tab-btn" data-tab="engrid">v1 vs v2 Diff</button>
+  <div class="tab-bar" role="tablist" aria-label="View tabs">
+    <button class="tab-btn active" data-tab="explorer" role="tab" aria-selected="true">Explorer</button>
+    <button class="tab-btn" data-tab="compare" role="tab" aria-selected="false">Compare</button>
+    <button class="tab-btn" data-tab="filter" role="tab" aria-selected="false">Filter Countries</button>
+    <button class="tab-btn" data-tab="engrid" role="tab" aria-selected="false">v1 vs v2 Diff</button>
   </div>
 
   <!-- EXPLORER TAB -->
-  <div id="tab-explorer">
+  <div id="tab-explorer" role="tabpanel">
     <div class="main-grid">
       <div class="main-content">
         <div style="margin-bottom:16px">
           <div class="country-select-wrap" id="mainCountrySelect">
-            <input class="search-input" type="text" placeholder="Search country by name or code..." id="mainCountryInput" autocomplete="off">
+            <input class="search-input" type="text" placeholder="Search country by name or code..." aria-label="Search countries" id="mainCountryInput" autocomplete="off">
             <div class="country-dropdown" id="mainCountryDropdown"></div>
           </div>
         </div>
@@ -188,7 +200,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
         <div class="card">
           <h2>Form Preview <span class="count" id="previewCountryLabel">US — United States</span></h2>
           <div style="margin-bottom:12px;font-size:.95rem;font-weight:600;color:var(--accent2)" id="recipientLabel">To:</div>
-          <div class="form-preview" id="formPreview"></div>
+          <div class="form-preview" id="formPreview" aria-live="polite"></div>
         </div>
 
         <div class="card">
@@ -196,11 +208,12 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
           <div class="data-table-wrap">
             <table class="data-table">
               <thead>
-                <tr><th>#</th><th>field_id</th><th>Label</th><th>Type</th><th>Required</th><th>Placeholder</th><th>Example</th><th>Regex</th><th>Dropdown Options</th></tr>
+                <tr><th class="sortable" data-sort="order">#</th><th class="sortable" data-sort="field_id">field_id</th><th class="sortable" data-sort="label">Label</th><th class="sortable" data-sort="type">Type</th><th class="sortable" data-sort="required">Required</th><th>Autocomplete</th><th>Placeholder</th><th>Example</th><th>Format</th><th>Regex</th><th>Options</th></tr>
               </thead>
               <tbody id="fieldTableBody"></tbody>
             </table>
           </div>
+          <div style="margin-top:12px;display:flex;gap:8px"><button class="copy-btn" id="copyJsonBtn">Copy as JSON</button><button class="copy-btn" id="copyHtmlBtn">Copy as HTML</button></div>
         </div>
       </div>
 
@@ -218,18 +231,19 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
   </div>
 
   <!-- COMPARE TAB -->
-  <div id="tab-compare" class="hidden">
+  <div id="tab-compare" role="tabpanel" class="hidden">
     <div class="compare-selector" id="compareSelectors"></div>
     <div class="compare-grid" id="compareGrid"></div>
   </div>
 
   <!-- FILTER TAB -->
-  <div id="tab-filter" class="hidden">
+  <div id="tab-filter" role="tabpanel" class="hidden">
     <div class="card">
       <h2>Filter Countries by Field Properties</h2>
       <div class="filter-panel" id="filterPanel"></div>
+      <div style="margin-bottom:8px"><button class="filter-clear hidden" id="clearFiltersBtn">Clear all filters</button></div>
       <div style="margin-bottom:12px">
-        <input class="search-input" type="text" placeholder="Search filtered results..." id="filterSearch" style="width:100%;max-width:400px">
+        <input class="search-input" type="text" placeholder="Search filtered results..." aria-label="Search filtered countries" id="filterSearch" style="width:100%;max-width:400px">
       </div>
       <div>
         <span class="count" id="filterCount"></span>
@@ -239,7 +253,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:.85rem}
   </div>
 
   <!-- ENGRID VS STRIPE TAB -->
-  <div id="tab-engrid" class="hidden">
+  <div id="tab-engrid" role="tabpanel" class="hidden">
     <div class="card" style="margin-bottom:20px">
       <h2>v1 → v2 Enhancements</h2>
       <p style="color:var(--text2);margin-bottom:16px;font-size:.9rem">Improvements in ENgrid Address Fields v2 combining the best of ENgrid v1's <code style="color:var(--accent2)">translate-fields.ts</code>, Stripe's AddressElement data, and AI-driven enhancements for accessibility, autofill, and UX.</p>
@@ -329,8 +343,9 @@ let DROPDOWN_OPTS = {};
   const tabs = document.querySelectorAll('.tab-btn');
   tabs.forEach(btn => {
     btn.addEventListener('click', () => {
-      tabs.forEach(b => b.classList.remove('active'));
+      tabs.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
       ['explorer','compare','filter','engrid'].forEach(t => document.getElementById('tab-' + t).classList.toggle('hidden', btn.dataset.tab !== t));
     });
   });
@@ -437,7 +452,7 @@ let DROPDOWN_OPTS = {};
             armed.forEach(o => { opts += `<option value="${escHtml(o.v)}">${escHtml(o.d)}</option>`; });
             opts += `</optgroup>`;
           } else {
-            realOpts.forEach(o => { opts += `<option value="${escHtml(o.v)}">${escHtml(o.d)}</option>`; });
+            realOpts.forEach(o => { opts += `<option value="${escHtml(o.v)}" ${o.l ? `title="${escHtml(o.l)}"` : ''}>${escHtml(o.d)}</option>`; });
           }
         } else {
           const n = f.dropdown_option_count || 0;
@@ -450,7 +465,10 @@ let DROPDOWN_OPTS = {};
         inputHtml = `<input class="form-input" type="text" placeholder="${escHtml(f.placeholder || '')}" data-field="${f.field_id}" data-required="${f.required}" data-regex="${escHtml(f.format_regex)}"${ac ? ` autocomplete="${ac}"` : ''} aria-required="${ariaReq}"${patternAttr}${inputmodeAttr}>`;
       }
       let hint = '';
-      if (f.format_regex) hint += `<div class="field-hint">Regex: ${escHtml(f.format_regex)}</div>`;
+      if (f.format_regex) {
+        hint += `<div class="field-hint">Regex: ${escHtml(f.format_regex)}</div>`;
+        hint += `<div class="field-hint-human">${humanizeRegex(f.format_regex, f.field_id, f.label)}</div>`;
+      }
       if (f.example) hint += `<div class="field-hint">Example: ${escHtml(f.example)}</div>`;
       return `<div class="form-field">
         <div class="form-label">${escHtml(f.label)} <span class="badge ${badgeClass}">${badgeText}</span></div>
@@ -468,23 +486,92 @@ let DROPDOWN_OPTS = {};
       el.addEventListener('input', () => { if (el.classList.contains('invalid')) validate(); });
     });
 
+    // Re-validate postal code when state changes
+    const stateInput = preview.querySelector('[data-field="state"]');
+    if (stateInput) {
+      stateInput.addEventListener('change', () => {
+        const postalInput = preview.querySelector('[data-field="postal_code"]');
+        if (postalInput && postalInput.value.trim()) validateField(postalInput);
+      });
+    }
+
     // Submit & Reset
     document.getElementById('formSubmitBtn').addEventListener('click', handleSubmit);
     document.getElementById('formResetBtn').addEventListener('click', handleReset);
 
     // Table
+    renderFieldTable(sorted);
+
+    // Copy buttons
+    document.getElementById('copyJsonBtn').addEventListener('click', () => {
+      const json = JSON.stringify({country: code, fields: sorted.map(f => ({...f, autocomplete: stripeAutocomplete[f.field_id] || null}))}, null, 2);
+      navigator.clipboard.writeText(json).then(() => { document.getElementById('copyJsonBtn').textContent = 'Copied!'; setTimeout(() => document.getElementById('copyJsonBtn').textContent = 'Copy as JSON', 1500); });
+    });
+    document.getElementById('copyHtmlBtn').addEventListener('click', () => {
+      const lines = sorted.map(f => {
+        const ac = stripeAutocomplete[f.field_id] || '';
+        if (f.type === 'dropdown') return `<select name="${f.field_id}"${ac ? ` autocomplete="${ac}"` : ''} aria-required="${f.required}"${f.required ? ' required' : ''}><option value="">Select ${f.label}...</option></select>`;
+        return `<input type="text" name="${f.field_id}"${ac ? ` autocomplete="${ac}"` : ''} aria-required="${f.required}"${f.required ? ' required' : ''}${f.placeholder ? ` placeholder="${f.placeholder}"` : ''}${f.format_regex ? ` pattern="${f.format_regex}"` : ''}>`;
+      });
+      navigator.clipboard.writeText(lines.join('\n')).then(() => { document.getElementById('copyHtmlBtn').textContent = 'Copied!'; setTimeout(() => document.getElementById('copyHtmlBtn').textContent = 'Copy as HTML', 1500); });
+    });
+  }
+
+  let currentSort = {field: null, dir: 'asc'};
+  function renderFieldTable(fields) {
+    const sorted = [...fields];
+    if (currentSort.field) {
+      sorted.sort((a, b) => {
+        let va = a[currentSort.field], vb = b[currentSort.field];
+        if (typeof va === 'boolean') { va = va ? 1 : 0; vb = vb ? 1 : 0; }
+        if (typeof va === 'number') return currentSort.dir === 'asc' ? va - vb : vb - va;
+        return currentSort.dir === 'asc' ? String(va||'').localeCompare(String(vb||'')) : String(vb||'').localeCompare(String(va||''));
+      });
+    }
     const tbody = document.getElementById('fieldTableBody');
-    tbody.innerHTML = sorted.map(f => `<tr>
+    tbody.innerHTML = sorted.map(f => {
+      const ac = stripeAutocomplete[f.field_id] || '';
+      const humanHint = f.format_regex ? humanizeRegex(f.format_regex, f.field_id, f.label) : '';
+      return `<tr>
       <td>${f.order}</td>
       <td class="mono">${f.field_id}</td>
       <td>${escHtml(f.label)}</td>
       <td>${f.type}</td>
       <td class="${f.required ? 'bool-true' : 'bool-false'}">${f.required}</td>
+      <td class="mono" style="color:var(--green)">${ac || '\u2014'}</td>
       <td>${escHtml(f.placeholder)}</td>
       <td class="mono">${escHtml(f.example)}</td>
-      <td class="mono" style="max-width:200px;overflow:hidden;text-overflow:ellipsis" title="${escHtml(f.format_regex)}">${escHtml(f.format_regex)}</td>
-      <td>${f.dropdown_option_count || '—'}</td>
-    </tr>`).join('');
+      <td style="color:var(--green);font-size:.78rem">${humanHint || '\u2014'}</td>
+      <td class="mono" style="max-width:180px;overflow:hidden;text-overflow:ellipsis" title="${escHtml(f.format_regex)}">${escHtml(f.format_regex)}</td>
+      <td>${f.dropdown_option_count || '\u2014'}</td>
+    </tr>`;}).join('');
+
+    // Sort headers
+    document.querySelectorAll('.data-table th.sortable').forEach(th => {
+      th.classList.remove('sort-asc', 'sort-desc');
+      if (th.dataset.sort === currentSort.field) th.classList.add(currentSort.dir === 'asc' ? 'sort-asc' : 'sort-desc');
+      th.onclick = () => {
+        if (currentSort.field === th.dataset.sort) currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
+        else { currentSort.field = th.dataset.sort; currentSort.dir = 'asc'; }
+        renderFieldTable(countries[currentCountryCode].fields.slice().sort((a,b) => a.order - b.order));
+      };
+    });
+  }
+
+  function humanizeRegex(regex, fieldId, label) {
+    if (!regex) return '';
+    if (/^\\d\{(\d+)\}$/.test(regex)) return `${label}: exactly ${RegExp.$1} digits`;
+    if (/^\(\\d\{(\d+)\}\)\(\?\:\[\\s \\-\]\(\\d\{(\d+)\}\)\)\?$/.test(regex) || regex.includes('(?:[ \\-]')) return `${label}: ${label === 'ZIP' ? '5 digits, optionally followed by hyphen and 4 more (ZIP+4)' : 'digits with optional separator'}`;
+    if (/^\\d\{(\d+)\}-\?\\d\{(\d+)\}$/.test(regex)) return `${label}: ${RegExp.$1} digits, dash, ${RegExp.$2} digits`;
+    if (/^[A-Z]/.test(regex) && regex.includes('\\d')) return `${label}: letters and digits in a specific pattern`;
+    if (/^\\d/.test(regex)) return `${label}: numeric format`;
+    return `${label}: specific format required`;
+  }
+
+  function getSubdivisionPostalPattern(countryCode, stateValue) {
+    if (!stateValue || !DROPDOWN_OPTS[countryCode]) return null;
+    const opt = DROPDOWN_OPTS[countryCode].find(o => o.v === stateValue);
+    return opt && opt.p ? opt.p : null;
   }
 
   function validateField(el) {
@@ -493,15 +580,46 @@ let DROPDOWN_OPTS = {};
     const regex = el.dataset.regex;
     const val = el.value.trim();
     const errEl = el.closest('.form-field').querySelector(`[data-error-for="${fieldId}"]`);
+    const c = countries[currentCountryCode];
+    const fieldMeta = c ? c.fields.find(f => f.field_id === fieldId) : null;
+    const label = fieldMeta ? fieldMeta.label : fieldId;
     let error = '';
 
     if (required && !val) {
-      error = 'This field is required';
+      error = `${label} is required`;
     } else if (val && regex) {
       try {
         const re = new RegExp('^(?:' + regex + ')$');
-        if (!re.test(val)) error = 'Format does not match expected pattern';
+        if (!re.test(val)) {
+          const hint = humanizeRegex(regex, fieldId, label);
+          error = hint || `${label} format is invalid`;
+        }
       } catch(e) {}
+    }
+
+    // Subdivision postal code validation (state-aware)
+    if (!error && fieldId === 'postal_code' && val && currentCountryCode) {
+      const stateEl = document.querySelector('#formPreview select[data-field="state"], #formPreview input[data-field="state"]');
+      const stateVal = stateEl ? stateEl.value : '';
+      if (stateVal) {
+        const subdivPattern = getSubdivisionPostalPattern(currentCountryCode, stateVal);
+        if (subdivPattern) {
+          try {
+            // For US: extract just the 5-digit prefix for subdivision matching (handles ZIP+4 and PO Box)
+            let testVal = val;
+            if (currentCountryCode === 'US') {
+              testVal = val.replace(/[- ].*/,'').substring(0, (currentCountryCode === 'US' ? 5 : val.length));
+              // Only test the first 3 digits against subdivision pattern for US
+              testVal = val.replace(/[- ].*/,'').substring(0, 3);
+            }
+            const subdivRe = new RegExp('^(?:' + subdivPattern + ')');
+            if (!subdivRe.test(testVal)) {
+              const stateLabel = stateEl.tagName === 'SELECT' ? stateEl.options[stateEl.selectedIndex]?.text : stateVal;
+              error = `${label} does not appear to match ${stateLabel || 'the selected state'} (expected pattern: ${subdivPattern})`;
+            }
+          } catch(e) {}
+        }
+      }
     }
 
     el.classList.toggle('invalid', !!error);
@@ -561,15 +679,24 @@ let DROPDOWN_OPTS = {};
     const withSorting = countryList.filter(c => c.fields.some(f => f.field_id === 'sorting_code')).length;
     const avgFields = (DATA.length / total).toFixed(1);
 
+    const totalFields = DATA.length;
+    const withSubdivPostal = countryList.filter(c => DROPDOWN_OPTS[c.code] && DROPDOWN_OPTS[c.code].some(o => o.p)).length;
+    const postalValidationPct = withPostal > 0 ? Math.round(postalRegex / withPostal * 100) : 0;
+    const reqFieldCounts = countryList.map(c => c.fields.filter(f => f.required).length);
+    const avgReq = (reqFieldCounts.reduce((a,b)=>a+b,0) / total).toFixed(1);
+
     document.getElementById('statsContent').innerHTML = [
       ['Total countries', total],
+      ['Total fields', totalFields],
       ['Avg fields/country', avgFields],
+      ['Avg required/country', avgReq],
       ['Have state/province', withState],
       ['State as dropdown', stateDropdown],
       ['State required', stateRequired],
       ['Have postal code', withPostal],
       ['Postal code required', postalRequired],
-      ['Postal code w/ regex', postalRegex],
+      ['Postal code w/ regex', `${postalRegex} (${postalValidationPct}%)`],
+      ['Subdivision postal patterns', withSubdivPostal],
       ['Have sublocality', withSublocality],
       ['Have sorting code', withSorting],
     ].map(([l,v]) => `<div class="stat-item"><span class="stat-label">${l}</span><span class="stat-value">${v}</span></div>`).join('');
@@ -609,11 +736,26 @@ let DROPDOWN_OPTS = {};
 
   function renderCompare() {
     const grid = document.getElementById('compareGrid');
-    grid.innerHTML = compareSelections.filter(c => countries[c]).map(code => {
+    const selected = compareSelections.filter(c => countries[c]);
+    // Find fields that differ across selected countries
+    const allFieldIds = new Set();
+    selected.forEach(code => countries[code].fields.forEach(f => allFieldIds.add(f.field_id)));
+    const diffFields = new Set();
+    allFieldIds.forEach(fid => {
+      const labels = new Set(), types = new Set(), reqs = new Set();
+      selected.forEach(code => {
+        const f = countries[code].fields.find(x => x.field_id === fid);
+        if (f) { labels.add(f.label); types.add(f.type); reqs.add(String(f.required)); }
+        else { labels.add('(missing)'); }
+      });
+      if (labels.size > 1 || types.size > 1 || reqs.size > 1) diffFields.add(fid);
+    });
+
+    grid.innerHTML = selected.map(code => {
       const c = countries[code];
       return `<div class="compare-col">
         <h3>${c.name} <span class="code">${c.code}</span></h3>
-        ${c.fields.sort((a,b) => a.order - b.order).map(f => `<div class="compare-field-row">
+        ${c.fields.sort((a,b) => a.order - b.order).map(f => `<div class="compare-field-row${diffFields.has(f.field_id) ? ' compare-diff' : ''}">
           <div class="compare-order">${f.order}</div>
           <div class="compare-field-info">
             <div class="label">${escHtml(f.label)} <span class="badge ${f.required ? 'badge-required' : 'badge-optional'}" style="font-size:.65rem">${f.required ? 'Req' : 'Opt'}</span></div>
@@ -636,18 +778,31 @@ let DROPDOWN_OPTS = {};
     {id: 'has_sorting', label: 'Has sorting code', fn: c => c.fields.some(f => f.field_id === 'sorting_code')},
     {id: 'city_required', label: 'City required', fn: c => c.fields.some(f => f.field_id === 'city' && f.required)},
     {id: 'gt4_fields', label: '5+ fields', fn: c => c.fields.length >= 5},
+    {id: 'gt5_fields', label: '6+ fields', fn: c => c.fields.length >= 6},
+    {id: 'has_line2', label: 'Has line 2', fn: c => c.fields.some(f => f.field_id === 'line2')},
+    {id: 'req3plus', label: '3+ required', fn: c => c.fields.filter(f => f.required).length >= 3},
+    {id: 'has_subdiv_postal', label: 'Has subdivision postal patterns', fn: c => DROPDOWN_OPTS[c.code] && DROPDOWN_OPTS[c.code].some(o => o.p)},
   ];
   let activeFilters = new Set();
 
   function initFilters() {
     const panel = document.getElementById('filterPanel');
-    panel.innerHTML = filters.map(f => `<button class="filter-btn" data-filter="${f.id}">${f.label}</button>`).join('');
+    panel.innerHTML = filters.map(f => `<button class="filter-btn" data-filter="${f.id}" aria-pressed="false">${f.label}</button>`).join('');
+    const clearBtn = document.getElementById('clearFiltersBtn');
     panel.addEventListener('click', e => {
       const btn = e.target.closest('.filter-btn');
       if (!btn) return;
       const fid = btn.dataset.filter;
       if (activeFilters.has(fid)) activeFilters.delete(fid); else activeFilters.add(fid);
       btn.classList.toggle('active');
+      btn.setAttribute('aria-pressed', activeFilters.has(fid));
+      clearBtn.classList.toggle('hidden', activeFilters.size === 0);
+      renderFilteredList();
+    });
+    clearBtn.addEventListener('click', () => {
+      activeFilters.clear();
+      panel.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+      clearBtn.classList.add('hidden');
       renderFilteredList();
     });
     document.getElementById('filterSearch').addEventListener('input', renderFilteredList);
@@ -663,7 +818,7 @@ let DROPDOWN_OPTS = {};
     });
     if (q) list = list.filter(c => matchesCountryQuery(c, q));
 
-    document.getElementById('filterCount').textContent = `${list.length} countries`;
+    document.getElementById('filterCount').textContent = `${list.length} of ${countryList.length} countries`;
     document.getElementById('filteredCountryList').innerHTML = list.map(c =>
       `<div class="country-list-item" data-code="${c.code}">
         <span>${c.name} <span class="code" style="color:var(--text2);margin-left:4px">${c.code}</span></span>
